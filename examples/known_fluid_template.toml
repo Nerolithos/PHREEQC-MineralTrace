@@ -1,0 +1,27 @@
+# Intentionally incomplete. Replace the source and supply YOUR measurements.
+# No invented measurements or missing-concentration defaults are provided.
+mode = "KnownFluid"
+minerals = ["Fluorite", "Calcite"]
+assumption = "same_stage_equilibrium"
+allow_unvalidated_temperature = false
+[fluid]
+units = "mol/kgw"
+origin = "Observation"
+label = ""
+source = ""
+[fluid.totals]
+# Supply all five keys, including explicit zeros if an element is excluded:
+# Ca = ...
+# F = ...
+# "C(4)" = ...
+# Na = ...
+# Cl = ...
+[fixed]
+# Supply temperature (degC), pH, pe, pressure_atm = 1.0, water_kg = 1.0.
+# Values replaced by scan axes remain declared exploration assumptions.
+[tolerances]
+# Supply positive Fluorite and Calcite SI tolerances.
+[[axes]]
+parameter = "pH"
+units = "dimensionless"
+# Supply at least two strictly increasing values, e.g. a range YOU choose.

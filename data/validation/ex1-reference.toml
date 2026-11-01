@@ -1,0 +1,11 @@
+source_id = "USGS-EX1-TABLE11"
+url = "https://water.usgs.gov/water-resources/software/PHREEQC/documentation/phreeqc3-html/phreeqc3-63.htm"
+location = "Table 11, Saturation indices"
+verification_status = "manually_checked_official_table"
+# Absolute SI tolerance: published output is rounded to two decimals.
+# 0.01 allows rounding and small release differences, not a calibrated error model.
+absolute_tolerance = 0.01
+[si]
+Calcite = 0.68
+Gypsum = -0.64
+Anhydrite = -0.92

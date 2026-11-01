@@ -1,0 +1,12 @@
+{
+  "source_id": "USGS-EX1-TABLE11",
+  "type": "official_documentation",
+  "title": "Example 1—Speciation Calculation",
+  "authors": [],
+  "year": null,
+  "doi": null,
+  "url": "https://water.usgs.gov/water-resources/software/PHREEQC/documentation/phreeqc3-html/phreeqc3-63.htm",
+  "page_or_table": "Table 11, Saturation indices",
+  "extraction_method": "manual",
+  "verification_status": "official_table_checked_2026-11-01"
+}

@@ -1,0 +1,3 @@
+PASS: final 42-point report; JSON/CSV/SVG parsed; all raw archives and source/database hashes checked; exact SI and status reproduced at all 42 points.
+Original: results/study-RdSUoz/report.html
+Reproduced: results/study-RdSUoz/reproduced/study-kYu4Ul/report.html

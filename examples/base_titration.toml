@@ -1,0 +1,29 @@
+process = "acid_base_titration"
+temperature_c = 25.0
+pressure_atm = 1.0
+allow_unvalidated_temperature = false
+minerals = ["Fluorite", "Calcite"]
+[initial]
+pH = 8.0
+pe = 4.0
+water_kg = 1.0
+units = "mol/kgw"
+origin = "Assumption"
+source = "SYNTHETIC / SIMULATED nominal ionic recipe, not laboratory data"
+label = "SYNTHETIC / SIMULATED; initial charge residual deliberately reported, not corrected"
+charge_context = "hypothetical"
+[initial.totals]
+Ca = 0.001
+F = 0.00022
+"C(4)" = 0.001
+Na = 0.001
+Cl = 0.00178
+[titrant]
+identity = "NaOH"
+addition_model = "formula_addition_no_carrier_water"
+amounts_mol = [0.00001, 0.00003, 0.00007, 0.0001, 0.0002]
+[diagnostics]
+charge_threshold_percent = 0.1
+mass_absolute_tolerance_mol = 0.0000000001
+mass_relative_tolerance = 0.000000001
+charge_conservation_tolerance_eq = 0.0000000001

@@ -1,0 +1,4 @@
+PASS: independent reproduction analysis.json byte-identical; 15 point archives; CSV row/column parsing; ten SVG XMLs; all source and evidence hashes; exploratory 6 conditional candidates; strict 0 included.
+Original: results/study-sXitvn/report.html
+Reproduced: results/study-sXitvn/reproduced/study-xKgdRS/report.html
+Strict: results/study-EsTIcJ/report.html

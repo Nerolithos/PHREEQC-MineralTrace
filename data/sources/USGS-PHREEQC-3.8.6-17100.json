@@ -1,0 +1,13 @@
+{
+  "source_id": "USGS-PHREEQC-3.8.6-17100",
+  "type": "official_software_distribution",
+  "title": "PHREEQC 3.8.6-17100",
+  "authors": [],
+  "year": null,
+  "doi": null,
+  "url": "https://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.8.6-17100.tar.gz",
+  "page_or_table": null,
+  "extraction_method": "download_and_extract",
+  "verification_status": "downloaded_from_USGS_and_executed",
+  "sha256": "b5c4a6dfea1a6bb6a3436857a50346bb943904a49582714494b4f1b1e54e64e1"
+}

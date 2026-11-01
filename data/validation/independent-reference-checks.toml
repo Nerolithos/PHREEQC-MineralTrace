@@ -1,0 +1,20 @@
+# Published parameter checks, not an independently reproduced complete aqueous case.
+[Fluorite]
+value = -10.57
+reported_uncertainty = 0.08
+units = "log10_Ksp"
+temperature_c = 25.0
+pressure = "1 bar"
+source_id = "NORDSTROM-2022"
+url = "https://www.usgs.gov/publications/evaluation-internal-consistency-thermodynamic-network-involving-fluorite-cryolite-and"
+doi = "10.1180/mgm.2022.40"
+limitation = "Infinite-dilution thermodynamic assessment; pressure differs from software's 1 atm; agreement is a screening check, not complete model validation."
+[Calcite]
+value = -8.480
+reported_uncertainty = 0.020
+units = "log10_Ksp"
+temperature_c = 25.0
+source_id = "PLUMMER-BUSENBERG-1982"
+url = "https://pubs.usgs.gov/publication/70011789"
+doi = "10.1016/0016-7037(82)90056-4"
+limitation = "Abstract-reported constant; original experimental tables have not been extracted or independently reproduced."

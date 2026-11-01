@@ -1,0 +1,297 @@
+description = "Raw v0.2.0 scan regression captured from the preserved study; no scientific validation claim"
+package_version = "0.2.0"
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+
+[[points]]
+temperature = 25.0
+pH = 6.5
+status = "incompatible"
+Fluorite = 0.1106631199064
+Calcite = -1.714241483393
+
+[[points]]
+temperature = 35.0
+pH = 6.5
+status = "incompatible"
+Fluorite = 0.001094943375369
+Calcite = -1.540232070685
+
+[[points]]
+temperature = 45.0
+pH = 6.5
+status = "incompatible"
+Fluorite = -0.09101836920395
+Calcite = -1.371517161249
+
+[[points]]
+temperature = 55.0
+pH = 6.5
+status = "incompatible"
+Fluorite = -0.1677449341157
+Calcite = -1.206091899582
+
+[[points]]
+temperature = 65.0
+pH = 6.5
+status = "incompatible"
+Fluorite = -0.2309126650298
+Calcite = -1.042948501773
+
+[[points]]
+temperature = 75.0
+pH = 6.5
+status = "incompatible"
+Fluorite = -0.2821493106593
+Calcite = -0.881734856542
+
+[[points]]
+temperature = 80.0
+pH = 6.5
+status = "incompatible"
+Fluorite = -0.3037552662381
+Calcite = -0.8018667001056
+
+[[points]]
+temperature = 25.0
+pH = 7.0
+status = "incompatible"
+Fluorite = 0.1082100549594
+Calcite = -1.078501476269
+
+[[points]]
+temperature = 35.0
+pH = 7.0
+status = "incompatible"
+Fluorite = -0.00143391505725
+Calcite = -0.9142422919681
+
+[[points]]
+temperature = 45.0
+pH = 7.0
+status = "incompatible"
+Fluorite = -0.09375221104983
+Calcite = -0.7507307903617
+
+[[points]]
+temperature = 55.0
+pH = 7.0
+status = "incompatible"
+Fluorite = -0.1708446500843
+Calcite = -0.5870704483902
+
+[[points]]
+temperature = 65.0
+pH = 7.0
+status = "incompatible"
+Fluorite = -0.2345802428225
+Calcite = -0.42298996884
+
+[[points]]
+temperature = 75.0
+pH = 7.0
+status = "incompatible"
+Fluorite = -0.2866380690318
+Calcite = -0.258637438838
+
+[[points]]
+temperature = 80.0
+pH = 7.0
+status = "incompatible"
+Fluorite = -0.308768498418
+Calcite = -0.1764898595341
+
+[[points]]
+temperature = 25.0
+pH = 7.5
+status = "incompatible"
+Fluorite = 0.1065467565843
+Calcite = -0.5263124474507
+
+[[points]]
+temperature = 35.0
+pH = 7.5
+status = "incompatible"
+Fluorite = -0.003299613513608
+Calcite = -0.3672474308194
+
+[[points]]
+temperature = 45.0
+pH = 7.5
+status = "compatible"
+Fluorite = -0.09599148880333
+Calcite = -0.2068647480419
+
+[[points]]
+temperature = 55.0
+pH = 7.5
+status = "compatible"
+Fluorite = -0.1736615951036
+Calcite = -0.04493653105982
+
+[[points]]
+temperature = 65.0
+pH = 7.5
+status = "compatible"
+Fluorite = -0.2382113348151
+Calcite = 0.1184196014083
+
+[[points]]
+temperature = 75.0
+pH = 7.5
+status = "incompatible"
+Fluorite = -0.2913387227514
+Calcite = 0.2828667443843
+
+[[points]]
+temperature = 80.0
+pH = 7.5
+status = "incompatible"
+Fluorite = -0.3140991130733
+Calcite = 0.3653556412639
+
+[[points]]
+temperature = 25.0
+pH = 8.0
+status = "compatible"
+Fluorite = 0.1045447344975
+Calcite = -0.01273320464536
+
+[[points]]
+temperature = 35.0
+pH = 8.0
+status = "compatible"
+Fluorite = -0.006000273800339
+Calcite = 0.1427935148642
+
+[[points]]
+temperature = 45.0
+pH = 8.0
+status = "incompatible"
+Fluorite = -0.0997357752899
+Calcite = 0.2998519683888
+
+[[points]]
+temperature = 55.0
+pH = 8.0
+status = "incompatible"
+Fluorite = -0.178867712089
+Calcite = 0.4582915097863
+
+[[points]]
+temperature = 65.0
+pH = 8.0
+status = "incompatible"
+Fluorite = -0.2453333608051
+Calcite = 0.6178105602958
+
+[[points]]
+temperature = 75.0
+pH = 8.0
+status = "incompatible"
+Fluorite = -0.3007867093606
+Calcite = 0.7781281886947
+
+[[points]]
+temperature = 80.0
+pH = 8.0
+status = "incompatible"
+Fluorite = -0.3248196431234
+Calcite = 0.8585388359696
+
+[[points]]
+temperature = 25.0
+pH = 8.5
+status = "incompatible"
+Fluorite = 0.0996294283413
+Calcite = 0.4782179142078
+
+[[points]]
+temperature = 35.0
+pH = 8.5
+status = "incompatible"
+Fluorite = -0.01300348779584
+Calcite = 0.6277553255275
+
+[[points]]
+temperature = 45.0
+pH = 8.5
+status = "incompatible"
+Fluorite = -0.1096941082626
+Calcite = 0.7774094257198
+
+[[points]]
+temperature = 55.0
+pH = 8.5
+status = "incompatible"
+Fluorite = -0.192779845065
+Calcite = 0.9267322128727
+
+[[points]]
+temperature = 65.0
+pH = 8.5
+status = "incompatible"
+Fluorite = -0.2641821371301
+Calcite = 1.07547106716
+
+[[points]]
+temperature = 75.0
+pH = 8.5
+status = "incompatible"
+Fluorite = -0.3253109849334
+Calcite = 1.223899635532
+
+[[points]]
+temperature = 80.0
+pH = 8.5
+status = "incompatible"
+Fluorite = -0.3523137176607
+Calcite = 1.29827372835
+
+[[points]]
+temperature = 25.0
+pH = 9.0
+status = "incompatible"
+Fluorite = 0.08605361275397
+Calcite = 0.9361963788254
+
+[[points]]
+temperature = 35.0
+pH = 9.0
+status = "incompatible"
+Fluorite = -0.03187994891114
+Calcite = 1.071413127244
+
+[[points]]
+temperature = 45.0
+pH = 9.0
+status = "incompatible"
+Fluorite = -0.1356139553627
+Calcite = 1.203591441451
+
+[[points]]
+temperature = 55.0
+pH = 9.0
+status = "incompatible"
+Fluorite = -0.2274641285812
+Calcite = 1.332527462313
+
+[[points]]
+temperature = 65.0
+pH = 9.0
+status = "incompatible"
+Fluorite = -0.3089787829299
+Calcite = 1.458947170219
+
+[[points]]
+temperature = 75.0
+pH = 9.0
+status = "incompatible"
+Fluorite = -0.3808637432786
+Calcite = 1.584782655597
+
+[[points]]
+temperature = 80.0
+pH = 9.0
+status = "incompatible"
+Fluorite = -0.4132120467172
+Calcite = 1.648380251576

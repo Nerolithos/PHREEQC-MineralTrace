@@ -1,0 +1,21 @@
+[ Info: Example 1 table 11 comparison NOT RUN: known mismatch with current database; run scripts/benchmark.jl to reproduce the failure.
+Test Summary:                     | Pass  Total  Time
+Formation events and evidence DAG |   13     13  0.6s
+Test Summary:                       | Pass  Total  Time
+Input units and dependency failures |    8      8  0.1s
+Test Summary:                                         | Pass  Total  Time
+Selected output integrity (synthetic parser fixtures) |    8      8  0.1s
+Test Summary:                             | Pass  Total  Time
+Study configuration and SI mask semantics |   19     19  0.5s
+Test Summary:                                        | Pass  Total  Time
+Real PHREEQC: USGS Example 1 and forward calculation |   10     10  0.9s
+Test Summary:                        | Pass  Total  Time
+USGS Example 2: table 13 SI at 25 °C |    4      4  0.1s
+Test Summary:                    | Pass  Total  Time
+Locked current-engine regression |    5      5  0.1s
+Test Summary:                                  | Pass  Total  Time
+Fluorite–Calcite real-engine consistency suite |   59     59  1.2s
+Test Summary:                                             | Pass  Total  Time
+Real-engine grid, reports and off-grid signature recovery |   66     66  4.6s
+Test Summary:                                         | Pass  Total  Time
+CLI failure archives (process fixtures, no chemistry) |   12     12  0.5s

@@ -1,0 +1,7 @@
+PASS: acid/base CSVs and six SVGs each; all source/evidence/database/input hashes; seven-element and net-charge accounting; standalone HTML.
+Independent reproduced analysis.json byte-identical.
+Acid report: results/process-oqxUw8/report.html
+Base report: results/process-DCemyJ/report.html
+Reproduced report: results/process-oqxUw8/reproduced/process-nV97oW/report.html
+Acid maximum elemental residuals (mol): {'Ca': 0.0, 'F': 9.999054535747565e-17, 'C': 2.9999874112673908e-15, 'Na': 0.0, 'Cl': 2.168404344971009e-19, 'H': 1.4210854715202004e-14, 'O': 0.0}
+Acid maximum change in net charge (eq): 2.8240010698822593e-15

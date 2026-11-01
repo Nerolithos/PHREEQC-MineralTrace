@@ -1,0 +1,73 @@
+{
+  "case_id": "OFR99247-EXP69",
+  "source": {
+    "source_id": "PLUMMER-BUSENBERG-1999-OFR99247",
+    "type": "original_experimental_report",
+    "title": "Data on the crystal growth of calcite from calcium bicarbonate solutions at 34°C and CO2 partial pressures of 0.101, 0.0156 and 0.00102 atmospheres",
+    "authors": [
+      "L. Niel Plummer",
+      "Eurybiades Busenberg"
+    ],
+    "year": 1999,
+    "doi": "10.3133/ofr99247",
+    "url": "https://pubs.usgs.gov/of/1999/0247/report.pdf",
+    "page_or_table": "printed pages 1–3; Table 1, experiment 69; PDF pages 4–6",
+    "extraction_method": "pypdf text extraction plus visual confirmation of complete relevant pages",
+    "verification_status": "original methods and table row visually checked",
+    "sha256": "1b7f93cf69af119f6490691e6cc1894ab43c94aac37a24cd0f0f7745903f66bc"
+  },
+  "status": "unsuitable_for_current_closed_formula_addition_titration",
+  "experimental_comparison_completed": false,
+  "conditions": {
+    "temperature_c": 34.0,
+    "gas_CO2_percent_reported": 0.102,
+    "reported_group_pCO2_atm": 0.00102,
+    "total_barometric_pressure_at_run": null,
+    "gas_boundary": "continuous CO2-N2 bubbling; open gas boundary",
+    "duration_min": 22.0,
+    "crystal_area_cm2": 5.56
+  },
+  "measured_composition": {
+    "Ca_total": {
+      "value": 2.66,
+      "units": "mmol/kg water",
+      "method": "EDTA titration",
+      "uncertainty": null
+    },
+    "total_inorganic_carbon": null,
+    "alkalinity": null,
+    "measured_pH": null,
+    "other_initial_ionic_totals": null
+  },
+  "independently_measured_observable": {
+    "name": "calcite crystal weight gain",
+    "value": 0.735,
+    "units": "mg",
+    "uncertainty": null
+  },
+  "author_calculated_not_measured": {
+    "pH": 8.52,
+    "calcite_SI": 1.62
+  },
+  "reported_method_quality": {
+    "individual_weighing_reproducibility_le_ug": 2.0,
+    "weight_gain_uncertainty_mg": null,
+    "note": "Individual weighing repeatability is not automatically the uncertainty of a difference; no uncertainty propagation invented."
+  },
+  "missing_for_supported_process": [
+    "initial measured pH and complete ionic/carbon inventory",
+    "stepwise acid/base doses and carrier-water specification",
+    "independently measured titration pH or species trajectory"
+  ],
+  "model_mismatch": [
+    "Measured response is crystal growth; v0.4 models no crystal growth or kinetic rate law",
+    "Experiment maintains open CO2 gas exchange; current process is closed aqueous formula addition",
+    "Reported table pH and SI are calculated, not independent measured validation targets"
+  ],
+  "decision": "No quantitative model-versus-measurement comparison performed. Do not fit missing carbonate totals or use calculated pH as measured data.",
+  "database_limitations": [
+    "phreeqc.dat aqueous species/activity scope not independently validated at 34°C for this experimental boundary",
+    "CaF+ inactive in the locked database; not relevant evidence for measured calcite growth",
+    "No gas-transfer or growth-kinetic process in the supported titration interface"
+  ]
+}

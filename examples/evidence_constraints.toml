@@ -1,0 +1,92 @@
+# SYNTHETIC / SIMULATED teaching study, no natural specimen or measured fluid.
+mode = "HypothesisExplorer"
+minerals = ["Fluorite", "Calcite"]
+assumption = "same_stage_equilibrium"
+stage_id = "SYNTHETIC-STAGE-I"
+allow_unvalidated_temperature = true
+[evaluation]
+mode = "exploratory"
+max_charge_error_percent = 0.1
+[fluid]
+units = "mol/kgw"
+origin = "Assumption"
+label = "SYNTHETIC / SIMULATED, not measured"
+source = "SYNTHETIC-RECIPE-001"
+[fluid.totals]
+Ca = 0.001
+F = 0.00022
+"C(4)" = 0.001
+Na = 0.001
+Cl = 0.00178
+[fixed]
+temperature = 25.0
+pH = 7.0
+pressure_atm = 1.0
+water_kg = 1.0
+pe = 4.0
+[tolerances]
+Fluorite = 0.25
+Calcite = 0.25
+[[axes]]
+parameter = "temperature"
+units = "degC"
+values = [30.0, 32.5, 35.0, 37.5, 40.0]
+[[axes]]
+parameter = "pH"
+units = "dimensionless"
+values = [7.98, 8.0, 8.02]
+[[constraints]]
+id = "temperature-window"
+parameter = "temperature"
+type = "interval"
+units = "degC"
+source_id = "SYNTHETIC-INTERVAL-NOT-NATURAL-DATA"
+classification = "Assumption"
+stage_id = "SYNTHETIC-STAGE-I"
+lower = 32.5
+upper = 37.5
+[[constraints]]
+id = "pH-window"
+parameter = "pH"
+type = "interval"
+units = "dimensionless"
+source_id = "SYNTHETIC-INTERVAL-NOT-NATURAL-DATA"
+classification = "Assumption"
+lower = 7.99
+upper = 8.02
+[[constraints]]
+id = "dissolved-F"
+parameter = "F"
+type = "measurement"
+units = "mol/kgw"
+source_id = "SYNTHETIC-MEASUREMENT-NOT-ACTUAL-OBSERVATION"
+classification = "Observation"
+stage_id = "SYNTHETIC-STAGE-I"
+value = 0.00022
+tolerance = 0.00001
+[[constraints]]
+id = "fluorite-equilibrium"
+parameter = "Fluorite"
+type = "saturation"
+units = "SI"
+source_id = "SYNTHETIC-EQUILIBRIUM-HYPOTHESIS"
+classification = "Assumption"
+stage_id = "SYNTHETIC-STAGE-I"
+value = 0.0
+tolerance = 0.25
+[[constraints]]
+id = "charge-policy"
+parameter = "charge_error"
+type = "quality"
+units = "percent"
+source_id = "USER-DECLARED-DIAGNOSTIC-POLICY"
+classification = "Assumption"
+upper = 0.1
+[[constraints]]
+id = "calcite-stage"
+parameter = "Calcite"
+type = "stage"
+units = "stage_id"
+source_id = "SYNTHETIC-STAGE-ASSIGNMENT-NOT-TEXTURE-EVIDENCE"
+classification = "Assumption"
+stage_id = "SYNTHETIC-STAGE-I"

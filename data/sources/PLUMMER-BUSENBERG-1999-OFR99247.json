@@ -1,0 +1,16 @@
+{
+  "source_id": "PLUMMER-BUSENBERG-1999-OFR99247",
+  "type": "original_experimental_report",
+  "title": "Data on the crystal growth of calcite from calcium bicarbonate solutions at 34°C and CO2 partial pressures of 0.101, 0.0156 and 0.00102 atmospheres",
+  "authors": [
+    "L. Niel Plummer",
+    "Eurybiades Busenberg"
+  ],
+  "year": 1999,
+  "doi": "10.3133/ofr99247",
+  "url": "https://pubs.usgs.gov/of/1999/0247/report.pdf",
+  "page_or_table": "printed pages 1–3; Table 1, experiment 69; PDF pages 4–6",
+  "extraction_method": "pypdf text extraction plus visual confirmation of complete relevant pages",
+  "verification_status": "original methods and table row visually checked",
+  "sha256": "1b7f93cf69af119f6490691e6cc1894ab43c94aac37a24cd0f0f7745903f66bc"
+}

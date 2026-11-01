@@ -1,0 +1,11 @@
+absolute_tolerance = 1.0e-10
+direct_archive = "../results/example1-direct-ASVFWK"
+input_sha256 = "4f43d280814e0d0a33a61ab20aabc4167f978661bbba9a2386d9661740a90d83"
+description = "Current engine regression, captured by direct CLI; not independent scientific validation"
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+engine_sha256 = "c812189a98bc4667fcccfe28387924df3cc4b63fe714a943b5c41ae2df720f4a"
+
+[si]
+Gypsum = -0.8021685199263
+Calcite = 0.7852558918818
+Anhydrite = -1.090041679578

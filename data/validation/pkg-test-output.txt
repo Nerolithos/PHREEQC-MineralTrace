@@ -1,0 +1,99 @@
+  Installing known registries into `/tmp/mineraltrace-julia-depot`
+┌ Warning: could not download https://pkg.julialang.org/registries
+│   exception = RequestError: Could not resolve host: pkg.julialang.org while requesting https://pkg.julialang.org/registries
+└ @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:69
+┌ Warning: could not download https://pkg.julialang.org/registries
+│   exception = RequestError: Could not resolve host: pkg.julialang.org while requesting https://pkg.julialang.org/registries
+└ @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:69
+     Cloning registry from "https://github.com/JuliaRegistries/General.git"
+ERROR: failed to clone from https://github.com/JuliaRegistries/General.git, error: GitError(Code:ERROR, Class:OS, failed to connect to github.com: Operation not permitted)
+Stacktrace:
+  [1] pkgerror(msg::String)
+    @ Pkg.Types /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Types.jl:70
+  [2] clone(io::IOStream, url::String, source_path::String; header::String, credentials::Nothing, kwargs::@Kwargs{})
+    @ Pkg.GitTools /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/GitTools.jl:136
+  [3] (::Base.var"#96#98"{Base.var"#96#97#99"{Vector{Float64}, Pkg.Registry.var"#51#55", typeof(Pkg.GitTools.clone)}})(::IOStream, ::Vararg{Any}; kwargs::@Kwargs{header::String})
+    @ Base ./error.jl:296
+  [4] #96
+    @ ./error.jl:291 [inlined]
+  [5] (::Pkg.Registry.var"#50#54"{Pkg.Registry.RegistrySpec, Nothing, IOStream, String})(tmp::String)
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:239
+  [6] mktempdir(fn::Pkg.Registry.var"#50#54"{Pkg.Registry.RegistrySpec, Nothing, IOStream, String}, parent::String; prefix::String)
+    @ Base.Filesystem ./file.jl:766
+  [7] mktempdir(fn::Function, parent::String)
+    @ Base.Filesystem ./file.jl:762
+  [8] mktempdir
+    @ ./file.jl:762 [inlined]
+  [9] (::Pkg.Registry.var"#48#52"{IOStream, Vector{Pkg.Registry.RegistrySpec}, String})()
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:203
+ [10] mkpidlock(f::Pkg.Registry.var"#48#52"{IOStream, Vector{Pkg.Registry.RegistrySpec}, String}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:93
+ [11] mkpidlock
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:90 [inlined]
+ [12] mkpidlock
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:88 [inlined]
+ [13] download_registries(io::IOStream, regs::Vector{Pkg.Registry.RegistrySpec}, depot::String)
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:168
+ [14] download_default_registries(io::IOStream; only_if_empty::Bool, depot::String)
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:111
+ [15] download_default_registries
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:98 [inlined]
+ [16] test(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:149
+ [17] test(pkgs::Vector{Pkg.Types.PackageSpec})
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:148
+ [18] test(; name::Nothing, uuid::Nothing, version::Nothing, url::Nothing, rev::Nothing, path::Nothing, mode::Pkg.Types.PackageMode, subdir::Nothing, kwargs::@Kwargs{})
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:174
+ [19] test()
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:165
+ [20] top-level scope
+    @ none:1
+
+caused by: GitError(Code:ERROR, Class:OS, failed to connect to github.com: Operation not permitted)
+Stacktrace:
+  [1] macro expansion
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/LibGit2/src/error.jl:112 [inlined]
+  [2] clone(repo_url::SubString{String}, repo_path::String, clone_opts::LibGit2.CloneOptions)
+    @ LibGit2 /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/LibGit2/src/repository.jl:459
+  [3] clone(repo_url::SubString{String}, repo_path::String; branch::String, isbare::Bool, remote_cb::Ptr{Nothing}, credentials::LibGit2.CachedCredentials, callbacks::Dict{Symbol, Tuple{Ptr{Nothing}, Any}})
+    @ LibGit2 /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/LibGit2/src/LibGit2.jl:585
+  [4] clone
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/LibGit2/src/LibGit2.jl:558 [inlined]
+  [5] clone(io::IOStream, url::String, source_path::String; header::String, credentials::Nothing, kwargs::@Kwargs{})
+    @ Pkg.GitTools /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/GitTools.jl:125
+  [6] (::Base.var"#96#98"{Base.var"#96#97#99"{Vector{Float64}, Pkg.Registry.var"#51#55", typeof(Pkg.GitTools.clone)}})(::IOStream, ::Vararg{Any}; kwargs::@Kwargs{header::String})
+    @ Base ./error.jl:296
+  [7] #96
+    @ ./error.jl:291 [inlined]
+  [8] (::Pkg.Registry.var"#50#54"{Pkg.Registry.RegistrySpec, Nothing, IOStream, String})(tmp::String)
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:239
+  [9] mktempdir(fn::Pkg.Registry.var"#50#54"{Pkg.Registry.RegistrySpec, Nothing, IOStream, String}, parent::String; prefix::String)
+    @ Base.Filesystem ./file.jl:766
+ [10] mktempdir(fn::Function, parent::String)
+    @ Base.Filesystem ./file.jl:762
+ [11] mktempdir
+    @ ./file.jl:762 [inlined]
+ [12] (::Pkg.Registry.var"#48#52"{IOStream, Vector{Pkg.Registry.RegistrySpec}, String})()
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:203
+ [13] mkpidlock(f::Pkg.Registry.var"#48#52"{IOStream, Vector{Pkg.Registry.RegistrySpec}, String}, at::String, pid::Int32; kwopts::@Kwargs{stale_age::Int64})
+    @ FileWatching.Pidfile /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:93
+ [14] mkpidlock
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:90 [inlined]
+ [15] mkpidlock
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/FileWatching/src/pidfile.jl:88 [inlined]
+ [16] download_registries(io::IOStream, regs::Vector{Pkg.Registry.RegistrySpec}, depot::String)
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:168
+ [17] download_default_registries(io::IOStream; only_if_empty::Bool, depot::String)
+    @ Pkg.Registry /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:111
+ [18] download_default_registries
+    @ /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/Registry/Registry.jl:98 [inlined]
+ [19] test(pkgs::Vector{Pkg.Types.PackageSpec}; io::IOStream, kwargs::@Kwargs{})
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:149
+ [20] test(pkgs::Vector{Pkg.Types.PackageSpec})
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:148
+ [21] test(; name::Nothing, uuid::Nothing, version::Nothing, url::Nothing, rev::Nothing, path::Nothing, mode::Pkg.Types.PackageMode, subdir::Nothing, kwargs::@Kwargs{})
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:174
+ [22] test()
+    @ Pkg.API /private/tmp/julia-1.10.10/share/julia/stdlib/v1.10/Pkg/src/API.jl:165
+ [23] top-level scope
+    @ none:1

@@ -1,0 +1,26 @@
+{
+  "source_id": "PHREEQC-UPSTREAM-v3.8.6",
+  "type": "official_version_tagged_reference",
+  "title": "PHREEQC Version 3.8.6-17100 upstream example output",
+  "authors": [],
+  "year": null,
+  "doi": null,
+  "url": "https://github.com/phreeqc-dev/phreeqc3/releases/tag/v3.8.6",
+  "page_or_table": "examples/ex1.out",
+  "extraction_method": "download",
+  "verification_status": "tagged_input_and_database_byte_matched_to_locked_distribution",
+  "files": {
+    "input": {
+      "sha256": "3906a796f6ae0d096743ba90f6ba67786194d9605bc2ad808b267ee723abec6e",
+      "url": "https://raw.githubusercontent.com/phreeqc-dev/phreeqc3/v3.8.6/examples/ex1"
+    },
+    "output": {
+      "sha256": "9cb70767838815ccb16030ceec94aaaa3a3d35a6c4f219deb3a90c6d889c2192",
+      "url": "https://raw.githubusercontent.com/phreeqc-dev/phreeqc3/v3.8.6/examples/ex1.out"
+    },
+    "database": {
+      "sha256": "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10",
+      "url": "https://raw.githubusercontent.com/phreeqc-dev/phreeqc3/v3.8.6/database/phreeqc.dat"
+    }
+  }
+}

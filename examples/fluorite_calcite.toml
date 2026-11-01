@@ -1,0 +1,39 @@
+mode = "HypothesisExplorer"
+minerals = ["Fluorite", "Calcite"]
+assumption = "same_stage_equilibrium"
+allow_unvalidated_temperature = true
+
+[fluid]
+units = "mol/kgw"
+origin = "Assumption"
+label = "SYNTHETIC / SIMULATED demonstration, not measured"
+source = "USER-SYNTHETIC-DEMO-001; no literature or specimen data"
+[fluid.totals]
+Ca = 0.001
+F = 0.00022
+"C(4)" = 0.001
+Na = 0.001
+Cl = 0.00178
+# Synthetic nominal ionic totals: CaF2 + CaCl2 + NaHCO3 recipe.
+# This is not an experiment or a reaction model; fixed pH can still cause charge imbalance.
+
+[fixed]
+temperature = 25.0
+pH = 7.0
+pressure_atm = 1.0
+water_kg = 1.0
+pe = 4.0
+
+[tolerances]
+Fluorite = 0.25
+Calcite = 0.25
+
+[[axes]]
+parameter = "temperature"
+units = "degC"
+values = [25.0, 35.0, 45.0, 55.0, 65.0, 75.0, 80.0]
+
+[[axes]]
+parameter = "pH"
+units = "dimensionless"
+values = [6.5, 7.0, 7.5, 8.0, 8.5, 9.0]

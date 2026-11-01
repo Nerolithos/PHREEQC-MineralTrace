@@ -1,0 +1,14 @@
+{
+  "usgs-ex1.pqi": {
+    "sha256": "3906a796f6ae0d096743ba90f6ba67786194d9605bc2ad808b267ee723abec6e",
+    "source_id": "USGS-PHREEQC-3.8.6-17100",
+    "archive_member": "examples/ex1",
+    "modification": "none; original official input copied verbatim"
+  },
+  "usgs-ex2.pqi": {
+    "sha256": "bff24cafb046ebcb0fd54263f6617fd3bddea1fe21da079d9e13af5ebecdbcc5",
+    "source_id": "USGS-PHREEQC-3.8.6-17100",
+    "archive_member": "examples/ex2",
+    "modification": "none; original official input copied verbatim"
+  }
+}
