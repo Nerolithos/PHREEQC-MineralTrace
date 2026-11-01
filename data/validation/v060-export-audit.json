@@ -1,0 +1,27 @@
+{
+  "report": "results/discovery-uhvHwF/report.html",
+  "candidate_count": 210,
+  "step_count": 810,
+  "handoffs_verified": 600,
+  "svg_count": 841,
+  "classifications": {
+    "incompatible": 201,
+    "undetermined": 7,
+    "compatible": 2
+  },
+  "qualitative_groups": 4,
+  "max_element_residual_mol": 1.000017846308765e-10,
+  "max_charge_change_eq": 3.4600035510312654e-14,
+  "source_input_database_and_handoff_hashes": "all verified",
+  "all_phase_access_invariant": true,
+  "all_mass_charge_direction_checks_pass": true,
+  "reproduced_report": "results/discovery-uhvHwF/reproduced/discovery-Aui0VU/report.html",
+  "byte_identical_files": [
+    "analysis.json",
+    "candidates.csv",
+    "sensitivity.json",
+    "response-groups.json",
+    "generated-candidates.toml"
+  ],
+  "analysis_sha256": "b24abc5ae54b3bd1daf46064cc957582b925e873a768faa3fcb677272db0ed11"
+}

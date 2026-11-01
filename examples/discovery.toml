@@ -1,0 +1,95 @@
+title = "SYNTHETIC / SIMULATED environmental mechanism search; not natural history"
+boundary = "closed_aqueous_and_retained_solids_no_gas"
+initial_temperature_c = 80.0
+allow_unvalidated_temperature = true
+minerals = ["Fluorite", "Calcite"]
+evaluation_mode = "exploratory"
+accessibility = "all_declared_phases_always_accessible"
+[initial]
+pH = 2.0
+pe = 4.0
+water_kg = 1.0
+units = "mol/kgw"
+origin = "Assumption"
+source = "SYNTHETIC-IONIC-RECIPE-NOT-MEASURED"
+label = "SYNTHETIC / SIMULATED; all compositions and operations are declared assumptions"
+charge_context = "hypothetical"
+[initial.totals]
+Ca = 0.01
+F = 0.0005
+"C(4)" = 0.001
+Na = 0.001
+Cl = 0.0309
+[diagnostics]
+# User-declared teaching diagnostic, not a validated analytical quality standard.
+charge_threshold_percent = 5.0
+mass_absolute_tolerance_mol = 0.0000000001
+mass_relative_tolerance = 0.000000001
+charge_conservation_tolerance_eq = 0.0000000001
+[[phases]]
+mineral = "Fluorite"
+initial_mol = 0.0
+direction = "precipitation_only"
+target_si = 0.0
+source_id = "SYNTHETIC-PHASE-PERMISSION"
+[[phases]]
+mineral = "Calcite"
+initial_mol = 0.0
+direction = "precipitation_only"
+target_si = 0.0
+source_id = "SYNTHETIC-PHASE-PERMISSION"
+[[events]]
+id = "F-I"
+mineral = "Fluorite"
+event_kind = "formation"
+classification = "Observation"
+source_id = "SYNTHETIC-TEXTURE-EXAMPLE-NOT-A-NATURAL-OBSERVATION"
+description = "Teaching observation only"
+[[events]]
+id = "C-I"
+mineral = "Calcite"
+event_kind = "formation"
+classification = "Observation"
+source_id = "SYNTHETIC-TEXTURE-EXAMPLE-NOT-A-NATURAL-OBSERVATION"
+[[evidence]]
+earlier = "F-I"
+later = "C-I"
+kind = "overgrowth"
+source_id = "SYNTHETIC-TEXTURE-EXAMPLE-NOT-A-NATURAL-OBSERVATION"
+reliability = "illustrative only"
+interpretation = "Assume an independently interpreted calcite overgrowth later than fluorite; no real texture supplied."
+
+[search]
+allowed_processes = ["equilibrium", "cooling", "HCl", "NaOH"]
+max_depth = 2
+max_candidates = 400
+max_total_addition_mol = 0.018
+reaction_threshold_mol = 0.0000001
+source_id = "SYNTHETIC-BOUNDED-ENVIRONMENT-GRAMMAR-NOT-MEASURED"
+
+[[grids]]
+id = "baseline"
+role = "baseline"
+source_id = "SYNTHETIC-SEARCH-BOUNDS"
+temperature_values_c = [25.0, 80.0]
+titrant_amounts_mol = [0.001, 0.009]
+[grids.initial_values]
+pH = [2.0, 2.1]
+
+[[grids]]
+id = "refined"
+role = "resolution"
+source_id = "SYNTHETIC-RESOLUTION-CHECK"
+temperature_values_c = [25.0, 50.0, 80.0]
+titrant_amounts_mol = [0.001, 0.005, 0.009]
+[grids.initial_values]
+pH = [2.0, 2.05, 2.1]
+
+[[grids]]
+id = "narrower"
+role = "range"
+source_id = "SYNTHETIC-RANGE-CHECK"
+temperature_values_c = [25.0, 80.0]
+titrant_amounts_mol = [0.001, 0.009]
+[grids.initial_values]
+pH = [2.0]

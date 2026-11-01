@@ -42,3 +42,6 @@ v0.3.0 交付见 [文件清单](V030_FILES.md) 和 [执行记录](data/validatio
 v0.4.0 交付见 [文件清单](V040_FILES.md) 和 [执行记录](data/validation/V040_STATUS.md)。
 
 v0.5.0 交付见 [文件清单](V050_FILES.md) 和 [执行记录](data/validation/V050_STATUS.md)。
+
+
+v0.6.0 自动候选机制筛选见 [使用说明](docs/DISCOVERY.md)、[文件清单](V060_FILES.md)与[执行记录](data/validation/V060_STATUS.md)。显著版本更新必须同步维护 README 中的用户价值、操作方法与科学边界。

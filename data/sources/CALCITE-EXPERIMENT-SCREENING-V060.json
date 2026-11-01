@@ -1,0 +1,58 @@
+{
+  "reviewed_on": "2026-11-01",
+  "full_reaction_path_validation_completed": false,
+  "cases": [
+    {
+      "id": "CALCITE-PCCP-2009-B815198A",
+      "title": "Proton/calcium ion exchange behavior of calcite",
+      "doi": "10.1039/B815198A",
+      "original_supplement_url": "https://www.rsc.org/suppdata/cp/b8/b815198a/b815198a.pdf",
+      "access_status": "publisher-indexed PDF text reviewed; direct download HTTP 404; screenshot cache miss; numerical tables not visually transcribed",
+      "measured_observables": [
+        "pH",
+        "calcium ion activity"
+      ],
+      "reported_uncertainty": "available in indexed methods; exact experimental subset and raw table require source verification",
+      "initial_inventory": null,
+      "initial_mineral_mol": null,
+      "supported_benchmark": false,
+      "reasons": [
+        "KCl electrolyte outside present simplified element profile",
+        "finite titrant-water additions not modeled",
+        "surface proton/calcium exchange not modeled",
+        "main initial-condition table and complete selected raw experiment not verified"
+      ],
+      "model_predictions": null
+    },
+    {
+      "id": "CALCITE-ZHANG-2020",
+      "title": "Divalent heavy metals and uranyl cations incorporated in calcite change its dissolution process",
+      "doi": "10.1038/s41598-020-73555-6",
+      "original_url": "https://www.nature.com/articles/s41598-020-73555-6",
+      "selected_material": "pure calcite control only; doped samples not selected",
+      "measured_endpoint": {
+        "Ca": {
+          "value": 0.52,
+          "units": "mmol/L",
+          "uncertainty": null
+        },
+        "pH": {
+          "value": 8.19,
+          "units": "dimensionless",
+          "uncertainty": null
+        }
+      },
+      "gas_boundary": "finite air headspace; not aqueous-only closed and not infinite gas reservoir",
+      "initial_inventory": null,
+      "initial_mineral_mol": null,
+      "pressure_atm": null,
+      "supported_benchmark": false,
+      "reasons": [
+        "finite headspace unsupported",
+        "complete starting inventory and endpoint uncertainties not established",
+        "time-series comparison would require kinetics"
+      ],
+      "model_predictions": null
+    }
+  ]
+}

@@ -13,6 +13,10 @@ include("processes/ProcessReport.jl")
 include("pathways/PathStudy.jl")
 include("pathways/PathSimulation.jl")
 include("pathways/PathReport.jl")
+include("discovery/DiscoveryStudy.jl")
+include("discovery/DiscoverySimulation.jl")
+include("discovery/DiscoveryReport.jl")
+export DiscoveryStudy, DiscoveryResult, load_discovery, generate_candidates, discover_paths
 export PathStudy, PathComparison, load_paths, compare_paths
 export charge_diagnostic, AcidBaseTitration, ProcessResult, load_process, process_input, simulate
 export EvidenceConstraint, evaluate_constraints, constraint_contribution, charge_equivalents
