@@ -1,236 +1,158 @@
-# MineralTrace — Mineral Formation Constraint Explorer
+# MineralTrace.jl — Reactive Mineral Path Explorer
 
-v0.4.0 新增真实酸碱滴定与过程报告，见下方 v0.4.0 章节；v0.3.0 新增证据约束、严格／探索评估、化学质量与模型适用性门槛、逐项排除原因和约束贡献；优先使用 [证据配置示例](examples/evidence_constraints.toml) 或 [严格模式配置](examples/evidence_constraints_strict.toml)。详见下方 v0.3.0 章节。
+**把流体组成、候选化学过程与矿物事件证据放在同一份可复现报告中，检查哪些形成路径与声明的条件相容。**
 
-矿物形成环境约束探索工具：**编辑 TOML → 真实 PHREEQC 参数扫描 → 查看 SI 共相容点 → 导出独立 HTML 报告**。不需要编写 Julia，也不需要 Web 服务器。
+MineralTrace 面向研究 Fluorite–Calcite（萤石–方解石）体系的矿物学与水溶液地球化学用户。你提供流体、反应步骤、矿物库存和有来源的事件关系；软件调用真实 PHREEQC 计算，检查化学守恒，逐项说明候选路径为何相容、不相容或无法判断。
 
-当前版本 0.4.0（保留扫描及证据约束接口），面向 Fluorite–Calcite 与简化 Ca–F–C–O–H／Na／Cl 水溶液。它回答“在指定流体、范围和同阶段平衡假设下，哪些采样条件符合声明的 SI 容差”，不能从矿物名称证明形成温度、沉淀行为或生成历史。
+当前源码版本 **0.5.0 · 研究预览阶段**。项目提供 Julia 包 API 和 TOML 命令行工作流；主要操作无需编写 Julia，也不需要 Web 服务器。完整反应路径的独立实验验证仍未完成，结果不能证明天然矿物的形成历史。
 
-## 十分钟开始一次探索
+[快速开始](#快速开始) · [使用自己的数据](#使用自己的数据) · [科学边界](#科学边界与验证状态) · [详细参考](docs/REFERENCE.md) · [版本与发布](#版本与发布)
 
-需要 Julia 1.10+ 和官方 PHREEQC 3 CLI。设置实际路径后，在项目根目录运行：
+## 用它研究什么
+
+例如：同一初始流体在降温过程中，先与萤石接触、再与方解石接触，与相反接触顺序分别产生什么反应？在明确的事件对应关系下，哪条候选与用户提供的“萤石早于方解石”证据冲突？
+
+MineralTrace 将这个问题拆成可审查的化学计算与证据检查。接触顺序和事件对应是输入假说，模型检查反应是否发生，以及该假说是否与证据一致；不会自动从矿物名称推断历史。
+
+| 你的问题 | 入口与示例 | 主要输出 |
+| --- | --- | --- |
+| 两条显式反应路径，哪条与事件证据相容？ | `scripts/paths.jl` · [reactive_paths.toml](examples/reactive_paths.toml) | 逐步 pH、SI、固相增减、联合余额与事件冲突原因 |
+| 加酸或加碱后，流体和矿物饱和度如何变化？ | `scripts/titrate.jl` · [acid_titration.toml](examples/acid_titration.toml)、[base_titration.toml](examples/base_titration.toml) | 真实反应后的 pH、物种、SI 和守恒检查；此接口的矿物仅监测 SI |
+| 哪些采样条件符合 SI 容差和外部约束？ | `scripts/mineraltrace.jl` · [evidence_constraints.toml](examples/evidence_constraints.toml) | 离散参数扫描、化学质量与逐项排除原因；采样点相互独立 |
+
+## 快速开始
+
+### 1. 获取源码与依赖
+
+需要 Git、**Julia 1.10+**、**PHREEQC 3 命令行引擎及其配套数据库**。Julia 部分仅依赖标准库；PHREEQC 需单独安装。
+
+```sh
+git clone https://github.com/Nerolithos/PHREEQC-MineralTrace.git
+cd PHREEQC-MineralTrace
+```
+
+从 [Julia 官网](https://julialang.org/downloads/)安装 Julia，从 [USGS 官方页面](https://www.usgs.gov/software/phreeqc-version-3)获取 PHREEQC。将以下占位路径替换为实际文件路径：
 
 ```sh
 export PHREEQC_EXECUTABLE=/absolute/path/to/phreeqc
 export PHREEQC_DATABASE=/absolute/path/to/phreeqc.dat
-julia --project=. scripts/mineraltrace.jl --check examples/fluorite_calcite.toml
-julia --project=. scripts/mineraltrace.jl examples/fluorite_calcite.toml results
 ```
 
-终端会打印 `results/study-…/report.html` 的完整路径。用浏览器打开即可；整个 HTML 内嵌所有 SVG、参数和结果，不需要联网。保留完整 study 文件夹，才能检查原始 PHREEQC 运行或复现。
+上述为 macOS／Linux shell 命令。在 Windows PowerShell 中使用 `$env:PHREEQC_EXECUTABLE = 'C:\实际路径\phreeqc.exe'` 和 `$env:PHREEQC_DATABASE = 'C:\实际路径\phreeqc.dat'` 设置变量；随后执行相同 Julia 命令。Windows 尚未在本项目完成验证。
 
-示例为 **SYNTHETIC / SIMULATED**，不是实测流体。复制 `examples/fluorite_calcite.toml`，编辑自己的参数文件即可，无需修改 Julia 源码。该示例展示 42 个温度–pH 点；部分点有电荷不平衡告警，不能直接当作天然流体模型。
+已测试环境为 Julia 1.10.10、macOS ARM64、PHREEQC 3.8.6-17100。若需要从源码编译引擎，参见[依赖安装参考](docs/REFERENCE.md#安装依赖)。不要混用未审查的数据库参数。
 
-每份报告包括：
+### 2. 运行两条候选路径
 
-- 每个矿物的 SI 热力图和 SI=0 插值线、一维扫描时的 SI 曲线。
-- 采样点的联合 SI 相容／不相容／失败分类及告警标记。
-- 相容采样范围、基于相邻点差分的范围归一化敏感性和多解性说明。
-- 完整固定参数、扫描参数、单位、用户容差、来源及假设。
-- 引擎 banner、数据库与输入摘要、失败原因和每点原始归档链接。
-- CSV、JSON、TOML、独立 SVG、数据库快照、核心源码与复现脚本。
-
-## 输入模式与参数
-
-`HypothesisExplorer`：流体来源必须为 `Assumption`。结果明确标记 **Conditional on assumed fluid composition ranges**。
-
-`KnownFluid`：用户提供实测或明确实验条件、来源和 `Observation` 标签。软件保留用户声明，不替用户认证测量；扫描范围和同阶段平衡仍是额外假设。`examples/known_fluid_template.toml` 故意不填测量值，填完整前不能运行。
-
-所有配置项必须显式给出，未知键会被拒绝：
-
-| 配置 | 规则 |
-| --- | --- |
-| `minerals` | Fluorite、Calcite 中选择一个或两个 |
-| `assumption` | 必须声明 `same_stage_equilibrium` |
-| `fluid.totals` | Ca、F、C(4)、Na、Cl 均显式填写，包括排除组分时的零值；单位只接受 mol/kgw |
-| `fluid.origin/label/source` | 事实／假设分类、输入标签、可核查来源或明确的合成来源说明 |
-| `fixed` | temperature、pH、pe、pressure_atm、water_kg 全部填写 |
-| `axes` | 一或两个轴；参数为 temperature、pH 或上述总浓度；至少两个严格递增值 |
-| 轴单位 | temperature 为 degC，pH 为 dimensionless，总浓度为 mol/kgw |
-| `tolerances` | 每个所选矿物分别声明正 SI 容差，严格判据为 `abs(SI) < tolerance` |
-
-当前探索边界为 25–80 °C、pH 0–14、各组分 0–0.1 mol/kgw、固定 1 atm 和 1 kg 初始水。它们是软件范围限制，**不是数据库适用性认证**。25 °C 以外必须显式设置 `allow_unvalidated_temperature = true`。便捷 `FluidState` API 也保留此显式选择。
-
-未列入的其他元素在此简化模型中被排除，不能把不完整天然分析表当成完整流体。无元素浓度、同阶段证据或范围时，软件不会自动补出成矿环境。
-
-扫描轴的值只替代对应固定基值；其余值保留。每个采样点都是独立的初始物种分布计算，未加入矿物反应、动力学或多阶段演化。
-
-## 结果应如何解释
-
-“SI 相容”仅表示给定化学模型下同时满足用户容差；不是自然界统一的平衡判据，也不是已确认沉淀。“不相容”只排除当前输入与容差下的采样点，不能排除其他流体或未采样条件。
-
-电荷误差绝对值超过 0.1% 会产生诊断告警，不自动调节任何离子。报告保留 SI 分类和化学质量告警两个维度；带告警的相容点需先审查化学条件。0.1% 不是天然样品的通用质量标准。
-
-失败点没有 SI 值，显示为灰色／叉号；绝不填零或归入不相容。CLI 在任一点失败时仍写出报告，并以退出码 1 提示；配置或依赖错误则明确退出，不调用假引擎。
-
-热力图色块代表采样点，不能当成连续可行域。SI=0 线在相邻成功样点之间做线性插值，不跨越失败点；有四个交点的歧义鞍点单元不连线。没有零点跨越时不会画出零线。一维图在失败点处断线。
-
-多个相容点会明确报告无法唯一约束；只有一个相容点也不能证明网格之间或范围以外无解。敏感性依赖声明范围，仅为 SI 响应排序，不是概率、信息增益或完整统计可辨识性。
-
-## 安装依赖
-
-从 [Julia 官网](https://julialang.org/downloads/) 安装 Julia，从 [USGS 官方发布页](https://www.usgs.gov/software/phreeqc-version-3) 获取引擎与配套数据库。例如本项目实际测试版本：
+在仓库根目录执行：
 
 ```sh
-curl -fLO https://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.8.6-17100.tar.gz
-tar -xzf phreeqc-3.8.6-17100.tar.gz
-cmake -S phreeqc-3.8.6-17100 -B phreeqc-build -DCMAKE_BUILD_TYPE=Release
-cmake --build phreeqc-build -j 4
-export PHREEQC_EXECUTABLE="$(pwd)/phreeqc-build/phreeqc"
-export PHREEQC_DATABASE="$(pwd)/phreeqc-3.8.6-17100/database/phreeqc.dat"
+julia --project=. scripts/paths.jl examples/reactive_paths.toml results
 ```
 
-项目仅依赖 Julia 标准库。已附 `Manifest.toml`，可直接运行上述命令；联网环境也可执行 `julia --project=. -e 'using Pkg; Pkg.instantiate()'`。受限网络中全新 depot 的 `Pkg.test()` 可能在获取默认注册表时失败，可使用下列直接测试入口。
+终端打印 `Report: …/report.html` 和每条候选的分类。用浏览器打开打印的 HTML 路径；报告内嵌 SVG，可离线阅读。缺少依赖或配置错误会明确退出；计算失败会保留归档和原因，不会生成模拟结果代替真实引擎。
 
-本机实际测试 Julia 1.10.10／macOS ARM64、PHREEQC 3.8.6-17100。此前工具暂装在 `/tmp`，未修改系统安装；临时目录被清理后需重装。
+**示例全部是 SYNTHETIC / SIMULATED 教学数据。** 两条路径都从 80 °C 降到 60 °C、40 °C，分别指定不同的矿物接触顺序，并使用教学事件边 `F-I → C-I`。当前参考计算中，正向候选为条件相容，反向候选与该边冲突。这演示的是指定假说的检验，不是对真实标本的年代预测。
 
-## API 与复现
+### 3. 阅读并保留结果
 
-```julia
-using MineralTrace
-study = load_study("examples/fluorite_calcite.toml") # 或 MineralStudy(spec_dictionary)
-result = scan(study, PHREEQCConfig(); root="results")
-path = report(result)
-```
+先查看报告中的路径操作图与候选分类理由，再核查反应量、守恒结果和证据来源。
 
-`ScanResult.samples` 按 x 轴最快排列，索引为 `(iy-1)*nx+ix`。每点保存坐标、SI、分类、警告、错误和原始目录。`compatibility` 提供 SI 判据；`signature_matches` 用于单独的正向 SI 特征匹配测试，不把任意 SI 目标当成共平衡证据。
+| 输出 | 用途 |
+| --- | --- |
+| `report.html`、独立 SVG | 查看 pH、温度、SI、固相增减和事件 DAG |
+| `steps.csv`、`balances.csv` | 分析逐步状态与水相加固相的元素余额 |
+| `analysis.json`、`results.json` | 分别读取确定性分析载荷、带运行溯源的完整结果 |
+| 原始 PHREEQC 文件、状态快照、数据库与源码快照 | 审计真实反应输入及逐步状态交接 |
+| `reproduce.jl` | 使用归档配置、数据库和源码重新计算 |
 
-进入导出的 study 文件夹后运行：
+**保留整个运行文件夹。** 单独的 HTML 可供阅读，完整归档用于核查和复现。在导出文件夹中运行：
 
 ```sh
 PHREEQC_EXECUTABLE=/absolute/path/to/phreeqc julia --project=. reproduce.jl
 ```
 
-使用归档数据库、配置及源码复现；应核对可执行文件摘要和引擎版本。不同机器构建的二进制摘要可能不同，不能冒称完全相同的计算环境。
+可执行文件仍需自行提供；不同构建与数据库版本可能改变数值，应核对报告中的版本和摘要。
 
-既有 `FormationEvent`、`Evidence`、`EvidenceGraph`、`analyze` 和 `topological_order` 保持独立工作。事件 ID 区分重复矿物阶段；循环抛出携带冲突证据的 `CycleConflict`；不能从扫描结果生成时间边。`run_phreeqc` 仍是可信专家输入接口，不是任意 PHREEQC 文件的安全沙箱。
+## 使用自己的数据
 
-## 验证状态
+先复制完整示例，保留所有必填字段：
+
+```sh
+cp examples/reactive_paths.toml my_paths.toml
+julia --project=. scripts/paths.jl my_paths.toml results
+```
+
+运行前逐项修改以下内容。字段定义与边界见[路径详细参考](docs/REFERENCE.md#v050reactive-mineral-path-explorer)。
+
+1. **初始流体**：填写 Ca、F、C(4)、Na、Cl 的总浓度（mol/kgw），以及初始 pH、pe、水质量和温度。标记 `Observation` 或 `Assumption`，填写真实来源；不完整分析不能当成完整流体。
+2. **固相库存**：逐相填写 `initial_mol`、`target_si` 和 `direction`。支持 `precipitation_only`、`dissolution_only`、`bidirectional`；零库存不能凭空溶解。
+3. **候选操作**：明确顺序、来源和每一步的 `active_phases`，无接触相时填写 `[]`。支持 `temperature`、`equilibrium`、`HCl`、`NaOH`。药剂 `amount_mol` 为每步添加的摩尔数，不是浓度或体积。
+4. **事件与证据**：为每个阶段设置独立事件 ID；用 `evidence` 声明有来源的先后关系，用每条路径的 `bindings` 明确事件与操作的对应。删除教学证据，缺失来源保持缺失，不要沿用合成来源编号。
+5. **评估策略**：明确守恒数值容差、电荷诊断阈值和 strict／exploratory 模式。教学配置的 0.5% 不是水质标准；旧接口的 0.1% 也只是诊断策略。软件不会自动修改浓度以消除不平衡。
+
+图中的操作序号不是时间。正 `solid_gain_mol` 表示模型沉淀，负值表示模型溶解；反应量不是速率、测量结晶量或地质持续时间。
+
+### 如何理解分类
+
+| 分类 | 含义 |
+| --- | --- |
+| `compatible` | 在指定化学模型、过程假说、阈值和事件对应下相容；探索模式仍带条件限定 |
+| `incompatible` | 当前候选违反硬化学约束或声明的证据关系；不能外推为所有历史均不可能 |
+| `undetermined` | 来源、对应、同一步骤内部顺序或模型适用性等不足以作判断 |
+
+必须区分三层信息：**SI 过饱和是反应机会；PHREEQC 固相增减是模型反应；独立矿物观察是外部证据。** 软件不会用前两层认证第三层，也不会从首次 SI > 0 自动生成先后关系。守恒失败是硬约束，不能靠证据拟合抵偿。
+
+## 科学边界与验证状态
+
+当前路径模型限于简化 Ca–F–C–O–H／Na／Cl 流体与 Calcite、Fluorite，固定 1 atm。25–80 °C 是软件探索范围，25 °C 以外必须显式接受未验证温区，不能据此宣称数据库适用性已获认证。
+
+边界为**水相加全部保留固相的元素库存封闭、无气体交换**；非接触固相保留但暂时隔离。温度由外部条件施加，不计算热量或焓平衡。HCl／NaOH 是无载体水的中性化学式添加。当前不支持真实滴定液体积与稀释、开放 CO₂、流体混合、动力学或自动地质历史反演。
+
+| 验证层级 | 当前证据与限制 |
+| --- | --- |
+| 引擎一致性 | 路径与直接 PHREEQC CLI 对照通过；代表路径输出差为 0，独立归档复现的 `analysis.json` 字节一致 |
+| 化学一致性 | 逐步检查水相与全部固相的 H/O/Ca/F/C/Na/Cl 库存、净电荷及反应方向；不是实验准确度证明 |
+| 独立实验比较 | 已核查 Brown–Roberson (1977) 原始萤石实验并完成有限 log K 对照；缺少充分碳／气体边界，未完成完整反应路径比较 |
+| 天然历史适用性 | 尚无天然矿床独立验证，当前模型适用性保持 unverified；strict 模式不会认证为已验证可行 |
+
+v0.5.0 本地完整测试 985 项通过，既有扫描、证据图及滴定保持工作。历史手册 Example 1 的三项差异仍保留；单独的历史基准预期失败，不能通过放宽容差掩盖。数据库物种完整性、活度模型与整个温区尚未完成独立验证。
 
 ```sh
 julia --project=. test/runtests.jl
 MINERALTRACE_INTEGRATION=1 julia --project=. test/runtests.jl
-julia --project=. scripts/benchmark.jl
 ```
 
-前两条分别运行基础测试和真实引擎集成测试。最后一条保留 **已知失败** 的历史 Example 1 对照，预期退出码 1；不能用它的失败掩盖或替代其他测试。
+第二条需上述 PHREEQC 环境变量。详细证据见[路径验证](data/validation/REACTIVE_PATH_VALIDATION.md)、[执行记录](data/validation/V050_STATUS.md)、[电荷语义](data/validation/CHARGE_BALANCE_SEMANTICS.md)和[历史差异调查](data/validation/EXAMPLE1_INVESTIGATION.md)。
 
-- [Example 1 差异调查](data/validation/EXAMPLE1_INVESTIGATION.md)：历史值、实际值、差值／相对差、输入与列映射检查，以及直接 CLI 对照。
-- [Ca–F–C 专项测试](data/validation/CAF_C_BENCHMARK.md)：浓度、pH、温度、SI 定义、电荷诊断及沉淀／溶解元素守恒。
-- [离网格合成测试](data/validation/SYNTHETIC_RECOVERY.md)：仅证明正向特征匹配与包围关系，不证明真实矿床预测能力。
-- [本轮验证汇总](data/validation/SPRINT2_STATUS.md)、[数据库初查](data/validation/DATABASE_REVIEW.md)。
+## Julia API
 
-历史 Example 1 三项差异仍未完全解释；当前引擎回归只能证明稳定性和适配器一致性。官方 Example 2 的 25 °C SI 对照通过，不能替代整个 Ca–F–C 体系验证。当前数据库 CaF+ 被注释，物种完整性、活度模型和全部温区尚未完成独立验证。不同数据库须独立审查，不能拼接参数。
-
-没有天然矿床独立验证，没有贝叶斯反演、信息增益、AI 成矿故事或自动形成顺序预测。下一阶段应优先完成版本匹配的参考验证、专门的 Ca–F–C 实验对照及流体化学质量约束，再考虑更复杂界面。
-
-## 官方资料
-
-[PHREEQC 3 手册](https://water.usgs.gov/water-resources/software/PHREEQC/documentation/phreeqc3-html/phreeqc3.htm) · [SELECTED_OUTPUT](https://water.usgs.gov/water-resources/software/PHREEQC/documentation/phreeqc3-html/phreeqc3-45.htm) · [Example 1](https://water.usgs.gov/water-resources/software/PHREEQC/documentation/phreeqc3-html/phreeqc3-63.htm) · [Example 2](https://water.usgs.gov/water-resources/software/PHREEQC/documentation/phreeqc3-html/phreeqc3-64.htm)
-
-MIT 许可证见 LICENSE。USGS 数据与示例保留原始来源，来源记录位于 `data/sources/`。
-
-## v0.3.0：证据、化学质量与最终可行域
-
-本节更新前文 v0.2.0 的 SI 扫描解释；原扫描输入、SI 和告警数值保持兼容，不能把旧的 `status` 字段当成最终纳入状态。
-
-```sh
-julia --project=. scripts/mineraltrace.jl --check examples/evidence_constraints.toml
-julia --project=. scripts/mineraltrace.jl examples/evidence_constraints.toml results
-```
-
-`examples/evidence_constraints.toml` 展示全部六类约束与明确阶段分配。它的“观测”值也是 **SYNTHETIC / SIMULATED** 教学数据，不是天然样品测量。用户可直接替换为自己的来源与约束，无需修改 Julia。
-
-```toml
-stage_id = "STAGE-I"
-[evaluation]
-mode = "strict" # 或 exploratory
-max_charge_error_percent = 0.1
-
-[[constraints]]
-id = "temperature-window"
-parameter = "temperature"
-type = "interval"
-units = "degC"
-classification = "Observation"
-# source_id = "实际来源编号" # 缺失时省略，不虚构
-stage_id = "STAGE-I"
-lower = 30.0
-upper = 40.0
-```
-
-该片段需放入完整 study 配置；不是可独立运行的流体模型。约束的分类由用户声明，软件不替用户认证原始证据。
-
-| type | parameter / units | 附加字段 |
-| --- | --- | --- |
-| interval | temperature / degC，pH / dimensionless，或组分 / mol/kgw | lower、upper，闭区间 |
-| measurement | Ca、F、C(4)、Na、Cl / mol/kgw | value、tolerance，绝对浓度误差，包含边界 |
-| saturation | Fluorite、Calcite / SI | value、正 tolerance，严格 `abs(SI-value)<tolerance`；必须是 Assumption；阶段不明时未验证 |
-| quality | charge_error / percent | upper，绝对电荷误差上限，包含边界 |
-| stage | Fluorite、Calcite / stage_id | stage_id，与 study 阶段比较；不生成时间顺序 |
-
-每条约束必须有唯一 id、parameter、type、units、classification；source_id 和适用时的 stage_id 保留原始缺失状态。未知或不适用字段被拒绝。观测区间可在扫描范围之外，结果为空不等于配置无效；物理单位／绝对温度等基础边界仍校验。更严格的 quality 约束与 `[evaluation]` 阈值共同生效，不会覆盖或放宽基本要求。
-
-每点新增 `evaluation`，分别记录：
-
-- computational_status 与 failure_kind：计算成功、缺相、已识别数值失败或其他引擎／输出失败。
-- chemical_quality_status：按声明电荷阈值 pass／fail／unverified。
-- model_applicability_status：verified／invalid／unverified。当前没有经完整独立验证的模型配置，保持 unverified；缺相为 invalid。
-- observation_status：仅观测类约束的状态；没有观测时的 pass 是空约束集的逻辑结果，不是正面证据。
-- final_status：included／included_conditional／excluded／unverified，附逐项理由。
-
-**严格模式**不纳入未验证模型、不可求值证据或缺失来源；当前严格最终可行域为零，不能解释成地质环境不存在。**探索模式**可保留明确标记的条件性候选，但仍排除电荷阈值失败、SI 不相容和硬证据冲突；未能求值的约束也不能通过。
-
-旧配置未指定 evaluation 时，显式披露采用 legacy exploratory／0.1% 策略。PHREEQC 输入从不自动添加 `charge` 调整项，未实现电中性修正场景，也不改变测量浓度。原有 0.1% 适配器告警始终保留，用户另设评估阈值不会擦除原始告警。
-
-报告分别输出原始 SI、化学、模型、观测、最终纳入、告警、排除与计算状态；`chemical.svg`、`model.svg`、`observations.svg`、`final.svg`、`warnings.svg`、`exclusions.svg`、`computational.svg` 均独立于 `joint.svg`。观测区域是原始 SI ∩ 化学通过 ∩ 观测通过；最终区域还包括所有假设约束和模式策略。
-
-约束贡献保留 SI／化学候选轨和最终策略轨：基线、按声明顺序逐条过滤、每次删除一条的 leave-one-out、网格相对冗余及冲突。严格模式最终基线为零时，不能把候选轨的减少冒称最终可行域的减少。空基线或未知证据不构成已证实冲突。离散格点的四邻域连通分量也不等于已证明的连续地质区域。
-
-新增 `constraints.csv`、`constraint-evaluations.csv`、`constraint-contribution.csv`；JSON 与 CSV 均保留独立状态与原因。`analysis.json` 是去除运行路径／时间戳的确定性科学载荷；`results.json` 另保留完整运行溯源。报告仍可离线打开，复现脚本仍使用归档源代码和数据库。
-
-新 API：`EvidenceConstraint`、`evaluate_constraints`、`constraint_contribution`、`charge_equivalents`。后者接受**水溶液物种**的 molality 和整数电荷，不把总无机碳当成单一带电离子，也不是另一套活度模型。
-
-- [逐点化学质量审计](data/validation/CHEMICAL_QUALITY_AUDIT.md)
-- [科学验证状态](data/validation/SCIENTIFIC_VALIDATION.md)
-- [v0.3.0 执行记录](data/validation/V030_STATUS.md)
-
-已取得版本匹配的官方 Example 1 输出并通过对照；历史手册三项差异仍保留。两个独立文献记录的 log K 数值筛查也通过，但完整独立水溶液案例、物种完整性、全部温区和真实矿床验证仍未完成。严格模式不会因这些局部检查而被自动标为模型已验证。
-
-约束复评使用 scan 产生的样点，校验实际 PHREEQC 输入 SHA-256；改变流体／输入后必须重算，显式请求不同数据库也会被拒绝。始终执行真实计算，不实现模糊匹配缓存。
-
-## v0.4.0：真实酸碱反应过程
-
-```sh
-julia --project=. scripts/titrate.jl examples/acid_titration.toml results
-julia --project=. scripts/titrate.jl examples/base_titration.toml results
-```
-
-同一个水溶液经过 PHREEQC `REACTION`／`INCREMENTAL_REACTIONS true` 推进；只指定初始 pH，各步 pH 由反应求解。支持 HCl 和 NaOH 的中性化学式添加，`amounts_mol` 是每一步的**增量摩尔数**，不是累计数、摩尔浓度或滴定体积。选择监测 Calcite／Fluorite；它们不是自动反应的固相。
-
-必须明确选择 `addition_model = "formula_addition_no_carrier_water"`。这是无载体水添加的理想化学式转移；不将未知滴定液体积悄悄视作零稀释。不支持含载体水的体积滴定、气体交换、矿物溶解／沉淀、反应速率或时间演化。实际实验若需要这些边界，不能直接套用本模型。
-
-初始 Ca、F、C(4)、Na、Cl 都需显式提供，单位 mol/kgw，同时给出初始水质量、pH、pe、温度、来源、Observation／Assumption 分类和 `charge_context`。纯 H+ 添加、负剂量、未知药剂、含糊单位和未说明的载体水模型会被拒绝。25 °C 外仍需明确接受未验证温区；1 atm 压力固定。
-
-API：
+在本仓库项目环境中：
 
 ```julia
-p = load_process("examples/acid_titration.toml") # 或 AcidBaseTitration(spec)
-r = simulate(p, PHREEQCConfig(); root="results")
-path = report(r)
+using MineralTrace
+study = load_paths("examples/reactive_paths.toml")
+comparison = compare_paths(study, PHREEQCConfig(); root="results")
+report_path = report(comparison)
 ```
 
-输出包含独立 HTML、6 张实际计算 SVG、`steps.csv`（pH／SI／总量／溶解物种）、`balances.csv`、`charge-species.csv`、JSON、PHREEQC 原始输入输出、数据库与源码快照及 `reproduce.jl`。`analysis.json` 保留确定性科学载荷，`results.json` 保留时间、路径等运行溯源。
+扫描、滴定与证据图 API 见[详细参考](docs/REFERENCE.md)。当前推荐克隆仓库使用，脚本和示例均位于仓库内；本 README 不假设已注册到 General，也不承诺 `Pkg.add("MineralTrace")` 可用。
 
-守恒检查独立计数 HCl／NaOH 的原子：Ca/F/C/Na/Cl 初始量对照用户 mol/kgw × 初始水 kg；H/O 初始量取引擎库存，随后核对新增原子，包含水中的 H/O。每步都使用实际水质量，不能把 molality 当成总摩尔数。中性添加还核对总净电荷是否保持初始残差。数值守恒容差显式配置，不能解释成实验不确定度或热力学准确度。
+## 版本与发布
 
-电荷诊断同时给出百分数、eq、eq/kgw、meq/kgw。**0.1% 是可配置诊断阈值，不是通用水质标准**；阈值超出不证明物理不可能。解析后的每个水溶液物种及其当量贡献可查 CSV；该表来自舍入后的原始物种分布，不是另一套活度模型。
+| 版本 | 用户可用能力 |
+| --- | --- |
+| 0.5.0 | 有限矿物反应、温度路径、显式事件对应与候选比较 |
+| 0.4.0 | 真实酸碱反应、元素守恒与过程报告 |
+| 0.3.0 | 来源约束、严格／探索模式与逐项排除原因 |
+| 早期版本 | PHREEQC 参数扫描与独立事件证据图 |
 
-`charge_context` 区分用户声明的分析误差、部分分析、假设流体；反应后状态自动标为计算过程，不冒充新的实测分析。KnownFluid 扫描默认只按部分分析解释；可显式声明 `fluid.charge_context`。旧适配器 0.1% 告警文本、原始值、扫描与历史回归均保留，不自动改变浓度。百分数可因归一化分母变化而降低，即使净当量残差并未消除。
+发布建议为先提供 **GitHub 研究预览 Release**，完成干净环境验证与自动化 CI 后，再评估 Julia General 注册；参见[发布评估与预览说明草稿](docs/RELEASING.md)。此建议不表示已发布或已注册。
 
-三类验证分别报告：引擎直接 CLI 对照、化学守恒、实验比较。已核查并登记公开方解石实验，但其观测量／边界不适配本版闭合滴定，**实验过程比较尚未完成**，没有用计算 pH 冒充测量。详见：
+**维护约定：每次显著版本更新，同步修改本首页的项目价值、可运行命令、输入输出、科学边界及验证状态。** 详细接口与历次记录链接到专页，避免首页只追加版本日志。发布说明应指向相应验证记录，并区分引擎、化学与实验验证。
 
-- [电荷语义说明](data/validation/CHARGE_BALANCE_SEMANTICS.md)
-- [原始实验筛查与不适用原因](data/validation/EXPERIMENTAL_CASE_V040.md)
-- [直接 CLI 对照](data/validation/TITRATION_ENGINE_COMPARISON.md)
-- [v0.4.0 执行记录](data/validation/V040_STATUS.md)
+## 许可证与资料
+
+项目代码使用 [MIT 许可证](LICENSE)。PHREEQC、数据库及原始文献保留各自来源与条款，登记于 [data/sources](data/sources)。
+
+[PHREEQC 官方资料](https://www.usgs.gov/software/phreeqc-version-3) · [PHREEQC 3 手册](https://water.usgs.gov/water-resources/software/PHREEQC/documentation/phreeqc3-html/phreeqc3.htm) · [详细功能参考](docs/REFERENCE.md)

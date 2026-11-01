@@ -1,0 +1,16 @@
+{
+  "source_id": "BROWN-ROBERSON-1977",
+  "type": "original_experimental_paper",
+  "title": "Solubility of natural fluorite at 25°C",
+  "authors": [
+    "D. W. Brown",
+    "C. E. Roberson"
+  ],
+  "year": 1977,
+  "doi": null,
+  "url": "https://pubs.usgs.gov/journal/1977/vol5issue4/report.pdf",
+  "page_or_table": "printed pp. 509–517; Table 5 and conclusions; PDF pp. 111–119",
+  "extraction_method": "text extraction plus original page visual verification",
+  "verification_status": "methods and Table 5 checked; final reported analytical uncertainty checked",
+  "sha256": "b1e181c7d94893dd8ade77c95d801e017e43baa9f0a472c4a93af72893f7176d"
+}

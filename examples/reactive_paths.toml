@@ -1,0 +1,129 @@
+title = "SYNTHETIC / SIMULATED two-path mineral sequence study; not natural history"
+boundary = "closed_aqueous_and_retained_solids_no_gas"
+initial_temperature_c = 80.0
+allow_unvalidated_temperature = true
+minerals = ["Fluorite", "Calcite"]
+evaluation_mode = "exploratory"
+[initial]
+pH = 8.0
+pe = 4.0
+water_kg = 1.0
+units = "mol/kgw"
+origin = "Assumption"
+source = "SYNTHETIC-IONIC-RECIPE-NOT-MEASURED"
+label = "SYNTHETIC / SIMULATED; all compositions and operations are declared assumptions"
+charge_context = "hypothetical"
+[initial.totals]
+Ca = 0.01
+F = 0.0005
+"C(4)" = 0.001
+Na = 0.001
+Cl = 0.0195
+[diagnostics]
+# User-declared teaching diagnostic, not a validated analytical quality standard.
+charge_threshold_percent = 0.5
+mass_absolute_tolerance_mol = 0.0000000001
+mass_relative_tolerance = 0.000000001
+charge_conservation_tolerance_eq = 0.0000000001
+[[phases]]
+mineral = "Fluorite"
+initial_mol = 0.0
+direction = "precipitation_only"
+target_si = 0.0
+source_id = "SYNTHETIC-PHASE-PERMISSION"
+[[phases]]
+mineral = "Calcite"
+initial_mol = 0.0
+direction = "precipitation_only"
+target_si = 0.0
+source_id = "SYNTHETIC-PHASE-PERMISSION"
+[[events]]
+id = "F-I"
+mineral = "Fluorite"
+event_kind = "formation"
+classification = "Observation"
+source_id = "SYNTHETIC-TEXTURE-EXAMPLE-NOT-A-NATURAL-OBSERVATION"
+description = "Teaching observation only"
+[[events]]
+id = "C-I"
+mineral = "Calcite"
+event_kind = "formation"
+classification = "Observation"
+source_id = "SYNTHETIC-TEXTURE-EXAMPLE-NOT-A-NATURAL-OBSERVATION"
+[[evidence]]
+earlier = "F-I"
+later = "C-I"
+kind = "overgrowth"
+source_id = "SYNTHETIC-TEXTURE-EXAMPLE-NOT-A-NATURAL-OBSERVATION"
+reliability = "illustrative only"
+interpretation = "Assume an independently interpreted calcite overgrowth later than fluorite; no real texture supplied."
+[[paths]]
+id = "fluorite_then_calcite"
+source_id = "USER-SYNTHETIC-PATH-A"
+[[paths.operations]]
+id = "cool60"
+kind = "temperature"
+temperature_c = 60.0
+active_phases = []
+source_id = "SYNTHETIC-COOLING-ASSUMPTION"
+[[paths.operations]]
+id = "F"
+kind = "equilibrium"
+active_phases = ["Fluorite"]
+source_id = "SYNTHETIC-PHASE-CONTACT"
+[[paths.operations]]
+id = "cool40"
+kind = "temperature"
+temperature_c = 40.0
+active_phases = []
+source_id = "SYNTHETIC-COOLING-ASSUMPTION"
+[[paths.operations]]
+id = "C"
+kind = "equilibrium"
+active_phases = ["Calcite"]
+source_id = "SYNTHETIC-PHASE-CONTACT"
+[[paths.bindings]]
+event_id = "F-I"
+operation_id = "F"
+level = "equilibrium_precipitation"
+minimum_mol = 0.00000001
+[[paths.bindings]]
+event_id = "C-I"
+operation_id = "C"
+level = "equilibrium_precipitation"
+minimum_mol = 0.00000001
+[[paths]]
+id = "calcite_then_fluorite"
+source_id = "USER-SYNTHETIC-PATH-B"
+[[paths.operations]]
+id = "cool60"
+kind = "temperature"
+temperature_c = 60.0
+active_phases = []
+source_id = "SYNTHETIC-COOLING-ASSUMPTION"
+[[paths.operations]]
+id = "C"
+kind = "equilibrium"
+active_phases = ["Calcite"]
+source_id = "SYNTHETIC-PHASE-CONTACT"
+[[paths.operations]]
+id = "cool40"
+kind = "temperature"
+temperature_c = 40.0
+active_phases = []
+source_id = "SYNTHETIC-COOLING-ASSUMPTION"
+[[paths.operations]]
+id = "F"
+kind = "equilibrium"
+active_phases = ["Fluorite"]
+source_id = "SYNTHETIC-PHASE-CONTACT"
+[[paths.bindings]]
+event_id = "F-I"
+operation_id = "F"
+level = "equilibrium_precipitation"
+minimum_mol = 0.00000001
+[[paths.bindings]]
+event_id = "C-I"
+operation_id = "C"
+level = "equilibrium_precipitation"
+minimum_mol = 0.00000001

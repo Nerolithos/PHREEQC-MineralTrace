@@ -8,4 +8,4 @@ PHREEQC-generated target SI: Dict("Fluorite" => -0.07364901089458, "Calcite" => 
 
 The true point is enclosed by matched grid coordinates; it is not recovered exactly, and multiple matches are reported. This checks consistency and bracketing only. Chemical warnings and the fixed assumed fluid remain applicable.
 
-Search archive: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/study-TKapL5. Target archive: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/run-JnYD2m. Database SHA-256: 59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10.
+Search archive: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/study-W00RsR. Target archive: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/run-Z8vddO. Database SHA-256: 59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10.

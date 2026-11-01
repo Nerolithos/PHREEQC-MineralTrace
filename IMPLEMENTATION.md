@@ -40,3 +40,5 @@
 v0.3.0 交付见 [文件清单](V030_FILES.md) 和 [执行记录](data/validation/V030_STATUS.md)。
 
 v0.4.0 交付见 [文件清单](V040_FILES.md) 和 [执行记录](data/validation/V040_STATUS.md)。
+
+v0.5.0 交付见 [文件清单](V050_FILES.md) 和 [执行记录](data/validation/V050_STATUS.md)。

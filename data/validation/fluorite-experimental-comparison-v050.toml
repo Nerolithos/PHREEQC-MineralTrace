@@ -1,0 +1,10 @@
+calculation = -10.5996756161
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+observable = "zero-ionic-strength phase log10 K at 25 C"
+raw_archive = "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/run-ARDGGb"
+reference = -10.58
+reported_analytical_uncertainty = 0.17
+scope = "Derived equilibrium parameter comparison only; full experimental reaction path rejected because initial carbon and gas boundary cannot be reproduced without assumptions. No fluid measurements were filled in."
+signed_delta = -0.01967561610000068
+source_id = "BROWN-ROBERSON-1977"
+within_reported_uncertainty = true

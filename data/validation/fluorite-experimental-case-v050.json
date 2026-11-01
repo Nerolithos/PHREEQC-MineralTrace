@@ -1,0 +1,52 @@
+{
+  "case_id": "BROWN-ROBERSON-1977-ONTARIO",
+  "source": {
+    "source_id": "BROWN-ROBERSON-1977",
+    "type": "original_experimental_paper",
+    "title": "Solubility of natural fluorite at 25°C",
+    "authors": [
+      "D. W. Brown",
+      "C. E. Roberson"
+    ],
+    "year": 1977,
+    "doi": null,
+    "url": "https://pubs.usgs.gov/journal/1977/vol5issue4/report.pdf",
+    "page_or_table": "printed pp. 509–517; Table 5 and conclusions; PDF pp. 111–119",
+    "extraction_method": "text extraction plus original page visual verification",
+    "verification_status": "methods and Table 5 checked; final reported analytical uncertainty checked",
+    "sha256": "b1e181c7d94893dd8ade77c95d801e017e43baa9f0a472c4a93af72893f7176d"
+  },
+  "temperature_c": 25.0,
+  "temperature_uncertainty_c": 0.5,
+  "conditions": {
+    "initial_water_ml": 200,
+    "fluorite_mass_g_approx": 0.5,
+    "aging_days": 1118,
+    "initial_NaClO4_molar_solution1": 0.0,
+    "CO2_boundary": "Atmospheric CO2 was not excluded over the aging period; exact gas history not supplied"
+  },
+  "measured_table5_solution1": {
+    "Ca_mg_per_L": 8.3,
+    "F_mg_per_L": 7.25,
+    "HCO3_mg_per_L_upper_limit": 5.0,
+    "HCO3_exact": null
+  },
+  "reported_analytical_relative_standard_deviation_approx": 0.1,
+  "reported_derived_observable": {
+    "name": "zero-ionic-strength fluorite log10 solubility product",
+    "value": -10.58,
+    "analytical_uncertainty": 0.17,
+    "scatter_only_uncertainty_not_total_analytical_uncertainty": 0.01,
+    "temperature_c": 25.0
+  },
+  "model_comparison_scope": "Compare engine phase log K at 25 °C with experimentally derived zero-strength endpoint only; not a full aqueous reaction-path reproduction.",
+  "full_path_benchmark_status": "rejected_unresolved_initial_carbon_and_gas_boundary",
+  "missing_or_incompatible": [
+    "initial pH and inorganic carbon not fully specified",
+    "bicarbonate is an upper limit, not an exact carbon input",
+    "open atmospheric exposure is not the supported closed boundary",
+    "perchlorate and minor impurities outside the restricted study inventory",
+    "shared possible thermodynamic data lineage means this is not a blind holdout"
+  ],
+  "decision": "Register actual measured values and compare only the independently reported derived observable. Do not invent a complete fluid or claim full experimental path validation."
+}

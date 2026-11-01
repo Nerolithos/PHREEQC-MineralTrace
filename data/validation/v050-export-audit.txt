@@ -1,0 +1,6 @@
+PASS: two candidates, ten states, 20 mineral-step CSV records and 70 element balances; nine SVGs; source/evidence/input/state hashes and every solution-state handoff verified.
+Independent reproduced analysis.json byte-identical.
+Report: results/paths-Tz30LX/report.html
+Reproduced: results/paths-Tz30LX/reproduced/paths-tEMqGT/report.html
+Maximum total element residual (mol): 7.155165349104209e-12
+Maximum net-charge change (eq): 2.0000819576926343e-16

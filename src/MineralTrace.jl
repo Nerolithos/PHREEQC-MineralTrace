@@ -10,6 +10,10 @@ include("exploration/Scan.jl")
 include("reporting/Report.jl")
 include("processes/Titration.jl")
 include("processes/ProcessReport.jl")
+include("pathways/PathStudy.jl")
+include("pathways/PathSimulation.jl")
+include("pathways/PathReport.jl")
+export PathStudy, PathComparison, load_paths, compare_paths
 export charge_diagnostic, AcidBaseTitration, ProcessResult, load_process, process_input, simulate
 export EvidenceConstraint, evaluate_constraints, constraint_contribution, charge_equivalents
 export MineralStudy, ScanResult, load_study, scan, report, signature_matches, compatibility

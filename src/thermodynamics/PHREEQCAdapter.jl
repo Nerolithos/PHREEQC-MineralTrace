@@ -82,18 +82,26 @@ end
 Raw input is an expert API and can use PHREEQC file-writing directives. Do not pass untrusted decks.
 Warnings are retained and result in a distinct status; all execution failures throw with an archive path.
 """
-function run_phreeqc(c::PHREEQCConfig, input::AbstractString; root="results", required=String[], sources=String[], metadata=Dict{String,Any}())
+function run_phreeqc(c::PHREEQCConfig, input::AbstractString; root="results", required=String[], sources=String[], metadata=Dict{String,Any}(), auxiliary_files=Dict{String,String}())
     env = environment_check(c)
+    reserved=("input.pqi","output.pqo","database.dat","selected.tsv","manifest.toml","stdout.log","stderr.log")
+    for (name,path) in auxiliary_files
+        basename(name)==name && !(name in ("",".","..")) && !(name in reserved) && isfile(path) || throw(ArgumentError("invalid auxiliary input $name"))
+    end
     mkpath(root)
     dir = abspath(mktempdir(root; prefix="run-", cleanup=false))
     write(joinpath(dir,"input.pqi"), input)
     cp(env.database, joinpath(dir,"database.dat"))
+    for (name,path) in auxiliary_files
+        cp(path,joinpath(dir,name))
+    end
     manifest = Dict{String,Any}("status"=>"started", "timestamp_utc"=>string(now(UTC)),
         "package_version"=>string(pkgversion(@__MODULE__)), "julia_version"=>string(VERSION),
         "executable"=>env.executable, "executable_sha256"=>bytes2hex(sha256(read(env.executable))),
         "database_name"=>basename(env.database), "database_sha256"=>env.database_sha256,
         "input_sha256"=>bytes2hex(sha256(codeunits(input))), "sources"=>sources,
         "metadata"=>metadata, "random_seed"=>"not applicable", "warnings"=>String[])
+    manifest["auxiliary_sha256"]=Dict(name=>bytes2hex(sha256(read(joinpath(dir,name)))) for name in keys(auxiliary_files))
     save() = open(io -> TOML.print(io, manifest), joinpath(dir,"manifest.toml"), "w")
     save()
     try
