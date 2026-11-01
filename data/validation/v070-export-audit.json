@@ -1,0 +1,19 @@
+{
+  "robustness_report": "results/discovery-qktTgC/robustness.html",
+  "endpoint_report": "results/calcite-validation-n1l1wm/report.html",
+  "robustness_reproduction": "results/discovery-qktTgC/reproduced-robustness/discovery-YY7151/robustness.html",
+  "endpoint_reproduction": "results/calcite-validation-n1l1wm/results/calcite-validation-a9xrD8/report.html",
+  "discovery_candidates": 210,
+  "total_with_OAT_candidates": 217,
+  "computed_states_including_initial_speciation": 838,
+  "verified_previous_dump_handoffs": 621,
+  "endpoint_scenarios": 35,
+  "independent_observation_count": 5,
+  "mass_normalizations_per_observation": 2,
+  "all_numeric_closure_checks_pass": true,
+  "all_endpoint_model_applicability_statuses": "unverified",
+  "source_and_script_archives_match_current": true,
+  "byte_identical_robustness_analysis_sha256": "411d7df20e20474b7329364a2915bdc96ae99e051f7e77ae0b749af8dae755ee",
+  "byte_identical_endpoint_analysis_sha256": "d12a057a2f6a50dce6b9b23947a30599a5cae4032b441f57897cee6786ee001f",
+  "interpretation": "Engine and chemical accounting pass; systematic experimental endpoint overprediction is retained, no general accuracy or chronology certified"
+}

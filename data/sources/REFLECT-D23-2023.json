@@ -1,0 +1,60 @@
+{
+  "source_id": "REFLECT-D23-2023",
+  "doi": "10.48440/gfz.4.8.2023.001",
+  "url": "https://www.reflect-h2020.eu/wp-content/uploads/2023/04/REFLECT_D2.3_mineral_solubility.pdf",
+  "license": "CC-BY-4.0",
+  "source_sha256": "7e80e09592286370000ca0dfccc4ff8cfc0f287690ba40e14e02e0bf8c436e70",
+  "selection_before_predictions": "All five purple 24 degC measured markers in Figure 22, top-right 0 wt% NaCl panel; no curve interpolation or post-prediction point selection",
+  "extraction": {
+    "image": "PDF page 26 Image183.jpg",
+    "width_px": 1296,
+    "height_px": 2033,
+    "linear_axis_pixels": {
+      "x0": 769.5,
+      "x60bar": 1283.5,
+      "y0": 407.5,
+      "y3_5_g_kg": 7.5
+    },
+    "marker_rule": "dense purple connected components, RGB B>R+10, R>G+20, B>G+45, R<170; exclude legend and tiny dotted-line components; visually checked against complete figure",
+    "display_precision": "pressure 0.01 bar, solubility 0.001 g/kg are digitization outputs, not measurement precision",
+    "digitization_bounds": "0.5 bar and 0.03 g/kg conservative extraction bounds, separate from experimental uncertainty"
+  },
+  "conditions": {
+    "initial_recipe": "degassed deionised water, no added NaCl; modeled as pure water, trace contaminants not independently quantified",
+    "initial_water_kg": 0.8,
+    "mineral": "ultra-pure commercial Merck calcite, 10 micrometre",
+    "reported_initial_solid_range_g": [
+      10.0,
+      40.0
+    ],
+    "exact_solid_mass_per_point_g": null,
+    "gas_boundary": "CO2 bottle pressure regulated; model fixed partial pressure with nonexhausted numerical CO2 reservoir",
+    "temperature_c": 24.0,
+    "reported_temperature_control_c": 0.1,
+    "reported_pressure_sensor_accuracy_bar": 0.2,
+    "equilibrium_criterion": "impedance change less than 1% for 12 h, consistency aliquots subsequently sampled",
+    "Ca_method": "EDTA titration, mean of five analyses; total dissolved Ca expressed as CaCO3, not free ion activity",
+    "reported_general_analytical_uncertainty": "usually below 1%; per-point uncertainty/confidence level not given",
+    "per_point_uncertainty": null,
+    "measured_pH": null,
+    "time_resolved_validation": false,
+    "figure_mass_basis": "g/kg in axis, solvent versus final solution not explicit; both model normalizations must be reported"
+  },
+  "predeclared_model": {
+    "database_sha256": "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10",
+    "database_name": "USGS phreeqc.dat 3.8.6-17100, unmodified",
+    "aqueous_activity": "database ion-association/extended Debye-Huckel profile; no experimental parameter tuning",
+    "gas_EOS": "native PHREEQC Peng-Robinson via CO2(g) fixed partial pressure; no substitution of partial pressure by fugacity",
+    "primary_stock_g": 10.0,
+    "stock_control_g": 40.0,
+    "numerical_CO2_reservoir_mol": 10.0,
+    "reservoir_control_mol": 20.0,
+    "solution_pressure_bar": "pCO2 + 0.03 bar, declared approximate 24C water-vapor correction; not an observed absolute-pressure value",
+    "pressure_sensitivity_bar": 0.7,
+    "temperature_sensitivity_c": 0.1,
+    "numerical_mass_tolerance_mol": 1e-08,
+    "comparison": "signed and relative CaCO3-equivalent endpoint errors for both kg-water and kg-final-solution bases; do not infer a validated path, rate, pH error or independent solid mass gain from Ca alone",
+    "fitted_parameters": [],
+    "acceptance": "Report quantitative disagreement as well as agreement. This is a bounded digitized endpoint challenge; exact run reconstruction remains limited by mass-basis and per-run-stock metadata."
+  }
+}

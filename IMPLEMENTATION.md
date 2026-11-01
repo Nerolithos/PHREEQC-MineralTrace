@@ -45,3 +45,6 @@ v0.5.0 交付见 [文件清单](V050_FILES.md) 和 [执行记录](data/validatio
 
 
 v0.6.0 自动候选机制筛选见 [使用说明](docs/DISCOVERY.md)、[文件清单](V060_FILES.md)与[执行记录](data/validation/V060_STATUS.md)。显著版本更新必须同步维护 README 中的用户价值、操作方法与科学边界。
+
+
+v0.7.0 科学可信度工作见[稳健性说明](docs/ROBUSTNESS.md)、[独立终点检验](docs/CALCITE_ENDPOINT.md)、[历史差异归因](data/validation/EXAMPLE1_ATTRIBUTION_V070.md)、[执行记录](data/validation/V070_STATUS.md)及[文件清单](V070_FILES.md)。独立终点出现偏差，未被标为模型验证通过。

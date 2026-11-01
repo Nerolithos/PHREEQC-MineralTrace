@@ -7,4 +7,4 @@ Not a complete independent aqueous-case validation. Published uncertainty is use
 | Fluorite | -10.57 | 0.08 | -10.5996756161 | -0.029675616100000468 |
 | Calcite | -8.48 | 0.02 | -8.479964655643 | 3.53443570002554e-5 |
 
-Sources and limitations: independent-reference-checks.toml. Raw calculation: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/run-JGjzzG.
+Sources and limitations: independent-reference-checks.toml. Raw calculation: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/run-5yv4Fx.

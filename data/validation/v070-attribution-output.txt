@@ -1,0 +1,11 @@
+/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c
+current {'Calcite': 0.7852558918818, 'Gypsum': -0.8021685199263, 'Anhydrite': -1.090041679578}
+unmodified_2012 {'Calcite': 0.675419492902, 'Gypsum': -0.6382460173182, 'Anhydrite': -0.924585371458}
+unmodified_2013 {'Calcite': 0.7539025688161, 'Gypsum': -0.6387346405051, 'Anhydrite': -0.9250701101335}
+current_2012_NaCO3 {'Calcite': 0.7852558918818, 'Gypsum': -0.8021685199263, 'Anhydrite': -1.090041679578}
+current_2012_NaHCO3 {'Calcite': 0.6981485206925, 'Gypsum': -0.8017435327736, 'Anhydrite': -1.089621057951}
+current_2012_Na_carbonates {'Calcite': 0.6981485206925, 'Gypsum': -0.8017435327736, 'Anhydrite': -1.089621057951}
+2013_2012_Na_carbonates {'Calcite': 0.675419492902, 'Gypsum': -0.6382460173182, 'Anhydrite': -0.924585371458}
+current_2012_sulfate_complexes {'Calcite': 0.7760868742954, 'Gypsum': -0.6425573540866, 'Anhydrite': -0.9303603292893}
+current_2012_carbonate_sulfate {'Calcite': 0.6870878810849, 'Gypsum': -0.6422509947031, 'Anhydrite': -0.930058523542}
+current_all_2012_aqueous_species {'Calcite': 0.6755542733913, 'Gypsum': -0.6367809276241, 'Anhydrite': -0.924585371458}

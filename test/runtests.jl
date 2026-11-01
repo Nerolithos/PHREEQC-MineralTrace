@@ -58,6 +58,7 @@ include("constraints.jl")
 include("process_unit.jl")
 include("pathways_unit.jl")
 include("discovery_unit.jl")
+include("credibility_unit.jl")
 
 if get(ENV,"MINERALTRACE_INTEGRATION","0") == "1"
     include("integration.jl")
@@ -67,6 +68,7 @@ if get(ENV,"MINERALTRACE_INTEGRATION","0") == "1"
     include("process_integration.jl")
     include("pathways_integration.jl")
     include("discovery_integration.jl")
+    include("credibility_integration.jl")
 else
     @info "Real PHREEQC integration NOT RUN. Set MINERALTRACE_INTEGRATION=1 and configure executable/database."
 end

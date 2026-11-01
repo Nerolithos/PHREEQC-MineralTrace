@@ -1,0 +1,240 @@
+{
+  "scope": "controlled database attribution with identical current binary/input, not experimental validation",
+  "engine_sha256": "c812189a98bc4667fcccfe28387924df3cc4b63fe714a943b5c41ae2df720f4a",
+  "manual_values": {
+    "Calcite": 0.68,
+    "Gypsum": -0.64,
+    "Anhydrite": -0.92
+  },
+  "original_tolerance": 0.01,
+  "Na_carbonate_interventions": [
+    "Na+ + CO3-2 = NaCO3-",
+    "Na+ + HCO3- = NaHCO3"
+  ],
+  "sulfate_interventions": [
+    "SO4-2 + H+ = HSO4-",
+    "NH4+ + SO4-2 = NH4SO4-",
+    "Ca+2 + SO4-2 = CaSO4",
+    "Ca+2 + HSO4- = CaHSO4+",
+    "Mg+2 + SO4-2 = MgSO4",
+    "Na+ + SO4-2 = NaSO4-",
+    "K+ + SO4-2 = KSO4-",
+    "Fe+2 + SO4-2 = FeSO4",
+    "Fe+2 + HSO4- = FeHSO4+",
+    "Fe+3 + SO4-2 = FeSO4+",
+    "Fe+3 + HSO4- = FeHSO4+2",
+    "Fe+3 + 2 SO4-2 = Fe(SO4)2-",
+    "Mn+2 + SO4-2 = MnSO4",
+    "Al+3 + SO4-2 = AlSO4+",
+    "Al+3 + 2SO4-2 = Al(SO4)2-",
+    "Al+3 + HSO4- = AlHSO4+2",
+    "Ba+2 + SO4-2 = BaSO4",
+    "Sr+2 + SO4-2 = SrSO4",
+    "Li+ + SO4-2 = LiSO4-",
+    "Cu+2 + SO4-2 = CuSO4",
+    "Zn+2 + SO4-2 = ZnSO4",
+    "Zn+2 + 2SO4-2 = Zn(SO4)2-2",
+    "Cd+2 + SO4-2 = CdSO4",
+    "Cd+2 + 2SO4-2 = Cd(SO4)2-2",
+    "Pb+2 + SO4-2 = PbSO4",
+    "Pb+2 + 2 SO4-2 = Pb(SO4)2-2"
+  ],
+  "missing_current_reactions": [
+    "Na+ + CO3-2 = NaCO3-",
+    "Al+3 + 2SO4-2 = Al(SO4)2-",
+    "Zn+2 + 2SO4-2 = Zn(SO4)2-2",
+    "Cd+2 + 2SO4-2 = Cd(SO4)2-2"
+  ],
+  "results": [
+    {
+      "case": "current",
+      "kind": "unmodified official database",
+      "values": {
+        "si_Calcite": 0.7852558918818,
+        "si_Gypsum": -0.8021685199263,
+        "si_Anhydrite": -1.090041679578,
+        "la_Ca": -2.60334704427,
+        "la_CO3": -5.091361719491,
+        "la_SO4": -2.764221366947,
+        "la_water": -0.008490043876489,
+        "lk_Calcite": -8.479964655643,
+        "lk_Gypsum": -4.582379979044,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/current"
+    },
+    {
+      "case": "unmodified_2012",
+      "kind": "unmodified official database",
+      "values": {
+        "si_Calcite": 0.675419492902,
+        "si_Gypsum": -0.6382460173182,
+        "si_Anhydrite": -0.924585371458,
+        "la_Ca": -2.617701265895,
+        "la_CO3": -5.186709116356,
+        "la_SO4": -2.584410837201,
+        "la_water": -0.008524401785482,
+        "lk_Calcite": -8.479829875154,
+        "lk_Gypsum": -4.580914889349,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "2300878463f8a1728ec5e15e9927155ca524500a6db8e367f9666471a5c3da3c",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/unmodified_2012"
+    },
+    {
+      "case": "unmodified_2013",
+      "kind": "unmodified official database",
+      "values": {
+        "si_Calcite": 0.7539025688161,
+        "si_Gypsum": -0.6387346405051,
+        "si_Anhydrite": -0.9250701101335,
+        "la_Ca": -2.618199904878,
+        "la_CO3": -5.10772740146,
+        "la_SO4": -2.584396936895,
+        "la_water": -0.008526344041167,
+        "lk_Calcite": -8.479829875154,
+        "lk_Gypsum": -4.580914889349,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "969c57fef0477fea3cb4a0358ef9038df6ed126b2311b4f8682dc31858d8ced9",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/unmodified_2013"
+    },
+    {
+      "case": "current_2012_NaCO3",
+      "kind": "diagnostic hybrid, not a usable scientific profile",
+      "values": {
+        "si_Calcite": 0.7852558918818,
+        "si_Gypsum": -0.8021685199263,
+        "si_Anhydrite": -1.090041679578,
+        "la_Ca": -2.60334704427,
+        "la_CO3": -5.091361719491,
+        "la_SO4": -2.764221366947,
+        "la_water": -0.008490043876489,
+        "lk_Calcite": -8.479964655643,
+        "lk_Gypsum": -4.582379979044,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "02fe0bf562722460e210556732a38ba87e7249c3057406e6b5b732392c0a7a5a",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/current_2012_NaCO3"
+    },
+    {
+      "case": "current_2012_NaHCO3",
+      "kind": "diagnostic hybrid, not a usable scientific profile",
+      "values": {
+        "si_Calcite": 0.6981485206925,
+        "si_Gypsum": -0.8017435327736,
+        "si_Anhydrite": -1.089621057951,
+        "la_Ca": -2.603016640447,
+        "la_CO3": -5.178799494504,
+        "la_SO4": -2.764131149142,
+        "la_water": -0.008487861113915,
+        "lk_Calcite": -8.479964655643,
+        "lk_Gypsum": -4.582379979044,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "fba506b82fb9688d86f0c4a39ee72078513bcc80fa7695433786331063b943f7",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/current_2012_NaHCO3"
+    },
+    {
+      "case": "current_2012_Na_carbonates",
+      "kind": "diagnostic hybrid, not a usable scientific profile",
+      "values": {
+        "si_Calcite": 0.6981485206925,
+        "si_Gypsum": -0.8017435327736,
+        "si_Anhydrite": -1.089621057951,
+        "la_Ca": -2.603016640447,
+        "la_CO3": -5.178799494504,
+        "la_SO4": -2.764131149142,
+        "la_water": -0.008487861113915,
+        "lk_Calcite": -8.479964655643,
+        "lk_Gypsum": -4.582379979044,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "fba506b82fb9688d86f0c4a39ee72078513bcc80fa7695433786331063b943f7",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/current_2012_Na_carbonates"
+    },
+    {
+      "case": "2013_2012_Na_carbonates",
+      "kind": "diagnostic hybrid, not a usable scientific profile",
+      "values": {
+        "si_Calcite": 0.675419492902,
+        "si_Gypsum": -0.6382460173182,
+        "si_Anhydrite": -0.924585371458,
+        "la_Ca": -2.617701265895,
+        "la_CO3": -5.186709116356,
+        "la_SO4": -2.584410837201,
+        "la_water": -0.008524401785482,
+        "lk_Calcite": -8.479829875154,
+        "lk_Gypsum": -4.580914889349,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "406fcbe8c978e250d309a981bee3428652cbc38f66bb8031708fd91ba2452f49",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/2013_2012_Na_carbonates"
+    },
+    {
+      "case": "current_2012_sulfate_complexes",
+      "kind": "diagnostic hybrid, not a usable scientific profile",
+      "values": {
+        "si_Calcite": 0.7760868742954,
+        "si_Gypsum": -0.6425573540866,
+        "si_Anhydrite": -0.9303603292893,
+        "la_Ca": -2.616369531301,
+        "la_CO3": -5.087508250047,
+        "la_SO4": -2.591517529627,
+        "la_water": -0.008525136101082,
+        "lk_Calcite": -8.479964655643,
+        "lk_Gypsum": -4.582379979044,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "1a789f75ad95b1ca9abbbfe2a250efc03e34ed17d4729e24a8c8fae9270858cd",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/current_2012_sulfate_complexes"
+    },
+    {
+      "case": "current_2012_carbonate_sulfate",
+      "kind": "diagnostic hybrid, not a usable scientific profile",
+      "values": {
+        "si_Calcite": 0.6870878810849,
+        "si_Gypsum": -0.6422509947031,
+        "si_Anhydrite": -0.930058523542,
+        "la_Ca": -2.616031563046,
+        "la_CO3": -5.176845211512,
+        "la_SO4": -2.591553692135,
+        "la_water": -0.008522859282996,
+        "lk_Calcite": -8.479964655643,
+        "lk_Gypsum": -4.582379979044,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "c40c0222b8cfa41e2c3840d628ae246b8c14165d4fbef5d4f4ef1561b6e73a01",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/current_2012_carbonate_sulfate"
+    },
+    {
+      "case": "current_all_2012_aqueous_species",
+      "kind": "diagnostic hybrid, not a usable scientific profile",
+      "values": {
+        "si_Calcite": 0.6755542733913,
+        "si_Gypsum": -0.6367809276241,
+        "si_Anhydrite": -0.924585371458,
+        "la_Ca": -2.617701265895,
+        "la_CO3": -5.186709116356,
+        "la_SO4": -2.584410837201,
+        "la_water": -0.008524401785482,
+        "lk_Calcite": -8.479964655643,
+        "lk_Gypsum": -4.582379979044,
+        "lk_Anhydrite": -4.277526731639
+      },
+      "database_sha256": "07fd9e46fd490879e3f9618817ebfd07634e1ef806bafc54500e87de06d4a662",
+      "input_sha256": "4c4ac9610b2bc9f297b430ad835841a049aebe8933ea9fc9c26958d4030aa9a6",
+      "archive": "/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/ex1-attribution-zwmmg5_c/current_all_2012_aqueous_species"
+    }
+  ]
+}

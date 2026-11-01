@@ -1,0 +1,24 @@
+{
+  "source_type": "official versioned source history; not experimental measurement",
+  "snapshots": [
+    {
+      "year": "2012",
+      "commit": "3e93b51308ece3c69d735507905c8a854e799fb1",
+      "date": "2012-11-14T21:00:44Z",
+      "url": "https://raw.githubusercontent.com/phreeqc-dev/phreeqc3/3e93b51308ece3c69d735507905c8a854e799fb1/database/phreeqc.dat",
+      "sha256": "2300878463f8a1728ec5e15e9927155ca524500a6db8e367f9666471a5c3da3c",
+      "local_path": "data/validation/historical-2012/phreeqc.dat",
+      "bytes_preserved": true
+    },
+    {
+      "year": "2013",
+      "commit": "1bc5fbc1be5c847cabaabe8cc45c708d8b3c0955",
+      "date": "2013-11-18T20:35:15Z",
+      "url": "https://raw.githubusercontent.com/phreeqc-dev/phreeqc3/1bc5fbc1be5c847cabaabe8cc45c708d8b3c0955/database/phreeqc.dat",
+      "sha256": "969c57fef0477fea3cb4a0358ef9038df6ed126b2311b4f8682dc31858d8ced9",
+      "local_path": "data/validation/historical-2013/phreeqc.dat",
+      "bytes_preserved": true
+    }
+  ],
+  "scope": "same current executable and input; unmodified historical databases plus clearly labeled diagnostic interventions; production database unchanged"
+}

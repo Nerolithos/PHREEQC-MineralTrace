@@ -16,6 +16,11 @@ include("pathways/PathReport.jl")
 include("discovery/DiscoveryStudy.jl")
 include("discovery/DiscoverySimulation.jl")
 include("discovery/DiscoveryReport.jl")
+include("validation/CalciteEndpoint.jl")
+include("robustness/Robustness.jl")
+include("robustness/RobustnessReport.jl")
+export RobustnessPlan, load_robustness, analyze_robustness, report_robustness
+export CalciteCO2Endpoint, calcite_endpoint
 export DiscoveryStudy, DiscoveryResult, load_discovery, generate_candidates, discover_paths
 export PathStudy, PathComparison, load_paths, compare_paths
 export charge_diagnostic, AcidBaseTitration, ProcessResult, load_process, process_input, simulate

@@ -1,0 +1,38 @@
+anchor_candidate = "candidate-d17c7a16ff0df250"
+source_id = "SYNTHETIC-LOCAL-SENSITIVITY-PLAN-NOT-SPECIMEN-DATA"
+thresholds_mol = [0.00000001, 0.0000001, 0.000001, 0.0001]
+amount_change_threshold_mol = 0.000001
+
+[[parameters]]
+id = "initial-pH"
+parameter = "pH"
+units = "dimensionless"
+operation_index = 0
+values = [2.0, 2.025, 2.1]
+[[parameters]]
+id = "initial-Ca"
+parameter = "Ca"
+units = "mol/kgw"
+operation_index = 0
+values = [0.008, 0.01, 0.012]
+[[parameters]]
+id = "initial-F"
+parameter = "F"
+units = "mol/kgw"
+operation_index = 0
+values = [0.0004, 0.0005, 0.0006]
+[[parameters]]
+id = "initial-temperature"
+parameter = "temperature"
+units = "degC"
+operation_index = 0
+values = [25.0, 50.0, 80.0]
+[[parameters]]
+id = "second-NaOH-dose"
+parameter = "dose"
+units = "mol"
+operation_index = 2
+values = [0.001, 0.005, 0.009]
+[plane]
+x_parameter_id = "initial-pH"
+y_parameter_id = "second-NaOH-dose"

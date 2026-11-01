@@ -1,3 +1,5 @@
+> v0.7.0 更新：已取得官方历史数据库并完成受控归因，见 [数据库差异归因](EXAMPLE1_ATTRIBUTION_V070.md)。下文保留早期调查原文；其中“尚未定位原因”的陈述属于当时状态。生产数据库和原始容差未修改。
+
 # Example 1 discrepancy investigation — 2026-11-01
 
 ## Reproduced comparison
