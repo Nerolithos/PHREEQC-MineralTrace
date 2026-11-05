@@ -1,5 +1,7 @@
 # Example 1 controlled database attribution — v0.7.0
 
+**Status: Root cause identified: database/speciation version dependence.** Historical cross-version differences remain recorded; no unresolved adapter defect is inferred from them.
+
 The previous cross-version mismatch is now attributed to **database aqueous-speciation/association changes**, rather than adapter parsing or an unidentified calculation failure. The same current executable and identical seawater input, with an unmodified official 2012-11-14 database, reproduce all three manual values within the original 0.01 SI tolerance. No measured concentrations or tolerance were changed.
 
 This does not prove that this exact Git commit was the manual authors' file: that original binary/database pair remains unidentified. It does establish that a historically available database is sufficient to recover the documented values, and controlled database interventions localize the dominant differences.

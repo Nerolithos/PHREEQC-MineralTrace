@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.7.0-334155?style=flat-square" alt="Source version 0.7.0"></a>
+  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.7.1-334155?style=flat-square" alt="Source version 0.7.1"></a>
   <a href="https://julialang.org/downloads/"><img src="https://img.shields.io/badge/Julia-1.10%2B-9558B2?style=flat-square&amp;logo=julia&amp;logoColor=white" alt="Julia 1.10 or later"></a>
   <a href="https://www.usgs.gov/software/phreeqc-version-3"><img src="https://img.shields.io/badge/PHREEQC-3_CLI-1976A3?style=flat-square" alt="PHREEQC 3 CLI"></a>
   <a href="examples/discovery.toml"><img src="https://img.shields.io/badge/TOML-configuration-9C4121?style=flat-square&amp;logo=toml&amp;logoColor=white" alt="TOML configuration"></a>
@@ -24,6 +24,8 @@
 
 > [!NOTE]
 > **Research preview.** MineralTrace compares conditional equilibrium-reaction mechanisms. Actual crystallization order remains undetermined. Independent calcite endpoint comparisons expose model discrepancies; a scientifically validated general process model is not yet established.
+
+**v0.7.1 · Explain the discrepancy.** Seven controlled choices across five frozen calcite endpoints distinguish gas, solution-pressure and model-profile sensitivities. Ideal CO₂ and charged-ion Davies choices increase the bias; a whole Pitzer profile reduces predictions but does not establish its cause or accuracy. [Attribution report](data/validation/v071/REPORT.md) · [Applicability register](data/validation/v071/MODEL_APPLICABILITY.toml).
 
 ## Overview
 
@@ -97,6 +99,7 @@ Run the robustness study or the frozen experimental comparison from the reposito
 ```sh
 julia --project=. scripts/robustness.jl examples/discovery.toml examples/robustness.toml results
 julia --project=. scripts/validate_calcite_endpoint.jl results
+julia --project=. scripts/attribute_calcite_bias.jl results
 ```
 
 The robustness command starts with discovery, adds one-at-a-time calculations and writes `robustness.html`. Reclassifying detection thresholds reuses verified chemical states; it does not overwrite pH or rerun a different reaction.
@@ -152,7 +155,7 @@ julia --project=. test/runtests.jl
 MINERALTRACE_INTEGRATION=1 julia --project=. test/runtests.jl
 ```
 
-The integration run needs the configured engine/database. The recorded v0.7.0 local suite passed 1675 checks; this is engineering evidence, not a CI badge or experimental-accuracy certificate. [Execution record](data/validation/V070_STATUS.md).
+The integration run needs the configured engine/database. The recorded v0.7.0 local suite passed 1675 checks; this is engineering evidence, not a CI badge or experimental-accuracy certificate. [Execution record](data/validation/V070_STATUS.md). The v0.7.1 suite passed 1685 local checks; the 35 attribution endpoints and exported replay are recorded [separately](data/validation/v071/VERIFICATION.json).
 
 Historical Example 1 differences are attributed through controlled official database snapshots. The original modern-database-versus-historical-table benchmark still reports three differences at the unchanged tolerance; matched historical reproduction and modern regression are separate. [Attribution](data/validation/EXAMPLE1_ATTRIBUTION_V070.md).
 

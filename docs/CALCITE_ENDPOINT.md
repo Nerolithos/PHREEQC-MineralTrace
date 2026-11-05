@@ -37,3 +37,15 @@ python scripts/check_reflect_digitization.py
 ```
 
 这不是 Julia 核心依赖。脚本从原始嵌入图定位同一批五个测量标记，核对冻结 CSV，不覆盖测量文件或改选误差较小的点。
+
+## v0.7.1 偏差归因
+
+```sh
+julia --project=. scripts/attribute_calcite_bias.jl results
+```
+
+保持五个观测值和 v0.7.0 协议不变。需要冻结的官方 `phreeqc.dat`，同目录下的官方 `pitzer.dat`；两者 SHA-256 均校验。命令输出七种选择 × 五点的原始 PHREEQC 归档、两种质量基准的有符号偏差、逐点预测变化、压力/活度遥测、守恒核对、离线 HTML、实际散点 SVG 及独立复现入口。整套数据库替换不是活度模型的单因素归因。
+
+结论见[偏差归因报告](../data/validation/v071/REPORT.md)、[原文核查](../data/validation/v071/SOURCE_AUDIT.md)、[受控协议](../data/validation/v071/PROTOCOL.md)与[适用性登记](../data/validation/v071/MODEL_APPLICABILITY.toml)。该登记是带证据的状态记录；没有自动认证连续温压范围或实现 v0.8.0 配置选择器。
+
+今后的报告固定区分同模型下的数值／算法稳健性与独立实验准确性；前者稳定不能替代后者检验。当前状态仍为 **Challenged / discrepancy unresolved**。未将五点数据用于校准，未增加混合、气体发现路径或动力学机制。

@@ -61,6 +61,7 @@ include("discovery_unit.jl")
 include("credibility_unit.jl")
 
 if get(ENV,"MINERALTRACE_INTEGRATION","0") == "1"
+    include("v071_attribution.jl")
     include("integration.jl")
     include("cafc.jl")
     include("exploration.jl")

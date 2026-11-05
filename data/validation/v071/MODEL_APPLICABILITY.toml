@@ -1,0 +1,56 @@
+schema_version = 1
+registry_kind = "evidence register only; not an automatic applicability classifier or certified profile"
+updated = "2026-11-04"
+
+[[profiles]]
+id = "calcite-co2-water-phreeqc386"
+status = "challenged_discrepancy_unresolved"
+system = "Calcite-CO2-H2O; pure-water approximation"
+temperature_c_tested = [24.0]
+pco2_bar_tested = [10.09, 23.2, 31.56, 39.85, 49.99]
+continuous_domain_validated = false
+pressure_definition = "pCO2 = absolute autoclave pressure minus water vapor pressure; model aqueous total = pCO2+0.03 bar"
+gas_model = "native PHREEQC Peng-Robinson"
+activity_model = "ion association / species-specific WATEQ extended Debye-Huckel, database defaults"
+database = "USGS phreeqc.dat 3.8.6-17100"
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+software = "PHREEQC 3.8.6-17100; MineralTrace 0.7.1"
+compared_observable = "EDTA-derived total dissolved calcium as CaCO3-equivalent g/kg"
+experiment_source = "REFLECT D2.3 (2023), DOI 10.48440/gfz.4.8.2023.001, Figure 22"
+point_count = 5
+comparison = "all five predictions high: +14.982 to +29.115 percent kg-water; +12.968 to +24.681 percent kg-final-solution"
+experimentally_supported_observables = []
+not_validated = ["pH", "dissolved CO2", "kinetic rate", "whole reaction path", "mineral formation order", "other temperatures", "saline solutions"]
+uncertainty = "pointwise experimental uncertainty missing; extraction bounds not experimental uncertainty; kg denominator unresolved"
+fitted_to_these_observations = false
+independent_second_holdout_completed = false
+engine_consistency = "instrumented endpoint replay agrees; separate from empirical accuracy"
+chemical_accounting = "Ca/C/H/O including residual calcite and numerical gas reservoir, net charge and nonexhausted buffers checked"
+report = "REPORT.md"
+
+[[profiles]]
+id = "calcite-co2-water-pitzer386"
+status = "challenged_profile_sensitivity_only"
+system = "Calcite-CO2-H2O; same five 24 C source points"
+database = "USGS pitzer.dat 3.8.6-17100"
+database_sha256 = "06ab2debc0cdb333598118df953165499c2f762a79de5f2df55dec6b78b02589"
+activity_model = "Pitzer with native database species, constants and interactions"
+gas_model = "native Peng-Robinson"
+compared_observable = "total Ca as CaCO3-equivalent, both unresolved kg bases"
+experimentally_supported_observables = []
+continuous_domain_validated = false
+comparison = "water +4.694 to +14.102 percent; solution -1.067 to +10.315 percent"
+warning = "whole-profile change; improvement cannot identify isolated activity or constant cause; no model selected by these residuals"
+not_validated = ["independent holdout accuracy", "pH", "rate", "reaction paths", "chronology", "whole pressure/temperature range"]
+
+[[profiles]]
+id = "discovery-cafc-synthetic-v070"
+status = "empirical_accuracy_unverified"
+system = "Calcite-Fluorite; simplified Ca-F-C-O-H/Na/Cl"
+pressure_atm = 1.0
+temperature_c_exploration_bounds = [25.0, 80.0]
+continuous_domain_validated = false
+experimentally_supported_observables = []
+numerical_robustness = "v0.7.0 same-model thresholds 1e-8 to 1e-6 mol retain classes; 1e-4 changes two candidates to undetermined; local initial-condition sensitivity remains"
+empirical_accuracy = "REFLECT high-pCO2 pure-water calcite endpoints do not validate this no-gas discovery system"
+warning = "numerical stability is distinct from empirical accuracy; actual crystallization order remains undetermined"

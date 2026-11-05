@@ -48,3 +48,5 @@ v0.6.0 自动候选机制筛选见 [使用说明](docs/DISCOVERY.md)、[文件�
 
 
 v0.7.0 科学可信度工作见[稳健性说明](docs/ROBUSTNESS.md)、[独立终点检验](docs/CALCITE_ENDPOINT.md)、[历史差异归因](data/validation/EXAMPLE1_ATTRIBUTION_V070.md)、[执行记录](data/validation/V070_STATUS.md)及[文件清单](V070_FILES.md)。独立终点出现偏差，未被标为模型验证通过。
+
+v0.7.1：五点冻结观测的受控偏差归因、原文计量审计、模型适用性证据登记及复现报告见[归因报告](data/validation/v071/REPORT.md)。未新增机制；未将 Pitzer 改善解释为已验证模型。

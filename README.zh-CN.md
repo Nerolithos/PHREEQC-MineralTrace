@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.7.0-334155?style=flat-square" alt="源码版本 0.7.0"></a>
+  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.7.1-334155?style=flat-square" alt="源码版本 0.7.1"></a>
   <a href="https://julialang.org/downloads/"><img src="https://img.shields.io/badge/Julia-1.10%2B-9558B2?style=flat-square&amp;logo=julia&amp;logoColor=white" alt="Julia 1.10 及以上"></a>
   <a href="https://www.usgs.gov/software/phreeqc-version-3"><img src="https://img.shields.io/badge/PHREEQC-3_CLI-1976A3?style=flat-square" alt="PHREEQC 3 命令行引擎"></a>
   <a href="examples/discovery.toml"><img src="https://img.shields.io/badge/TOML-configuration-9C4121?style=flat-square&amp;logo=toml&amp;logoColor=white" alt="TOML 配置"></a>
@@ -24,6 +24,8 @@
 
 > [!NOTE]
 > **研究预览阶段。** MineralTrace 比较条件性的平衡反应机制，真实结晶先后仍为无法判断。独立方解石终点对照已暴露模型偏差，尚未建立经过科学验证的通用过程模型。
+
+**v0.7.1 · 解释实验偏差。** 对五个冻结方解石观测点完成七种受控选择，区分气体、液相压力与模型配置敏感性。理想 CO₂ 与带电物种 Davies 对照使高估扩大；整套 Pitzer 配置降低预测，但尚未确定因果或验证准确性。[偏差归因报告](data/validation/v071/REPORT.md) · [适用性登记](data/validation/v071/MODEL_APPLICABILITY.toml)。
 
 ## 概览
 
@@ -97,6 +99,7 @@ julia --project=. scripts/discover.jl examples/discovery.toml results
 ```sh
 julia --project=. scripts/robustness.jl examples/discovery.toml examples/robustness.toml results
 julia --project=. scripts/validate_calcite_endpoint.jl results
+julia --project=. scripts/attribute_calcite_bias.jl results
 ```
 
 稳健性命令会从发现计算开始，增加单参数计算并输出 `robustness.html`。检测阈值复评使用已经核查的化学状态，不会覆盖 pH 或重算成另一种反应。
@@ -152,7 +155,7 @@ julia --project=. test/runtests.jl
 MINERALTRACE_INTEGRATION=1 julia --project=. test/runtests.jl
 ```
 
-集成测试需要已配置的引擎／数据库。v0.7.0 记录的本地完整测试为 1675 项通过，这是工程证据，不是 CI 徽章或实验准确度认证。[执行记录](data/validation/V070_STATUS.md)。
+集成测试需要已配置的引擎／数据库。v0.7.0 记录的本地完整测试为 1675 项通过，这是工程证据，不是 CI 徽章或实验准确度认证。[执行记录](data/validation/V070_STATUS.md)。v0.7.1 本地完整测试 1685 项通过；35 个归因终点和导出包复现见[独立检查记录](data/validation/v071/VERIFICATION.json)。
 
 历史 Example 1 已通过官方数据库快照完成受控归因。原始“现代数据库对历史表格”基准仍在不变容差下报告三项差异；匹配的历史复现与现代回归分别检查。[详细归因](data/validation/EXAMPLE1_ATTRIBUTION_V070.md)。
 

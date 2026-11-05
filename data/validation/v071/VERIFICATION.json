@@ -1,0 +1,13 @@
+{
+  "full_suite_pass_count": 1685,
+  "new_control_checks": 10,
+  "controlled_endpoints": 35,
+  "conservation_and_boundary_checks": "all 35 pass",
+  "independent_export_reproduction": "analysis.json, comparison.csv and comparison.svg byte-identical",
+  "direct_cli_replay": "Pitzer-profile input/database produces byte-identical selected.tsv",
+  "observation_sha256": "2e8df44966f958f0959c4f252124e8a0b55c5b4b3e4889a5799a328a0d12d805",
+  "analysis_sha256": "79f89478e957f5175cde0b2d72a0c045179a37d9573f5ea879c976e24e5c406b",
+  "archive": "results/calcite-attribution-KP4dqg",
+  "reproduction_archive": "results/calcite-attribution-KP4dqg/reproduced/calcite-attribution-n3zDKm",
+  "empirical_status": "challenged_discrepancy_unresolved"
+}
