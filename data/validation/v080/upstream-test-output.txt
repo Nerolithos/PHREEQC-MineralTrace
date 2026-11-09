@@ -1,0 +1,4 @@
+Upstream archive: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/upstream-EMaXcH
+V080_UPSTREAM_ARCHIVE=/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/upstream-EMaXcH
+Test Summary:                                                        | Pass  Total  Time
+Version-matched official references never grant experimental support |    7      7  2.3s

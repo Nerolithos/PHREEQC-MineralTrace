@@ -1,0 +1,11 @@
+{
+  "upstream_version": "3.8.6-17100",
+  "source_url": "https://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.8.6-17100.tar.gz",
+  "archive_sha256": "b5c4a6dfea1a6bb6a3436857a50346bb943904a49582714494b4f1b1e54e64e1",
+  "source_type": "engine_reference",
+  "files": {
+    "ex6": "8e44f6a226e3f58cf34456755cde7ace25ce6568f50393bb895d5986339bfef3",
+    "ex7": "344fcc89c6fc7d0e0229084528ef06321727b274c7fcc159590cdf9ded09387d",
+    "ex22": "7e32dcb2b77f15415f9ccc44306d04c84d81d32797a80430b28b8466472dc32c"
+  }
+}

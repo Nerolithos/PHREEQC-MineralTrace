@@ -34,11 +34,15 @@ function diagnostic_databases(base, pitzer, dest)
     Dict("davies_ions_with_removed_gamma"=>sort(unique(removed)),"ideal_removed_properties"=>["T_c","P_c","Omega"])
 end
 
-function attribution_input(e, stock; pressure_atm=nothing)
+function attribution_input(e, stock; pressure_atm=nothing, expanded_telemetry=false)
     input=MineralTrace.endpoint_input(e)
     # Instrument actual solution pressure, ionic strength, activities and pressure-adjusted constants.
     input=replace(input," logf_CO2\n"=>" logf_CO2 pressure_atm ionic_strength gamma_Ca gamma_HCO3 lk_Calcite lk_CO2\n")
     input=replace(input,"LA(\"CO2\")-LK_PHASE(\"CO2(g)\")"=>"LA(\"CO2\")-LK_PHASE(\"CO2(g)\"), PRESSURE, MU, 10^(LA(\"Ca+2\")-LM(\"Ca+2\")), 10^(LA(\"HCO3-\")-LM(\"HCO3-\")), LK_PHASE(\"Calcite\"), LK_PHASE(\"CO2(g)\")")
+    if expanded_telemetry
+        input=replace(input,"lk_CO2\n"=>"lk_CO2 la_Ca2 la_CO2 total_DIC_mol_kgw total_Ca_mol_kgw\n")
+        input=replace(input,"LK_PHASE(\"Calcite\"), LK_PHASE(\"CO2(g)\")"=>"LK_PHASE(\"Calcite\"), LK_PHASE(\"CO2(g)\"), LA(\"Ca+2\"), LA(\"CO2\"), TOT(\"C(4)\"), TOT(\"Ca\")")
+    end
     p=isnothing(pressure_atm) ? e.spec["solution_pressure_bar"]/1.01325 : pressure_atm
     input*"\nREACTION_PRESSURE 1\n $p\nEQUILIBRIUM_PHASES 1\n Calcite 0 $stock\n CO2(g) $(log10(e.spec["pco2_bar"]/1.01325)) 10\nSAVE solution 1\nSAVE equilibrium_phases 1\nDUMP\n -file state.dmp\n -solution 1\n -equilibrium_phases 1\nEND\n"
 end
@@ -72,7 +76,7 @@ function attribution_report(dir, results, scenarios)
     write(joinpath(dir,"report.html"),page)
 end
 
-function attribute_calcite_bias(root; project=dirname(@__DIR__), config=PHREEQCConfig(), pitzer=joinpath(dirname(config.database),"pitzer.dat"))
+function attribute_calcite_bias(root; project=dirname(@__DIR__), config=PHREEQCConfig(), pitzer=joinpath(dirname(config.database),"pitzer.dat"), expanded_telemetry=false, return_payload=false)
     obs=joinpath(project,"data/validation/reflect-2023/observations.csv")
     bytes2hex(sha256(read(obs)))==OBS_HASH || error("Frozen observations changed")
     env=environment_check(config);mkpath(root);dir=abspath(mktempdir(root;prefix="calcite-attribution-",cleanup=false))
@@ -96,7 +100,7 @@ function attribute_calcite_bias(root; project=dirname(@__DIR__), config=PHREEQCC
             r=calcite_endpoint(e,c;root=dir)
             pa=name=="aqueous_pressure_upper" ? (p+0.23)/1.01325 : name=="omit_vapor_pressure" ? p/1.01325 : name=="aqueous_1atm_limit" ? 1. : (p+0.03)/1.01325
             stock=10/parse(Float64,r["selected"]["gfw_Calcite"])
-            deck=attribution_input(e,stock;pressure_atm=pa)
+            deck=attribution_input(e,stock;pressure_atm=pa,expanded_telemetry)
             run=run_phreeqc(c,deck;root=dir,required=["pressure_atm","ionic_strength","n_Ca","n_C","n_H","n_O","logf_CO2"],sources=["REFLECT-D23-2023"],metadata=Dict("scenario"=>name,"interpretation"=>meaning))
             q=only(filter(q->q["state"]=="react",run.rows));initial=only(filter(q->q["state"]=="i_soln",run.rows));v(k)=parse(Float64,q[k])
             abs(v("pressure_atm")-pa)<1e-8 || error("Actual aqueous pressure differs from declared pressure")
@@ -138,7 +142,7 @@ function attribute_calcite_bias(root; project=dirname(@__DIR__), config=PHREEQCC
     mkpath(joinpath(dir,"data/validation/v071"))
     for f in ("PROTOCOL.md","SOURCE_AUDIT.md");cp(joinpath(project,"data/validation/v071",f),joinpath(dir,"data/validation/v071",f));end
     println("Attribution archive: ",dir)
-    dir
+    return_payload ? (dir,payload) : dir
 end
 if abspath(PROGRAM_FILE)==@__FILE__
     attribute_calcite_bias(isempty(ARGS) ? "results" : ARGS[1])

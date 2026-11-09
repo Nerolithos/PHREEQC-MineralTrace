@@ -17,8 +17,11 @@ include("discovery/DiscoveryStudy.jl")
 include("discovery/DiscoverySimulation.jl")
 include("discovery/DiscoveryReport.jl")
 include("validation/CalciteEndpoint.jl")
+include("validation/ModelProfiles.jl")
 include("robustness/Robustness.jl")
 include("robustness/RobustnessReport.jl")
+export comparison_statistics
+export ModelProfile, EvidenceRegistry, load_model_profiles, load_evidence_registry, evaluate_applicability, audit_database, bar_to_atm, atm_to_bar
 export RobustnessPlan, load_robustness, analyze_robustness, report_robustness
 export CalciteCO2Endpoint, calcite_endpoint
 export DiscoveryStudy, DiscoveryResult, load_discovery, generate_candidates, discover_paths

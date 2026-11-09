@@ -1,0 +1,1150 @@
+[
+  {
+    "sha": "b624e3522c575f25b08fa7d40b9ac85748ed9755",
+    "node_id": "C_kwDOEYV-ANoAKGI2MjRlMzUyMmM1NzVmMjViMDhmYTdkNDBiOWFjODU3NDhlZDk3NTU",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-05-23T02:45:16Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-05-23T02:45:16Z"
+      },
+      "message": "Tonys changes to Br in phreeqc.dat, amm.dat, and pitzer.dat. New test case NaK_ClBr.",
+      "tree": {
+        "sha": "d8b66d49ac766b8b6b7d8a627eedc3c2838deb8f",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/d8b66d49ac766b8b6b7d8a627eedc3c2838deb8f"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/b624e3522c575f25b08fa7d40b9ac85748ed9755",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/b624e3522c575f25b08fa7d40b9ac85748ed9755",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/b624e3522c575f25b08fa7d40b9ac85748ed9755",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/b624e3522c575f25b08fa7d40b9ac85748ed9755/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "75b810838ceb996931cea386175d7fc2a94c6c59",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/75b810838ceb996931cea386175d7fc2a94c6c59",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/75b810838ceb996931cea386175d7fc2a94c6c59"
+      }
+    ]
+  },
+  {
+    "sha": "291512edb51bd016a74d157525902d98b1b18c5f",
+    "node_id": "C_kwDOEYV-ANoAKDI5MTUxMmVkYjUxYmQwMTZhNzRkMTU3NTI1OTAyZDk4YjFiMThjNWY",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-05-20T04:32:41Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-05-20T04:32:41Z"
+      },
+      "message": "lsp of databases, changed alk of e- to 1.0 in all databases, modified sit.dat",
+      "tree": {
+        "sha": "a53402469fd449f44a3f6caf6d02708185586fed",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/a53402469fd449f44a3f6caf6d02708185586fed"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/291512edb51bd016a74d157525902d98b1b18c5f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/291512edb51bd016a74d157525902d98b1b18c5f",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/291512edb51bd016a74d157525902d98b1b18c5f",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/291512edb51bd016a74d157525902d98b1b18c5f/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "23926575406667f9d24e0da7ed5e92c71245b2ea",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/23926575406667f9d24e0da7ed5e92c71245b2ea",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/23926575406667f9d24e0da7ed5e92c71245b2ea"
+      }
+    ]
+  },
+  {
+    "sha": "1748a90e3aea2b52337906e1fc8dc6f9aba8862b",
+    "node_id": "C_kwDOEYV-ANoAKDE3NDhhOTBlM2FlYTJiNTIzMzc5MDZlMWZjOGRjNmY5YWJhODg2MmI",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-05-06T22:48:38Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-05-06T22:48:38Z"
+      },
+      "message": "Removed CALCULATE_VALUES, added MEAN_GAMMAS, made phreeqc_rates.dat, updated CMakeLists, ran all examples, added test case ss_kinetics",
+      "tree": {
+        "sha": "ffd1890ed1151186640e2b2debe9b3c75597fd12",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/ffd1890ed1151186640e2b2debe9b3c75597fd12"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/1748a90e3aea2b52337906e1fc8dc6f9aba8862b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/1748a90e3aea2b52337906e1fc8dc6f9aba8862b",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/1748a90e3aea2b52337906e1fc8dc6f9aba8862b",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/1748a90e3aea2b52337906e1fc8dc6f9aba8862b/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "258656865756de15478c16b5f7e74efac30037ab",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/258656865756de15478c16b5f7e74efac30037ab",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/258656865756de15478c16b5f7e74efac30037ab"
+      }
+    ]
+  },
+  {
+    "sha": "26ceff1e235df0cd75c075c6baeb0b718603a9f6",
+    "node_id": "C_kwDOEYV-ANoAKDI2Y2VmZjFlMjM1ZGYwY2Q3NWMwNzVjNmJhZWIwYjcxODYwM2E5ZjY",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-04-22T15:41:41Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-04-22T15:41:41Z"
+      },
+      "message": "Tony's latest databases",
+      "tree": {
+        "sha": "0747b24f9390d71f55fc7bfb2b7d5462c1b4a170",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/0747b24f9390d71f55fc7bfb2b7d5462c1b4a170"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/26ceff1e235df0cd75c075c6baeb0b718603a9f6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/26ceff1e235df0cd75c075c6baeb0b718603a9f6",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/26ceff1e235df0cd75c075c6baeb0b718603a9f6",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/26ceff1e235df0cd75c075c6baeb0b718603a9f6/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6ffbf41587060d78d29b80b5a6ed78e3a4b9041c",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/6ffbf41587060d78d29b80b5a6ed78e3a4b9041c",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/6ffbf41587060d78d29b80b5a6ed78e3a4b9041c"
+      }
+    ]
+  },
+  {
+    "sha": "a20d7b52657d58eb303d583ace7b5c97782b8416",
+    "node_id": "C_kwDOEYV-ANoAKGEyMGQ3YjUyNjU3ZDU4ZWIzMDNkNTgzYWNlN2I1Yzk3NzgyYjg0MTY",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-04-14T23:45:26Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-04-14T23:45:26Z"
+      },
+      "message": "Tony changes 20240414, with correction to CH4 Vm. Changes to src. seaw_SC expanded.",
+      "tree": {
+        "sha": "9436f931ae3f57f8c514a3d5d28934f4b088e37b",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/9436f931ae3f57f8c514a3d5d28934f4b088e37b"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/a20d7b52657d58eb303d583ace7b5c97782b8416",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/a20d7b52657d58eb303d583ace7b5c97782b8416",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/a20d7b52657d58eb303d583ace7b5c97782b8416",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/a20d7b52657d58eb303d583ace7b5c97782b8416/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "169f86fb416809577a7af5ce98efcd405f08479b",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/169f86fb416809577a7af5ce98efcd405f08479b",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/169f86fb416809577a7af5ce98efcd405f08479b"
+      }
+    ]
+  },
+  {
+    "sha": "3ecc28c40856981b4e18991cb07eb8976957c05b",
+    "node_id": "C_kwDOEYV-ANoAKDNlY2MyOGM0MDg1Njk4MWI0ZTE4OTkxY2IwN2ViODk3Njk1N2MwNWI",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-03-16T05:20:47Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-03-16T05:20:47Z"
+      },
+      "message": "All test cases run. Fixed CALCULATED_VALUES and RATES in Amm.dat and phreeqc.dat",
+      "tree": {
+        "sha": "c64ee82d417a618caea1682325c6c16e3299b324",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/c64ee82d417a618caea1682325c6c16e3299b324"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/3ecc28c40856981b4e18991cb07eb8976957c05b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/3ecc28c40856981b4e18991cb07eb8976957c05b",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/3ecc28c40856981b4e18991cb07eb8976957c05b",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/3ecc28c40856981b4e18991cb07eb8976957c05b/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2fff208e6309754fa1c4792d7b44022c2c6eef91",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/2fff208e6309754fa1c4792d7b44022c2c6eef91",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/2fff208e6309754fa1c4792d7b44022c2c6eef91"
+      }
+    ]
+  },
+  {
+    "sha": "3fba5566b02ce7bca2ee4b8ea057aa8a246a1161",
+    "node_id": "C_kwDOEYV-ANoAKDNmYmE1NTY2YjAyY2U3YmNhMmVlNGI4ZWEwNTdhYThhMjQ2YTExNjE",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-03-15T21:16:12Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-03-15T21:16:12Z"
+      },
+      "message": "Tony's changes Mar 15, 2024",
+      "tree": {
+        "sha": "f75eede1d84b19fcaf095e7b26c1cee041367955",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/f75eede1d84b19fcaf095e7b26c1cee041367955"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/3fba5566b02ce7bca2ee4b8ea057aa8a246a1161",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/3fba5566b02ce7bca2ee4b8ea057aa8a246a1161",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/3fba5566b02ce7bca2ee4b8ea057aa8a246a1161",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/3fba5566b02ce7bca2ee4b8ea057aa8a246a1161/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "829ffe974fea5a2f1df90c4b2cc3fb3e736d7f43",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/829ffe974fea5a2f1df90c4b2cc3fb3e736d7f43",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/829ffe974fea5a2f1df90c4b2cc3fb3e736d7f43"
+      }
+    ]
+  },
+  {
+    "sha": "f3d8d174c4449db58ae1b8b06b8ab34fdf58493d",
+    "node_id": "C_kwDOEYV-ANoAKGYzZDhkMTc0YzQ0NDlkYjU4YWUxYjhiMDZiOGFiMzRmZGY1ODQ5M2Q",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-02-12T23:19:13Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2024-02-12T23:19:13Z"
+      },
+      "message": "modified NH3 from Tony's Amm.dat",
+      "tree": {
+        "sha": "3d1966e642023ec5495e8951590b66f8d8f125d5",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/3d1966e642023ec5495e8951590b66f8d8f125d5"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/f3d8d174c4449db58ae1b8b06b8ab34fdf58493d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/f3d8d174c4449db58ae1b8b06b8ab34fdf58493d",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/f3d8d174c4449db58ae1b8b06b8ab34fdf58493d",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/f3d8d174c4449db58ae1b8b06b8ab34fdf58493d/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a04de06a637948f40b0eb9626fc85f6d94235109",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/a04de06a637948f40b0eb9626fc85f6d94235109",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/a04de06a637948f40b0eb9626fc85f6d94235109"
+      }
+    ]
+  },
+  {
+    "sha": "9460fad4061a6271884d86521606d417d39075e3",
+    "node_id": "C_kwDOEYV-ANoAKDk0NjBmYWQ0MDYxYTYyNzE4ODRkODY1MjE2MDZkNDE3ZDM5MDc1ZTM",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2023-05-22T17:36:02Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2023-05-22T17:36:02Z"
+      },
+      "message": "Tony's changes May 5 and 7.",
+      "tree": {
+        "sha": "5d51526a3c1b86b179ae560d799a52ea35333c41",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/5d51526a3c1b86b179ae560d799a52ea35333c41"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/9460fad4061a6271884d86521606d417d39075e3",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/9460fad4061a6271884d86521606d417d39075e3",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/9460fad4061a6271884d86521606d417d39075e3",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/9460fad4061a6271884d86521606d417d39075e3/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "e7d4ae5ff1e42660ca38642230a78da0003c558a",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/e7d4ae5ff1e42660ca38642230a78da0003c558a",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/e7d4ae5ff1e42660ca38642230a78da0003c558a"
+      }
+    ]
+  },
+  {
+    "sha": "44b7473db765d45cf28bc80d0975f2127041130c",
+    "node_id": "C_kwDOEYV-ANoAKDQ0Yjc0NzNkYjc2NWQ0NWNmMjhiYzgwZDA5NzVmMjEyNzA0MTEzMGM",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2023-04-18T22:58:45Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2023-04-18T22:58:45Z"
+      },
+      "message": "Fixed Sg gfw and alkalinity in Amm.dat, phreeqc.dat, and pitzer.dat. Updated RELEASE.TXT",
+      "tree": {
+        "sha": "0b196040458256787955696339f4d3dc50a06faf",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/0b196040458256787955696339f4d3dc50a06faf"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/44b7473db765d45cf28bc80d0975f2127041130c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/44b7473db765d45cf28bc80d0975f2127041130c",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/44b7473db765d45cf28bc80d0975f2127041130c",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/44b7473db765d45cf28bc80d0975f2127041130c/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "feaec413437eed0493214b780aa5cca4a6693808",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/feaec413437eed0493214b780aa5cca4a6693808",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/feaec413437eed0493214b780aa5cca4a6693808"
+      }
+    ]
+  },
+  {
+    "sha": "ea3cba24a86f2c1569f93a9fd85ce2f207597ece",
+    "node_id": "C_kwDOEYV-ANoAKGVhM2NiYTI0YTg2ZjJjMTU2OWY5M2E5ZmQ4NWNlMmYyMDc1OTdlY2U",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2023-04-04T00:31:48Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2023-04-04T00:31:48Z"
+      },
+      "message": "Tony's viscosity with many examples",
+      "tree": {
+        "sha": "806b05a442be49f9d1dcdc51ffdc0d50c524d59b",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/806b05a442be49f9d1dcdc51ffdc0d50c524d59b"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/ea3cba24a86f2c1569f93a9fd85ce2f207597ece",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/ea3cba24a86f2c1569f93a9fd85ce2f207597ece",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/ea3cba24a86f2c1569f93a9fd85ce2f207597ece",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/ea3cba24a86f2c1569f93a9fd85ce2f207597ece/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "a4a3bf86bbcb30c0589e7786ec2678d54bfa6b29",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/a4a3bf86bbcb30c0589e7786ec2678d54bfa6b29",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/a4a3bf86bbcb30c0589e7786ec2678d54bfa6b29"
+      }
+    ]
+  },
+  {
+    "sha": "ea7ada6f0967b50ab341956c4b063805a3ddb986",
+    "node_id": "MDY6Q29tbWl0MjkzOTYxMjE2OmVhN2FkYTZmMDk2N2I1MGFiMzQxOTU2YzRiMDYzODA1YTNkZGI5ODY=",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2021-07-07T03:52:06Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2021-07-07T03:52:06Z"
+      },
+      "message": "Tony H2S. Amm.dat, phreeqc.dat, pitzer.dat, utf8, updated test cases",
+      "tree": {
+        "sha": "c139fac34cafe1c4860fa3cb709ddd344edf1696",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/c139fac34cafe1c4860fa3cb709ddd344edf1696"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/ea7ada6f0967b50ab341956c4b063805a3ddb986",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/ea7ada6f0967b50ab341956c4b063805a3ddb986",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/ea7ada6f0967b50ab341956c4b063805a3ddb986",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/ea7ada6f0967b50ab341956c4b063805a3ddb986/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "527e58bbe7d5b9cf2226253ced42d74228dae55a",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/527e58bbe7d5b9cf2226253ced42d74228dae55a",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/527e58bbe7d5b9cf2226253ced42d74228dae55a"
+      }
+    ]
+  },
+  {
+    "sha": "527e58bbe7d5b9cf2226253ced42d74228dae55a",
+    "node_id": "MDY6Q29tbWl0MjkzOTYxMjE2OjUyN2U1OGJiZTdkNWI5Y2YyMjI2MjUzY2VkNDJkNzQyMjhkYWU1NWE=",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2021-07-06T23:30:19Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2021-07-06T23:30:19Z"
+      },
+      "message": "before H2S",
+      "tree": {
+        "sha": "62c88cadabb16e5d04da042f9fe8bb224809d4ce",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/62c88cadabb16e5d04da042f9fe8bb224809d4ce"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/527e58bbe7d5b9cf2226253ced42d74228dae55a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/527e58bbe7d5b9cf2226253ced42d74228dae55a",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/527e58bbe7d5b9cf2226253ced42d74228dae55a",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/527e58bbe7d5b9cf2226253ced42d74228dae55a/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "84d0373d6a41ad83d0764caeb030b292440024d0",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/84d0373d6a41ad83d0764caeb030b292440024d0",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/84d0373d6a41ad83d0764caeb030b292440024d0"
+      }
+    ]
+  },
+  {
+    "sha": "84d0373d6a41ad83d0764caeb030b292440024d0",
+    "node_id": "MDY6Q29tbWl0MjkzOTYxMjE2Ojg0ZDAzNzNkNmE0MWFkODNkMDc2NGNhZWIwMzBiMjkyNDQwMDI0ZDA=",
+    "commit": {
+      "author": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2021-07-06T21:12:57Z"
+      },
+      "committer": {
+        "name": "David Parkhurst",
+        "email": "dlparkhurst@gmail.com",
+        "date": "2021-07-06T21:12:57Z"
+      },
+      "message": "Updated Amm.dat, phreeqc.dat, pitzer.dat for H2S(g)",
+      "tree": {
+        "sha": "261dde1749664930832c16e602b68156c6df7cb4",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/trees/261dde1749664930832c16e602b68156c6df7cb4"
+      },
+      "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/git/commits/84d0373d6a41ad83d0764caeb030b292440024d0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null,
+        "verified_at": null
+      }
+    },
+    "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/84d0373d6a41ad83d0764caeb030b292440024d0",
+    "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/84d0373d6a41ad83d0764caeb030b292440024d0",
+    "comments_url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/84d0373d6a41ad83d0764caeb030b292440024d0/comments",
+    "author": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "dlparkhurst",
+      "id": 66229751,
+      "node_id": "MDQ6VXNlcjY2MjI5NzUx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66229751?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dlparkhurst",
+      "html_url": "https://github.com/dlparkhurst",
+      "followers_url": "https://api.github.com/users/dlparkhurst/followers",
+      "following_url": "https://api.github.com/users/dlparkhurst/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dlparkhurst/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dlparkhurst/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dlparkhurst/subscriptions",
+      "organizations_url": "https://api.github.com/users/dlparkhurst/orgs",
+      "repos_url": "https://api.github.com/users/dlparkhurst/repos",
+      "events_url": "https://api.github.com/users/dlparkhurst/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dlparkhurst/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "2cfb8bff6590c4f2e53018f188ffaada1f719756",
+        "url": "https://api.github.com/repos/phreeqc-dev/phreeqc3/commits/2cfb8bff6590c4f2e53018f188ffaada1f719756",
+        "html_url": "https://github.com/phreeqc-dev/phreeqc3/commit/2cfb8bff6590c4f2e53018f188ffaada1f719756"
+      }
+    ]
+  }
+]

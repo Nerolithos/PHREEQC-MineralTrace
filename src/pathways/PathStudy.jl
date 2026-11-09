@@ -84,7 +84,7 @@ end
 load_paths(path::AbstractString)=PathStudy(TOML.parsefile(path))
 
 function path_selection(minerals)
-    ["SELECTED_OUTPUT 1"," -file selected.tsv"," -reset false"," -high_precision true"," -state true"," -pH true"," -temperature true"," -water true"," -charge_balance true"," -percent_error true"," -totals Ca F C(4) Na Cl"," -molalities Ca+2 F- HCO3- CO3-2 CO2"," -saturation_indices "*join(minerals," "),"USER_PUNCH 1"," -headings "*join(vcat(["n_$e" for e in PROCESS_ELEMENTS],["solid_$m" for m in minerals])," ")," -start"," 10 PUNCH "*join(vcat(["TOTMOLE(\"$e\")" for e in PROCESS_ELEMENTS],["EQUI(\"$m\")" for m in minerals]),", ")," -end"]
+    ["SELECTED_OUTPUT 1"," -file selected.tsv"," -reset false"," -high_precision true"," -state true"," -pH true"," -temperature true"," -water true"," -charge_balance true"," -percent_error true"," -totals Ca F C(4) Na Cl"," -molalities Ca+2 F- HCO3- CO3-2 CO2"," -saturation_indices "*join(minerals," "),"USER_PUNCH 1"," -headings "*join(vcat(["n_$e" for e in PROCESS_ELEMENTS],["solid_$m" for m in minerals],["pressure_atm","ionic_strength"])," ")," -start"," 10 PUNCH "*join(vcat(["TOTMOLE(\"$e\")" for e in PROCESS_ELEMENTS],["EQUI(\"$m\")" for m in minerals],["PRESSURE","MU"]),", ")," -end"]
 end
 
 function path_initial_input(s::PathStudy)

@@ -99,22 +99,29 @@ function sensitivity_comparisons(s,candidates,membership)
     result
 end
 
-function discover_paths(s::DiscoveryStudy,c::PHREEQCConfig=PHREEQCConfig();root="results")
+function discover_paths(s::DiscoveryStudy,c::PHREEQCConfig=PHREEQCConfig();root="results",profile_id="discovery-cafc-386")
+    registry=load_evidence_registry();profiles=load_model_profiles(;registry)
+    haskey(profiles,profile_id) || throw(ArgumentError("Unknown model profile: $profile_id"))
+    profile=profiles[profile_id]
     generated=generate_candidates(s) # Budget and every recipe validated BEFORE any engine execution.
     env=environment_check(c);dbtext=read(env.database,String)
     all(m->occursin(Regex("(?m)^"*m*"\\s*\$"),dbtext),s.spec["minerals"]) || throw(DependencyError("Requested phase absent from selected database"))
+    db_audit=audit_database(env.database;phases=profile.spec["required_phases"],species=profile.spec["required_species"])
     mkpath(root);dir=abspath(mktempdir(root;prefix="discovery-",cleanup=false));project=dirname(dirname(@__DIR__))
     open(io->TOML.print(io,s.spec;sorted=true),joinpath(dir,"discovery.toml"),"w")
     open(io->TOML.print(io,Dict("candidates"=>generated.candidates,"membership"=>generated.membership);sorted=true),joinpath(dir,"generated-candidates.toml"),"w")
     cp(env.database,joinpath(dir,"database.dat"))
     for path in ("src","data","Project.toml","Manifest.toml");cp(joinpath(project,path),joinpath(dir,path));end
-    write(joinpath(dir,"reproduce.jl"),"using MineralTrace\ns=load_discovery(joinpath(@__DIR__,\"discovery.toml\"))\nc=PHREEQCConfig(database=joinpath(@__DIR__,\"database.dat\"),timeout_seconds=$(c.timeout_seconds))\nr=discover_paths(s,c;root=joinpath(@__DIR__,\"reproduced\"))\nprintln(report(r))\n")
+    write(joinpath(dir,"reproduce.jl"),"using MineralTrace\ns=load_discovery(joinpath(@__DIR__,\"discovery.toml\"))\nc=PHREEQCConfig(database=joinpath(@__DIR__,\"database.dat\"),timeout_seconds=$(c.timeout_seconds))\nr=discover_paths(s,c;root=joinpath(@__DIR__,\"reproduced\"),profile_id=\"$profile_id\")\nprintln(report(r))\n")
+    open(io->TOML.print(io,Dict("profile"=>profile.spec);sorted=true),joinpath(dir,"model-profile.toml"),"w")
+    write(joinpath(dir,"database-audit.json"),json_value(db_audit)*"\n")
     frozen=PHREEQCConfig(executable=env.executable,database=joinpath(dir,"database.dat"),timeout_seconds=c.timeout_seconds)
     candidates=Dict{String,Any}[]
     for item in generated.candidates
         study=PathStudy(item["spec"]);definition=only(study.spec["paths"])
         candidate=run_candidate(study,definition,frozen,dir)
         candidate["screening"]=screen_discovered(s,candidate)
+        candidate["model_applicability"]=isempty(candidate["steps"]) ? Dict("model_profile_id"=>profile_id,"profile_match_status"=>"unknown_evidence","strict_qualified"=>false,"reason"=>"no calculated chemical states") : discovery_applicability(profile,candidate,db_audit;registry)
         candidate["coordinates"]=item["coordinates"];candidate["chemistry_sha256"]=item["chemistry_sha256"]
         candidate["environmental_sequence"]=item["environmental_sequence"]
         candidate["accessibility"]="all_declared_phases_always_accessible"
@@ -122,6 +129,9 @@ function discover_paths(s::DiscoveryStudy,c::PHREEQCConfig=PHREEQCConfig();root=
     end
     groups=discovery_groups(candidates);sensitivity=sensitivity_comparisons(s,candidates,generated.membership)
     provenance=Dict{String,Any}("timestamp_utc"=>string(now(UTC)),"julia_version"=>string(VERSION),"package_version"=>string(pkgversion(@__MODULE__)),"database_sha256"=>env.database_sha256,"executable_sha256"=>bytes2hex(sha256(read(env.executable))),"config_sha256"=>bytes2hex(sha256(read(joinpath(dir,"discovery.toml")))),"generated_candidates_sha256"=>bytes2hex(sha256(read(joinpath(dir,"generated-candidates.toml")))),"enumeration"=>"deterministic bounded exhaustive enumeration of declared discrete grammar; no random seed, optimization or evidence-guided pruning","phase_access_policy"=>s.spec["accessibility"],"model_applicability"=>"unverified")
+    provenance["model_profile_id"]=profile_id
+    provenance["evidence_registry_sha256"]=registry.fingerprint
+    provenance["model_profile_sha256"]=bytes2hex(sha256(codeunits(json_value(profile.spec))))
     provenance["source_sha256"]=Dict(relpath(joinpath(folder,f),dir)=>bytes2hex(sha256(read(joinpath(folder,f)))) for (folder,_,files) in walkdir(joinpath(dir,"src")) for f in files)
     provenance["evidence_sha256"]=Dict(relpath(joinpath(folder,f),dir)=>bytes2hex(sha256(read(joinpath(folder,f)))) for (folder,_,files) in walkdir(joinpath(dir,"data")) for f in files)
     provenance["engine_banners"]=unique([TOML.parsefile(joinpath(dir,p["archive"],"manifest.toml"))["engine_banner"] for candidate in candidates for p in candidate["steps"]])

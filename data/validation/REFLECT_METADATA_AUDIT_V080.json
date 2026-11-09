@@ -1,0 +1,287 @@
+{
+  "source_id": "REFLECT-D23-2023",
+  "doi": "10.48440/gfz.4.8.2023.001",
+  "source_sha256": "7e80e09592286370000ca0dfccc4ff8cfc0f287690ba40e14e02e0bf8c436e70",
+  "fields": [
+    {
+      "id": "pressure_definition",
+      "value": "absolute autoclave pressure minus water vapor pressure",
+      "unit": "bar",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 paragraph 1",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "pCO2, not gauge pressure, total pressure or fugacity"
+    },
+    {
+      "id": "selected_pco2",
+      "value": [
+        10.09,
+        23.2,
+        31.56,
+        39.85,
+        49.99
+      ],
+      "unit": "bar",
+      "source_page": 26,
+      "source_location": "Fig.22 top-right pure-water panel, five purple markers",
+      "classification": "derived",
+      "transcription_confidence": "digitization_bound_separate",
+      "interpretation": "Frozen digitization; not nominal exact pressure"
+    },
+    {
+      "id": "temperature",
+      "value": 24.0,
+      "unit": "degC",
+      "source_page": 26,
+      "source_location": "Fig.22 legend and purple markers",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Selected endpoint temperature"
+    },
+    {
+      "id": "water_initial",
+      "value": 800,
+      "unit": "g solvent",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 paragraph 1",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "0 wt% panel modeled as initially 0.8 kg pure water"
+    },
+    {
+      "id": "aqueous_recipe",
+      "value": "degassed deionised water; no added NaCl",
+      "unit": "recipe",
+      "source_page": 22,
+      "source_location": "§3.2.2 and Fig.22 p.26",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Trace concentrations not quantified"
+    },
+    {
+      "id": "trace_chemistry",
+      "value": "UNKNOWN",
+      "unit": "mol/kgw",
+      "source_page": 22,
+      "source_location": "§3.2.2",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "No invented trace concentrations"
+    },
+    {
+      "id": "solubility_axis",
+      "value": "g/kg calcite solubility",
+      "unit": "g/kg",
+      "source_page": 26,
+      "source_location": "Fig.22 ordinate",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Total Ca titration converted to CaCO3 equivalent; explicit worksheet not supplied"
+    },
+    {
+      "id": "mass_denominator",
+      "value": "UNKNOWN",
+      "unit": "kg",
+      "source_page": 26,
+      "source_location": "Fig.22 ordinate and methods pp.22–23",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "Water versus final solution not explicit; preserve both"
+    },
+    {
+      "id": "calcite_initial_range",
+      "value": [
+        10,
+        40
+      ],
+      "unit": "g",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 paragraph 1",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Range, not measured per-point assignment"
+    },
+    {
+      "id": "calcite_per_point",
+      "value": "UNKNOWN",
+      "unit": "g",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 paragraph 1",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "10 g is declared stock control, not recovered measured loading"
+    },
+    {
+      "id": "calcite_material",
+      "value": "predominantly ultra-pure Merck, 10 micrometre",
+      "unit": "material",
+      "source_page": 22,
+      "source_location": "§3.2.2",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Do not transfer Iceland spar preparation to Merck powder"
+    },
+    {
+      "id": "reactor_capacity",
+      "value": 900,
+      "unit": "mL",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 paragraph 1",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Nominal vessel capacity is not measured operational headspace"
+    },
+    {
+      "id": "gas_control",
+      "value": "CO2 bottle; reducing and metering valves; gas cap flushed 15–20 min",
+      "unit": "boundary",
+      "source_page": 23,
+      "source_location": "Fig.19 and paragraph 1",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Supports regulated pCO2 approximation; valve history during each endpoint not supplied"
+    },
+    {
+      "id": "operational_headspace",
+      "value": "UNKNOWN",
+      "unit": "L",
+      "source_page": 23,
+      "source_location": "Fig.19 and sampling paragraphs",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "Do not infer 0.1 L from nominal vessel minus solvent"
+    },
+    {
+      "id": "gas_purity",
+      "value": "UNKNOWN",
+      "unit": "mole fraction",
+      "source_page": 23,
+      "source_location": "paragraph 1",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "CO2 feed and air flush reported; exact impurities not given"
+    },
+    {
+      "id": "analytical_observable",
+      "value": "EDTA-derived dissolved calcium",
+      "unit": "total Ca",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 last sentences",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Not free-Ca activity, not total inorganic carbon"
+    },
+    {
+      "id": "analysis",
+      "value": "EDTA complexometry at pH 10, Eriochrome Black T, mean five titrations",
+      "unit": "method",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 last sentences",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "pH 10 is analytical titration condition, not in situ fluid pH"
+    },
+    {
+      "id": "analytical_uncertainty",
+      "value": "usually below 1%",
+      "unit": "percent",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 last sentence",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "No pointwise confidence level or sigma"
+    },
+    {
+      "id": "pointwise_uncertainty",
+      "value": "UNKNOWN",
+      "unit": "g/kg",
+      "source_page": 22,
+      "source_location": "§3.2.3.1 last sentence",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "No uncertainty-weighted acceptance statistic"
+    },
+    {
+      "id": "pressure_sensor_accuracy",
+      "value": 0.2,
+      "unit": "bar",
+      "source_page": 23,
+      "source_location": "paragraph 1",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Separate from digitization ±0.5 bar"
+    },
+    {
+      "id": "temperature_control",
+      "value": 0.1,
+      "unit": "degC",
+      "source_page": 23,
+      "source_location": "paragraph 1",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Control accuracy, not pointwise experimental distribution"
+    },
+    {
+      "id": "equilibrium_criterion",
+      "value": "impedance change <1% for 12 h; 1–3 consistency aliquots at 4 h intervals up to 24 h",
+      "unit": "criterion",
+      "source_page": 23,
+      "source_location": "paragraph 2",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Operational evidence, not guaranteed thermodynamic equilibrium"
+    },
+    {
+      "id": "duration_per_point",
+      "value": "UNKNOWN",
+      "unit": "h",
+      "source_page": 23,
+      "source_location": "paragraph 2; p.25 kinetic experiment opening",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "4–6 days belongs to kinetic-start description, not every Fig.22 point"
+    },
+    {
+      "id": "sampling",
+      "value": "at system P/T; 2 micrometre filter; ~10 mL flush; weighed bidistilled water to avoid precipitation on pressure release",
+      "unit": "procedure",
+      "source_page": 23,
+      "source_location": "paragraphs 2–3",
+      "classification": "reported",
+      "transcription_confidence": "high",
+      "interpretation": "Pointwise dilution masses/worksheets absent"
+    },
+    {
+      "id": "measured_endpoint_pH",
+      "value": "UNKNOWN",
+      "unit": "pH",
+      "source_page": 22,
+      "source_location": "EDTA pH 10 is not endpoint pH",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "Calculated pH must never be labeled OBSERVED"
+    },
+    {
+      "id": "measured_DIC",
+      "value": "UNKNOWN",
+      "unit": "mol/kgw",
+      "source_page": 22,
+      "source_location": "EDTA measurement description",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "No total inorganic carbon measurement recovered"
+    },
+    {
+      "id": "measured_net_solid_loss",
+      "value": "UNKNOWN",
+      "unit": "g",
+      "source_page": 22,
+      "source_location": "range of starting stocks only",
+      "classification": "unknown",
+      "transcription_confidence": "high",
+      "interpretation": "Stoichiometric model dissolution is calculated, not independently weighed"
+    }
+  ],
+  "conclusion": "metadata incomplete; operational regulated-gas evidence supports approximation, not exact reconstruction"
+}

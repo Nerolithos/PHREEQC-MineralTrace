@@ -1,0 +1,3 @@
+V080_DISCOVERY_ARCHIVE=/Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/discovery-bLhgrU
+Test Summary:                                                                         | Pass  Total     Time
+Discovery annotation preserves finite chemistry, proxy classes and strict uncertainty |    9      9  1m01.5s

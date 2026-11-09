@@ -1,0 +1,321 @@
+SOURCE SNAPSHOT: primary publisher text returned by web search on 2026-11-09.
+This is a retrieval transcript, not the original publisher PDF or HTML bytes.
+Canonical DOI: 10.1021/acs.jced.4c00670. Publisher states CC BY 4.0.
+Internal retrieval citation tokens have been removed; the scientific content is retained.
+Direct PDF/HTML download returned HTTP 403; do not label this file an original PDF.
+
+Solubility of Calcium
+Carbonate in Aqueous Monoethylene
+Glycol Mixtures under a Carbon Dioxide Atmosphere Using an Analytical
+Method (https://pubs.acs.org/doi/10.1021/acs.jced.4c00670)
+  Published: 1.7 years ago; Crawled: last week; https://doi.org/10.1021/acs.jced.4c00670 ... The absolute and relative mean deviation are AADm_{CaCO_{3}} = 0.14 mmol/kg and Δm_{CaCO_{3}} = 2.11%, respectively, indicating a representation of the system close to experimental uncertainty.
+Deborah C. Andrade
+
+Department of Chemical Engineering
+
+,
+
+Federal University of Rio Grande do Norte - UFRN
+
+,
+
+Lagoa Nova
+
+, Natal, Rio Grande do Norte 59066-800,
+
+Brazil
+
+Leonardo Pereira;
+
+Close author information for Leonardo Pereira
+
+Leonardo Pereira
+
+PETROBRAS/CENPES/PDDP/TPP
+
+,
+
+Av. Horácio Macedo. 950
+
+, Rio de Janeiro 219141-915,
+
+Brazil
+
+Osvaldo Chiavone-Filho
+
+Close author information for Osvaldo Chiavone-Filho
+
+Osvaldo Chiavone-Filho
+
+Department of Chemical Engineering
+
+,
+
+Federal University of Rio Grande do Norte - UFRN
+
+,
+
+Lagoa Nova
+
+, Natal, Rio Grande do Norte 59066-800,
+
+Brazil
+
+COI Statement: The authors declare no competing financial interest.
+
+Publisher: American Chemical Society
+
+Received: November 25, 2024
+
+Revision Received: January 17, 2025
+
+Accepted: February 05, 2025
+
+Published Online: February 25, 2025
+
+Published in Issue: March 13, 2025
+
+© 2025 The Authors. Published by American Chemical Society This publication is licensed under a Creative Commons Attribution 4.0 International License.
+
+J. Chem. Eng. Data (2025) 70 (3): 1498–1507.
+
+https://doi.org/10.1021/acs.jced.4c00670
+
+## Abstract
+
+Hydrate formation (low temperatures and high pressures) is a major concern in natural gas production as it can block pipelines and disrupt operations. Monoethylene glycol (MEG) is used to inhibit hydrates but reduces the solubility of salts like calcium carbonate (CaCO_{3}), leading to precipitation and scaling in pipelines and equipment. This study experimentally determined aqueous CaCO_{3} solubility under varying CO_{2} pressures (101.3–214.6 kPa) at constant temperatures (278.15, 288.15, and 298.15 K). Additional experiments examined the CaCO_{3} solubility in MEG–water mixtures at 298.15 K and under CO_{2} pressures (101.3–214.6 kPa). Using a novel setup with jacketed glass cells and a thermostatic bath, excess CaCO_{3} ensured a constant solid presence. Results showed increased solubility in the presence of CO_{2} but a significant reduction with MEG. Thermodynamic modeling was performed for the H_{2}O + CO_{2} + CaCO_{3} system, using the Pitzer model and OLI simulator, yielding good prediction results. A comprehensive literature review of CaCO_{3} aqueous solubility data (273.25–368.15 K, 0.03–214.6 kPa) was compiled. The database was correlated with the Pitzer model, resulting in low deviations (AADmCaCO_{3} = 0.14 mmol/kg). The Redlich–Kister expansion described accurately mixed solvent solubility data. The approach demonstrated broader applicability for the temperature and CO_{2} pressure ranges of interest.
+
+## 1. Introduction
+
+The formation of natural gas hydrates can cause problems in the production flow. Hydrates are formed at high pressures and low temperatures, precisely the conditions found in natural gas transport lines between the wellhead and the platform. Monoethylene glycol is generally used as a thermodynamic inhibitor to prevent the formation of these natural gas hydrates. (1−3)
+
+The water produced in the oil and gas exploitation processes contains large amounts of dissolved salts. Calcium carbonate is one of those salts that presents a low solubility in water. However, in the reservoir, CaCO_{3} has an opposite behavior due to the presence of carbon dioxide (CO_{2}). This occurs due to the dissolution of CO_{2}, forming carbonic acid and other derived species. The solubility of CaCO_{3} is highly influenced by the amount formed of carbonic acid present in the solution, which was produced by the CO_{2} concentration, which leads to CaCO_{3} solubilization. (4) It should be noted that the amount of carbon dioxide in the aqueous phase may be indirectly monitored through pH. (5)
+
+CaCO_{3}–H_{2}O–CO_{2}  | 298.15  | 100  | Sass et al. (18)
+CaCO_{3}–H_{2}O–CO_{2}  | 274.15–303.15  | 100  | Wells (19)
+CaCO_{3}–H_{2}O–CO_{2}  | 298.15  | 92  | Nakayama (5)
+CaCO_{3}–H_{2}O–NaCl (0.4–5.6 mol kg^{–1})  | 298.15–362.15  | 100  | Nagy (20)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0–0.5 mol kg^{–1})  | 273.15–377.15  | 100–10,000  | Miller (21)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0–1.0 mol kg^{–1})  | 371.15–593.15  | 97–6290  | Ellis (22,23)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (1–3 mol kg^{–1}  | 473.15–673.15  | 60,000–100,000  | Malinin and Kanukov (24)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (10^{–3}–0.1 mol kg^{–1})  | 373.15–437.15  | 100–5648  | Bychkov (25)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0.1–6 mol kg^{–1})  | 298.15  | 100  | Millero et al. (26)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0.17–0.8 mol kg^{–1})  | 373.15–573.15  | 13,500  | Pool et al. (27)
+   |    |    |  
+CaCO_{3}–H_{2}O–MEG (0–80%)  | 298.15  | 100  | Natsi et al. (28)
+CaCO_{3}–H_{2}O–NaCl (0–0.5 mol/kg)MEG (90%)  | 353.15–418.15  | 100  | Odeigah et al. (29)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0–0.5 mol/kg)MEG (0–99.67%)  | 275.95–343.15  | 100  | Lu et al. (30)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0.6–1.1 mol/kg)MEG (0–100%)  | 298.15–333.15  | 110–400  | Serpa et al. (31)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0–2.4 mol/kg)MEG (0–99.67%)  | 298.15–368.15  | 100  | Coto et al. (4)
+CaCO_{3}–H_{2}O–CO_{2}–NaCl (0.1–0.7 mol/kg)MEG (0–100%)  | 298.15–353.15  | 100  | Kaasa and Sandengen (1)
+
+
+Due to the challenges and complexity of the calcium carbonate system, the present work aims to describe the behavior of CaCO_{3} solubility, measured as a function of CO_{2} partial pressure and MEG concentration and in a temperature range of operational interest.
+
+Although the literature includes numerous studies covering various pressure, temperature, and composition ranges, there are still some gaps in certain ranges of interest to the petroleum industry. This study aims to address these gaps by providing new experimental data and developing a systematic model based on both our experimental results and the existing literature. The resulting correlation can be applied to low pressures (up to 214.6 kPa) and temperatures ranging from 273.25 to 368.15 K.
+
+The interaction among MEG, water, CO_{2}, and CaCO_{3} represents a complex multicomponent system. The study provides new insights into solubility behavior in such systems, contributing to the broader field of chemical thermodynamics.
+
+This research bridges fundamental chemical understanding and industrial applications, making it a significant contribution to fields such as petrochemical engineering, environmental science, and process chemistry.
+
+## 2. Experimental Methods
+
+### 2.1. Materials
+
+Table 2 reports the purities and suppliers of the chemicals used in this work. Ultrapure water of type 1, previously distilled, was deionized using the Merck Milli-Q Direct Water Purification System. Water and MEG were also monitored by measurements of density, pH, and electrical conductivity (κ < 1.5 μS·cm^{–1}). MEG and water purities were corroborated by vapor pressure measurements. The humidity of MEG was monitored using Karl Fischer titration (Mettler-Toledo, model DL39). This control has been performed continuously due to the hygroscopic nature of the compounds. MEG and CaCO_{3} were used without further purification. The use of desiccators and careful manipulation of the samples in the operations were found to be crucial in the experiments.
+
+Table 2.
+
+Purities and Suppliers of Chemicals Used in This Work
+
+ |  |  |  | ρ(298.15 K) (g·cm^{–3})
+--- | --- | --- | --- | ---
+component  | source  | CAS reg. no.  | purity (wt %)  | this worka  | literature
+--- | --- | --- | --- | --- | ---
+monoethylene glycol (MEG)  | Sigma-Aldrich  | 107-21-1  | ≥99.8  | 1.10978  | 1.10982 (32)
+deionized waterb  |    |    |    | 0.99709  | 0.99707 (33)
+carbon dioxide  | Linde  |    | ≥99.9  | 0.80944c  | 0.8091c (34)
+calcium carbonate  | Sigma-Aldrich  | 471-34-1  | ≥99.5  |    |  
+
+a
+
+Measured at atmospheric pressure (101.3b kPa) with Anton Paar, model DMA 4500M; standard estimated uncertainties (u) for the variables are u(T) = 0.01 K and u(P) = 0.3 kPa. The combined standard uncertainty of the density measurements was estimated to be u_{c}(ρ) = 1.1×10^{–4} g·cm^{–3}.
+
+b
+
+Ultrapure (type 1) water previously distilled; Merck Milli-Q Direct Water Purification System; monitored by measurements of density, pH, and conductivity (κ < 1.5 μS/cm).
+
+c
+
+Carbon dioxide densities at 7000 kPa and 293.15 K.
+
+### 2.2. Experimental Procedure
+
+The experimental procedure was carried out in a specially designed apparatus with two jacketed glass cells (approximately 50 mL each) coupled to a thermostatic bath, a buffer tank, a CO_{2} cylinder, and a valve system, or manifold, as illustrated in Figure 1. Cells were maintained under the same conditions of pressure and temperature during the experiment. An excess of calcium carbonate was added to the liquid phase to ensure the constant presence of the solid phase and to provide conditions for salt saturation in the cell during the experiment. The system was maintained at a constant temperature by circulating water from a thermostatic bath. The pressure was also fixed by providing an atmosphere of carbon dioxide above the liquid surface with the aid of a buffer tank. Calcium carbonate has a low solubility in pure water; however, the solubility increases when carbon dioxide is present in the system.
+
+Figure 1
+
+View LargeDownload to Slide
+
+Figure 1.
+
+Experimental CaCO_{3} solubility setup scheme in aqueous mixtures under a CO_{2} atmosphere: (a) jacketed glass cells; (b) thermostatic bath; (c) magnetic stirrers; (d) manifold; (e) pressure transducer; (f) vacuum pump; (g) buffer; (h) CO_{2} cylinder; and (i) pH and temperature sensor.
+
+Figure 1
+
+View LargeDownload to Slide
+
+Figure 1.
+
+Experimental CaCO_{3} solubility setup scheme in aqueous mixtures under a CO_{2} atmosphere: (a) jacketed glass cells; (b) thermostatic bath; (c) magnetic stirrers; (d) manifold; (e) pressure transducer; (f) vacuum pump; (g) buffer; (h) CO_{2} cylinder; and (i) pH and temperature sensor.
+
+Close Figure 1.
+
+Initially, the system operates at a lower temperature to ensure the solubilization of CaCO_{3} for a period of 30 min, considering that the solubility of this salt increases with a decrease in temperature. The mixture is under agitation for 2 h, and after that period, the system is at rest for another 2 h to ensure total sedimentation. (35) Previous salt solubility determinations at the laboratory were also carried out for other aqueous systems. (36−38)
+
+It is worth mentioning that, in the system with CaCO_{3} and mixtures with MEG, and some with just water, the time to reach the equilibrium proved by the reproducibility of two successive samples is longer, being necessary to extend each test by 24 h.
+
+After the end of this process, samples were collected from both cells and diluted in HNO_{3} to avoid salt precipitation, and the analysis was carried out using a VARIAN atomic absorption spectrometer. The two generated values were compared in terms of reproducibility, and in the case of divergence, the experiment was repeated. Otherwise, the mean was calculated and regarded as the solubility, together with the corresponding deviation.
+
+To determine the activity coefficient of Ca^{2+}, the Pitzer (41) model was applied, as presented in eq 14. Millero and Schreiber (40) present the Pitzer parameters for CaCO_{3} at 298.15 K. In this work, a linear temperature dependence on the parameters (B^{0}_{i}, B^{1}_{i}, C_{i}) was employed using Millero and Schreiber (40) equations.
+
+$$\mathrm{ln}\phantom{\rule{0.25em}{0ex}}{\gamma }_{\mathit{i}}={{Z}_{\mathit{i}}}^{2}·{f}^{\gamma }+I·{B}_{i}^{0}+{B}_{\mathit{i}}^{1}·{f}^{1}+{I}^{2}·{C}_{\mathit{i}}$$
+
+(14)
+
+$${f}^{1}=[1-{\mathrm{e}}^{-2{I}^{1/2}}(1+2{I}^{1/2}-2I)]$$
+
+(15)
+
+where f^{γ} is the Debye–Huckel (42) limiting law given by
+
+$${f}^{\gamma }=-0.392\left[\frac{{I}^{1/2}}{1+1.2{I}^{1/2}}+\frac{2}{1.2}\mathrm{ln}\left(1+1.2{I}^{1/2}\right)\right]$$
+
+(16)
+
+$$I=\frac{1}{2}\sum _{i=1}^{n}{{Z}_{i}}^{2}{m}_{i}$$
+
+(17)
+
+where I is ionic strength, Z is the ion charge, and m_{i} is the molality (mol kg^{–1}).
+
+The OLI simulator (43) was also used for representing experimental data. (6) Thermodynamic modeling of calcium carbonate solubility in water was performed by using this software. Initially, the chemical species involved and the conditions of interest (composition, temperature, and pressure) were inserted. Then, using the MSE activity coefficient model (44) in conjunction with the SRK equation of state, the solubility values of calcium carbonate were determined in a range of CO_{2} partial pressure, via Flash calculation. Given the applicability of the OLI tool for systems with electrolytes, it is possible to assess the conformity of experimental data (this work and literature) on CaCO_{3} solubility.
+
+### 3.2. H_{2}O–MEG–CO_{2}–CaCO_{3} System
+
+For the excess property approach, an ideal solution definition is required. The excess solubility (m^{E}) may be defined as the difference between the actual solubility and the ideal solution. (45,46) The logarithm form has been applied with the mole fraction scale of concentration, see eq 18. The ideal solubility is defined according to eq 19:
+
+$$\mathrm{ln}\phantom{\rule{0.25em}{0ex}}{m}_{{\mathrm{CaCO}}_{3}}^{\mathrm{E}}=\mathrm{ln}\phantom{\rule{0.25em}{0ex}}{m}_{{\mathrm{CaCO}}_{3}}-\mathrm{ln}\phantom{\rule{0.25em}{0ex}}{m}_{{\mathrm{CaCO}}_{3}}^{\mathrm{id}}$$
+
+## 4. Results and Discussion
+
+### 4.1. H_{2}O–CO_{2}–CaCO_{3} Solubility Measurements
+
+The experimental runs of the solubility of calcium carbonate in water in the presence of CO_{2} were carried out in five isobars (101.3, 134.6, 161.3, 188.0, and 214.6 kPa) at temperatures of 278.15, 288.15, and 298.15 K. The measurements obtained for the H_{2}O + CO_{2} + CaCO_{3} system are reported in Table 3, added to the deviations of the data obtained in duplicate.
+
+Table 3.
+
+Experimentala Solubility of CaCO_{3} in Water at P_{CO_{2}} = (101.3–214.6) kPa
+
+ | P_{CO_{2}} = 214.6 kPa  | P_{CO_{2}} = 188.0 kPa  | P_{CO_{2}} = 161.3 kPa  | P_{CO_{2}} = 134.6 kPa  | P_{CO_{2}} = 101.3 kPa
+--- | --- | --- | --- | --- | ---
+T/K  | m_{CaCO_{3}}  | σb  | m_{CaCO_{3}}  | σb  | m_{CaCO_{3}}  | σb  | m_{CaCO_{3}}  | σb  | m_{CaCO_{3}}  | σb
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+278.15  | 16.97  | 0.05  | 16.38  | 0.30  | 15.52  | 0.21  | 14.82  | 0.25  | 12.86  | 0.30
+288.15  | 15.28  | 0.18  | 13.92  | 0.29  | 13.24  | 0.03  | 11.54  | 0.31  | 11.36  | 0.20
+298.15  | 13.14  | 0.21  | 12.34  | 0.05  | 11.17  | 0.04  | 10.02  | 0.05  | 8.95  | 0.09
+
+a
+
+Standard estimated uncertainties u for the variables are u(T) = 0.05 K, u(P) = 2.7 kPa, u(m_{CaCO_{3}}) = 0.15 mmol kg^{–1}.
+
+b
+
+The standard deviation of experimental data obtained in duplicate.
+
+Among the wide range of conditions reported in the literature (Table 1), this study introduces conditions that have not yet been reported in the H_{2}O+CO_{2}+CaCO_{3} system, such as low temperatures and CO_{2} pressures slightly above 1 atm. To model this system, experimental data were selected from studies that reported measurements within the temperature range (273.25–368.15 K) and CO_{2} pressure range (0.03–214.6 kPa), ensuring a minimum level of agreement between them and with this study. (4,5,12,17,18)
+
+In the modeling process, it is necessary to input the variables pH and partial CO_{2} pressure. Unfortunately, not all studies report both variables, with some reporting only pH (4) and others only partial CO_{2} pressure. 
+Figure 3 presents a clear agreement between the experimental data obtained in this work, the values found in the literature by Frear and Johnston, (12) Nakayama, (5) Plummer and Busenberg, (17) Sass et al., (18) and Coto et al. (4) It can also be observed that the experimental results agree with the OLI simulator calculated values for the three temperatures, validating the reliability and accuracy of the commercial software. It is also demonstrated that Pitzer correlation represents accurately the CaCO_{3} solubility data. Therefore, these two approaches can adequately describe the solubility behavior of calcium carbonate in water in the presence of CO_{2}.
+
+Figure 3.
+
+Solubility data of CaCO_{3} as a function of CO_{2} partial pressure in aqueous solutions at three isotherms; experimental data (this work): * 278.15 K; + 288.15 K; × 298.15 K; literature data: Δ, Plummer and Busenberg; (17) ◊, Nakayama; (5) ○, Frear and Jhonston; (12) ▽, Sass et al.; (18) ⬡, Coto et al.; (4) – −, OLI simulator; (43) (solid line) Pitzer model (this work).
+
+As can be seen in Figure 3, the measured experimental data demonstrate to be coherent. The solubility of CaCO_{3} increases with the increase of CO_{2} partial pressure. However, the opposite effect can be observed in the temperature. The temperature elevation leads to a decrease in CaCO_{3} solubility. Literature data are presented for CO_{2} partial pressures below the range of this study.
+
+The OLI System simulator was used to assess the behavior of the system, represented by the dashed line in Figure 3. Qualitatively, a significant agreement was observed both with the literature data and the data obtained in this study. A calcite solubility model was also employed to describe the system’s behavior, represented by the solid line in Figure 3. Despite showing a slight difference between the OLI System simulator and the solubility model, both demonstrated agreement with the experimental data behavior.
+
+Figure 4 presents solubility data of CaCO_{3} as a function of the CO_{2} partial pressure in aqueous solutions at T = 298.15 K. 
+As shown in Figure 4, the mean activity coefficient is less than one for all experimental data. This behavior is expected and reflects the attractive forces between species, which result in higher miscibility and salt solubility in relation to the ideal solution.
+
+Consequently, the Pitzer model was adjusted to incorporate temperature dependence in the parameters and recalibrated using a broader data set, covering temperatures ranging from 278.15 to 368.15 K and pressures ranging from 0.03 to 214.6 kPa. A significant improvement in the fit to the data was observed compared to the parameters from Millero and Schreiber, (40) resulting in a curve closely resembling that obtained from the OLI simulator. Regarding experimental deviations, Millero parameters, for the reported temperature of 298.15 K, resulted in an average absolute relative deviation of 8.93%, while the OLI simulator recorded 2.47% considering the temperatures ranging from 278.15 to 368.15 K and pressures ranging from 0.03 to 214.6 kPa. The modified and reparametrized Pitzer models in this work showed an average absolute relative deviation of 2.11%.
+
+Figure 5 illustrates the deviation analysis between the OLI model and the Pitzer model parametrized in this work.
+
+Figure 5.
+
+Comparison of deviations between the parametrized Pitzer model (this work) and the OLI software relative to experimental data for CaCO_{3} solubility: (a) differences in molality (Δm = m_{calc} – m_{exp}); (b) comparison of calculated versus experimental molality for this work; and (c) comparison of calculated versus experimental molality for OLI software.
+
+Figure 5a shows that most data show an absolute deviation below 1 mmol/kg, highlighting the good agreement between the two models. Figure 5b,c shows the comparison between the calculated and experimental values for each model, where both exhibit almost linear behavior, reinforcing the accuracy and similarity of the results obtained with both models.
+
+### 4.2. H_{2}O–MEG–CO_{2}–CaCO_{3} Solubility Measurements
+
+The experimental tests of calcium carbonate solubility in aqueous solution with MEG and in the presence of CO_{2} (H_{2}O + MEG + CO_{2} + CaCO_{3}) were carried out in four isobars (101.3, 161.3, 188.0, and 214.6 kPa) at a temperature of 298.15 K. The entire concentration range of monoethylene glycol was covered, see Table 5.
+
+Table 5.
+
+Experimental Solubilities of CaCO_{3} in Water–MEG Mixtures at P_{CO_{2}} = (101.3–214.6) kPa and T = 298.15 Ka
+
+P_{CO_{2}} = 214.6 kPa  | P_{CO_{2}} = 188.0 kPa  | P_{CO_{2}} = 161.3 kPa  | P_{CO_{2}} = 101.3 kPa
+--- | --- | --- | ---
+w′_{MEG}b  | m_{CaCO_{3}}  | σc  | w′_{MEG}  | m_{CaCO_{3}}  | σ  | w′_{MEG}  | m_{CaCO_{3}}  | σ  | w′_{MEG}  | m_{CaCO_{3}}  | σ
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+0.052  | 10.912  | 0.073  | 0.051  | 10.290  | 0.110  | 0.051  | 9.289  | 0.075  | 0.050  | 8.760  | 0.135
+0.101  | 10.014  | 0.050  | 0.103  | 9.171  | 0.108  | 0.102  | 8.554  | 0.231  | 0.101  | 7.648  | 0.132
+0.202  | 8.402  | 0.133  | 0.202  | 7.883  | 0.054  | 0.202  | 7.251  | 0.008  | 0.191  | 6.141  | 0.060
+0.402  | 6.460  | 0.043  | 0.402  | 5.370  | 0.239  | 0.403  | 4.684  | 0.062  | 0.402  | 3.993  | 0.090
+0.603  | 3.584  | 0.005  | 0.602  | 3.327  | 0.154  | 0.603  | 2.926  | 0.046  | 0.603  | 2.109  | 0.263
+0.804  | 1.697  | 0.069  | 0.803  | 1.230  | 0.015  | 0.804  | 0.984  | 0.077  | 0.804  | 0.698  | 0.012
+1.000  | 1.489  | 0.138  | 1.000  | 0.993  | 0.087  | 1.000  | 0.762  | 0.024  | 1.000  | 0.564  | 0.254
+
+a
+
+Standard estimated uncertainties u for the variables are u(T) = 0.05 K, u(P) = 2.7 kPa, u(water) = u(MEG) = 3 × 10^{–4} (mass fraction), u(mCaCO_{3}) = 0.15 mmol kg^{–1}.
+
+b
+
+w′_{MEG} is the salt-free mass fraction of MEG.
+
+c
+
+Standard deviation of experimental data obtained in duplicate.
+
+As can be seen in Figure 6, the experimental data demonstrate to be precise. The solubility of CaCO_{3} is higher when the CO_{2} partial pressure is more elevated. Relative to the MEG concentration, its increase leads to a decrease in CaCO_{3} solubility. Literature data are scarce in solubility data of CaCO_{3} in systems with MEG, and for this reason, it is not possible to make a comparison.
+
+Figure 6.
+
+Experimental solubilities of CaCO_{3} as a function of salt-free MEG mole fraction at 298.15 K and under CO_{2} partial pressures: ◇, 101.3 kPa; Δ, 161.3 kPa; ○, 188.0 kPa; □, 214.6 kPa; , Redlich–Kister correlation (all pressures); and ideal solution at 214.6 kPa.
+
+Note that the results indicated a negative excess solubility, reflecting a more pronounced salting-out effect of MEG. Moura-Neto et al. (48) applied an extended Pitzer–Lorimer approach for salt solubility in mixed solvents using the excess solution theory, finding this salting-out effect for MEG. However, these excess solution theory approaches have the limitation of requiring experimental salt solubility data in pure solvents. To overcome this issue with solubility in pure MEG, Setchenov’s equation can be utilized. (36)
+
+It was demonstrated that the RLK correlation in this work can describe the four salt solubility isobars with only one pair of parameters. The objective function utilized was the difference in the excess solubilities in the logarithm form (ln m^{E}_{exp} – ln m^{E}_{calc}). The estimated parameters for CaCO_{3} solubility in aqueous solutions with MEG were a_{1} = −3.584 ± 0.153 and a_{2} = −1.119 ± 0.394. It should be pointed out that the meaningful correction of the excess solubility for the isobar 214.6 kPa, as illustrated in Figure 6, is necessary to compute the MEG salting-out effect.
+
+Figure 7 compares the RLK model and the experimental data for the CaCO_{3} solubility in water–MEG mixtures.
+
+Figure 7.
+
+Comparison of deviations between the RLK model and experimental data for CaCO_{3} solubility in water–MEG mixtures: (a) differences in molality (Δm = m_{calc} – m_{exp}) and (b) comparison of calculated versus experimental molality.
+
+In Figure 7a, the difference in molality (Δm) between the values calculated by the model and the experimental data is shown. Most deviations remain within a relatively small range below 1.5 mmol/kg; however, there is an increase in deviations at higher CaCO_{3} concentrations, especially above 10 mmol/kg, due to the logarithmic form of the objective function. Figure 7b shows the comparison between the calculated and experimental molality, revealing good agreement, with most points close to the identity line (diagonal). This indicates that the RLK model can reproduce the experimental data within the experimental uncertainties.
+
+## 5. Conclusions
+
+In summary, this study has measured calcite solubility with a CO_{2} atmosphere, in aqueous solutions with and without MEG. Five isobars (P = 101.3–214.6 kPa) of CaCO_{3} solubility in aqueous solution with a CO_{2} atmosphere were determined at three temperatures (T = 278.15, 288.15, and 298.15 K) using a modified analytical method. It was observed that the presence of CO_{2} in the system leads, as expected, to an increase in CaCO_{3}'s solubility in water. A salt solubility data series was built for the system H_{2}O + CO_{2} + CaCO_{3} with the measured and literature data. The salt solubility behavior was compared with the OLI simulator, and the resulting absolute and mean deviation are AADm_{CaCO_{3}} = 0.34 mmol/kg and Δm_{CaCO_{3}} = 2.70%, respectively. The selected data series was also applied for the aqueous system to reparametrize Pitzer's model. Six parameters were obtained considering a wide range of CO_{2} partial pressure, temperature, and pH based on the literature and experimental solubility of this work. The absolute and relative mean deviation are AADm_{CaCO_{3}} = 0.14 mmol/kg and Δm_{CaCO_{3}} = 2.11%, respectively, indicating a representation of the system close to experimental uncertainty. The developed model can be used for different pressure and temperature ranges with accuracy.
+
+For the system H_{2}O + MEG + CO_{2} + CaCO_{3}, four isobars (P = 101.3–214.6 kPa) of CaCO_{3} solubility in aqueous solution with MEG and a CO_{2} atmosphere at T = 298.15 K were determined. The whole solvent composition range was covered. It was observed that the presence of MEG in the system leads to a decrease in CaCO_{3} solubility, even higher than the defined ideal solution. The RLK expansion was accurately applied for the excess salt solubility correlation; the resulting absolute and mean deviations are AADm_{CaCO_{3}} = 0.40 mmol/kg and Δm_{CaCO_{3}} = 6.12%, respectively.
+
+This research on the solubility of calcium carbonate in aqueous monoethylene glycol (MEG) mixtures under a carbon dioxide atmosphere represents a significant contribution to both fundamental scientific and industrial applications. By investigating the solubility behavior of calcium carbonate under various pressures and temperatures, the study provides critical insights into the interaction among CO_{2}, H_{2}O, MEG, and CaCO_{3}, an area that has been underexplored in the existing literature.
+
+In addition, the study introduces a new analytical method for measuring solubility, providing researchers and engineers with a valuable tool for working with complex fluid systems. This method allows for more accurate calculations of CaCO_{3} solubility under various conditions. Overall, the research connects theoretical chemistry with real-world engineering applications, opening up new possibilities for progress in industries where solubility is a key factor.
+

@@ -1,0 +1,81 @@
+schema_version = 1
+
+[[entries]]
+id = "REFLECT-24C-Ca"
+source_type = "independent_experiment"
+source_path = "../sources/REFLECT-D23-2023.pdf"
+source_sha256 = "7e80e09592286370000ca0dfccc4ff8cfc0f287690ba40e14e02e0bf8c436e70"
+persistent_id = "doi:10.48440/gfz.4.8.2023.001"
+observable = "total_Ca_as_CaCO3_endpoint"
+conclusion = "experimentally_challenged"
+comparison_method = "all five frozen measured markers; signed errors on both unresolved kg bases; no fitting"
+limitations = ["pointwise uncertainty UNKNOWN", "mass denominator UNKNOWN", "not a path/rate/pH/chronology test", "database calibration lineage UNKNOWN; these observations not used to fit MineralTrace parameters"]
+independent_of_calibration = "UNKNOWN"
+domain = {boundary = "fixed_partial_pressure", database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10", gas_model = "peng_robinson", activity_model = "ion_association", points = [{temperature_c = 24.0, pco2_bar = 10.09, pressure_bar = 10.12}, {temperature_c = 24.0, pco2_bar = 23.2, pressure_bar = 23.23}, {temperature_c = 24.0, pco2_bar = 31.56, pressure_bar = 31.59}, {temperature_c = 24.0, pco2_bar = 39.85, pressure_bar = 39.88}, {temperature_c = 24.0, pco2_bar = 49.99, pressure_bar = 50.02}]}
+assumptions = ["pure-water approximation", "regulated bottle represented by nonexhausted reservoir", "approximate vapor pressure 0.03 bar"]
+numerical_result = "v0.7.0 baseline: +14.982 to +29.115% water; +12.968 to +24.681% final solution; unchanged"
+uncertainty = "UNKNOWN pointwise; extraction 0.03 g/kg is separate"
+continuous_domain_supported = false
+
+[[entries]]
+id = "USGS-ex6-386"
+source_type = "engine_reference"
+source_path = "../validation/upstream-v080/ex6"
+source_sha256 = "8e44f6a226e3f58cf34456755cde7ace25ce6568f50393bb895d5986339bfef3"
+persistent_id = "https://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.8.6-17100.tar.gz#examples/ex6"
+observable = "engine_reference_behavior"
+conclusion = "engine_verified"
+comparison_method = "version-matched original and instrumented decks; direct CLI versus adapter; independent same-version reference locked in upstream report"
+limitations = ["not independent experimental data", "benchmark raw decks do not extend public chemical-process scope", "cross-version differences recorded without automatic rebaselining"]
+independent_of_calibration = false
+domain = {points = []}
+assumptions = ["official version-matched database", "source phase overrides retained"]
+numerical_result = "See data/validation/UPSTREAM_BENCHMARKS_V080.md and upstream-v080/benchmark-results.toml; status requires successful run"
+
+[[entries]]
+id = "USGS-ex7-386"
+source_type = "engine_reference"
+source_path = "../validation/upstream-v080/ex7"
+source_sha256 = "344fcc89c6fc7d0e0229084528ef06321727b274c7fcc159590cdf9ded09387d"
+persistent_id = "https://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.8.6-17100.tar.gz#examples/ex7"
+observable = "engine_reference_behavior"
+conclusion = "engine_verified"
+comparison_method = "version-matched original and instrumented decks; direct CLI versus adapter; independent same-version reference locked in upstream report"
+limitations = ["not independent experimental data", "benchmark raw decks do not extend public chemical-process scope", "cross-version differences recorded without automatic rebaselining"]
+independent_of_calibration = false
+domain = {points = []}
+assumptions = ["official version-matched database", "source phase overrides retained"]
+numerical_result = "See data/validation/UPSTREAM_BENCHMARKS_V080.md and upstream-v080/benchmark-results.toml; status requires successful run"
+
+[[entries]]
+id = "USGS-ex22-386"
+source_type = "engine_reference"
+source_path = "../validation/upstream-v080/ex22"
+source_sha256 = "7e32dcb2b77f15415f9ccc44306d04c84d81d32797a80430b28b8466472dc32c"
+persistent_id = "https://water.usgs.gov/water-resources/software/PHREEQC/phreeqc-3.8.6-17100.tar.gz#examples/ex22"
+observable = "engine_reference_behavior"
+conclusion = "engine_verified"
+comparison_method = "version-matched original and instrumented decks; direct CLI versus adapter; independent same-version reference locked in upstream report"
+limitations = ["not independent experimental data", "benchmark raw decks do not extend public chemical-process scope", "cross-version differences recorded without automatic rebaselining"]
+independent_of_calibration = false
+domain = {points = []}
+assumptions = ["official version-matched database", "source phase overrides retained"]
+numerical_result = "See data/validation/UPSTREAM_BENCHMARKS_V080.md and upstream-v080/benchmark-results.toml; status requires successful run"
+
+
+[[entries]]
+id = "FERREIRA-2025-25C-Ca"
+source_type = "independent_experiment"
+source_path = "../sources/FERREIRA-2025-PUBLISHER-TRANSCRIPT.txt"
+source_sha256 = "09c4f1a0c06489086ede731208f507e726cf4b59c487cbcc62d40be22d37a1cc"
+persistent_id = "doi:10.1021/acs.jced.4c00670"
+observable = "total_Ca_as_CaCO3_endpoint"
+conclusion = "experimentally_challenged"
+comparison_method = "All five frozen 298.15 K pure-water Table 3 means; baseline prediction before any fit; molal comparison with reported uncertainty and duplicate SD separate"
+limitations = ["Source independent of REFLECT, full database calibration independence UNKNOWN", "Primary source is publisher retrieval transcript, not original PDF bytes", "Related 2022 thesis is not a separate independent dataset", "No measured endpoint pH or DIC in this subset", "Filtration cutoff and exact loadings unknown; gas boundary approximation", "No strict holdout or path qualification granted"]
+independent_of_calibration = "UNKNOWN"
+domain = {boundary = "fixed_partial_pressure", database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10", gas_model = "peng_robinson", activity_model = "ion_association", points = [{temperature_c = 25.0, pco2_bar = 1.013, pressure_bar = 1.0447}, {temperature_c = 25.0, pco2_bar = 1.3459999999999999, pressure_bar = 1.3777}, {temperature_c = 25.0, pco2_bar = 1.6130000000000002, pressure_bar = 1.6447000000000003}, {temperature_c = 25.0, pco2_bar = 1.88, pressure_bar = 1.9117}, {temperature_c = 25.0, pco2_bar = 2.146, pressure_bar = 2.1776999999999997}]}
+assumptions = ["Pure-water approximation", "Regulated CO2 partial pressure and pCO2+0.0317 bar aqueous total", "Numerical 1 kg solvent / 10 g calcite / 10 mol gas are normalization/buffers, not invented measured loadings"]
+numerical_result = "All five central predictions low: -1.246 to -10.404%; mean signed error -0.682692 mmol/kg; RMSE 0.849584 mmol/kg. Does not reproduce REFLECT positive-bias direction in this different domain."
+uncertainty = "u(m)=0.15 mmol/kg, u(T)=0.05 K, u(P)=2.7 kPa; duplicate SD [0.09,0.05,0.04,0.05,0.21] mmol/kg separate; no weighted acceptance"
+continuous_domain_supported = false

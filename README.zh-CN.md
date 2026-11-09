@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.7.1-334155?style=flat-square" alt="源码版本 0.7.1"></a>
+  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.8.1-334155?style=flat-square" alt="源码版本 0.8.1"></a>
   <a href="https://julialang.org/downloads/"><img src="https://img.shields.io/badge/Julia-1.10%2B-9558B2?style=flat-square&amp;logo=julia&amp;logoColor=white" alt="Julia 1.10 及以上"></a>
   <a href="https://www.usgs.gov/software/phreeqc-version-3"><img src="https://img.shields.io/badge/PHREEQC-3_CLI-1976A3?style=flat-square" alt="PHREEQC 3 命令行引擎"></a>
   <a href="examples/discovery.toml"><img src="https://img.shields.io/badge/TOML-configuration-9C4121?style=flat-square&amp;logo=toml&amp;logoColor=white" alt="TOML 配置"></a>
@@ -25,7 +25,7 @@
 > [!NOTE]
 > **研究预览阶段。** MineralTrace 比较条件性的平衡反应机制，真实结晶先后仍为无法判断。独立方解石终点对照已暴露模型偏差，尚未建立经过科学验证的通用过程模型。
 
-**v0.7.1 · 解释实验偏差。** 对五个冻结方解石观测点完成七种受控选择，区分气体、液相压力与模型配置敏感性。理想 CO₂ 与带电物种 Davies 对照使高估扩大；整套 Pitzer 配置降低预测，但尚未确定因果或验证准确性。[偏差归因报告](data/validation/v071/REPORT.md) · [适用性登记](data/validation/v071/MODEL_APPLICABILITY.toml)。
+**v0.8.1 · 第二组独立来源实验，严格留出资格待确认。** 对另一实验室五个冻结的 25 °C 终点使用原模型预测，偏差为 **−1.25% 至 −10.40%**，没有复现不同温压域 REFLECT 的正向偏差。与数据库参数校准的完整独立性仍未知，没有授予模型或严格路径验证资格。[运行与复核](docs/INDEPENDENT_EXPERIMENT.md) · [科学比较](data/validation/v081/REPORT.md) · [模型验证框架](docs/SCIENTIFIC_VALIDATION.md)。
 
 ## 概览
 
@@ -100,6 +100,9 @@ julia --project=. scripts/discover.jl examples/discovery.toml results
 julia --project=. scripts/robustness.jl examples/discovery.toml examples/robustness.toml results
 julia --project=. scripts/validate_calcite_endpoint.jl results
 julia --project=. scripts/attribute_calcite_bias.jl results
+julia --project=. scripts/validate_scientific_models.jl results
+julia --project=. scripts/validate_holdout.jl results
+julia --project=. scripts/validate_upstream.jl results
 ```
 
 稳健性命令会从发现计算开始，增加单参数计算并输出 `robustness.html`。检测阈值复评使用已经核查的化学状态，不会覆盖 pH 或重算成另一种反应。
@@ -155,7 +158,7 @@ julia --project=. test/runtests.jl
 MINERALTRACE_INTEGRATION=1 julia --project=. test/runtests.jl
 ```
 
-集成测试需要已配置的引擎／数据库。v0.7.0 记录的本地完整测试为 1675 项通过，这是工程证据，不是 CI 徽章或实验准确度认证。[执行记录](data/validation/V070_STATUS.md)。v0.7.1 本地完整测试 1685 项通过；35 个归因终点和导出包复现见[独立检查记录](data/validation/v071/VERIFICATION.json)。
+集成测试需要已配置的引擎／数据库。v0.7.0 记录的本地完整测试为 1675 项通过，这是工程证据，不是 CI 徽章或实验准确度认证。[执行记录](data/validation/V070_STATUS.md)。[v0.8.0 检查与独立复现](data/validation/V080_STATUS.md)覆盖新档案、候选注释与官方基准。v0.7.1 本地完整测试 1685 项通过；35 个归因终点和导出包复现见[独立检查记录](data/validation/v071/VERIFICATION.json)。
 
 历史 Example 1 已通过官方数据库快照完成受控归因。原始“现代数据库对历史表格”基准仍在不变容差下报告三项差异；匹配的历史复现与现代回归分别检查。[详细归因](data/validation/EXAMPLE1_ATTRIBUTION_V070.md)。
 
@@ -174,9 +177,11 @@ report_path = report(result)
 
 在克隆的项目环境中使用（`julia --project=.`）。本 README 不假设已经注册到 General，也不承诺 `Pkg.add("MineralTrace")` 可用。
 
-## 文档导航
+## 文档
 
-中英文首页覆盖相同的起步流程；详细指南目前以中文提供。
+[科学验证与适用性说明](docs/SCIENTIFIC_VALIDATION.md)提供模型档案、证据登记、适用性匹配、审计与科学限制。导航
+
+中英文首页覆盖相同的起步流程；多数详细指南以中文提供，科学验证指南为英文。
 
 [候选发现](docs/DISCOVERY.md) · [稳健性](docs/ROBUSTNESS.md) · [方解石终点](docs/CALCITE_ENDPOINT.md) · [完整参考](docs/REFERENCE.md) · [v0.7.0 结果](data/validation/V070_STATUS.md) · [发布准备](docs/RELEASING.md)
 

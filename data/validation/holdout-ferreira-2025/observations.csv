@@ -1,0 +1,6 @@
+id,temperature_k,pco2_kpa,total_Ca_equivalent_mmol_kg_water,duplicate_sd_mmol_kg_water,reported_standard_u_mmol_kg_water,reported_standard_u_temperature_k,reported_standard_u_pressure_kpa
+FERREIRA-25C-1,298.15,101.3,8.95,0.09,0.15,0.05,2.7
+FERREIRA-25C-2,298.15,134.6,10.02,0.05,0.15,0.05,2.7
+FERREIRA-25C-3,298.15,161.3,11.17,0.04,0.15,0.05,2.7
+FERREIRA-25C-4,298.15,188.0,12.34,0.05,0.15,0.05,2.7
+FERREIRA-25C-5,298.15,214.6,13.14,0.21,0.15,0.05,2.7

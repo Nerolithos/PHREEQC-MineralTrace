@@ -1,0 +1,43 @@
+# Intervals are declared execution/review bounds, NOT experimentally validated ranges.
+# Ionic strength 0–0.5 is a declared review envelope only, not an accuracy claim.
+schema_version = 1
+
+[[profiles]]
+id = "discovery-cafc-386"
+chemical_system = "Calcite-Fluorite; Ca-F-C-O-H/Na/Cl"
+mineral_phases = ["Calcite", "Fluorite"]
+aqueous_components = ["Ca", "F", "C", "O", "H", "Na", "Cl"]
+required_species = ["H+", "OH-", "H2O", "Ca+2", "F-", "HCO3-", "CO3-2", "CO2"]
+required_phases = ["Calcite", "Fluorite"]
+gas_model = "none"
+boundary = "none_closed"
+domain = {temperature_c = [25.0, 80.0], pressure_bar = [1.01325, 1.01325], ionic_strength_mol_kgw = [0.0, 0.5]}
+observables = ["equilibrium_reaction_path", "mineral_saturation_index"]
+statuses = ["engine_verified", "chemically_consistent", "applicability_unverified"]
+experimental_references = ["REFLECT-24C-Ca", "USGS-ex6-386"]
+database_identifier = "USGS phreeqc.dat 3.8.6-17100"
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+activity_model = "ion_association"
+known_discrepancies = ["REFLECT five high-pCO2 24 C endpoints systematically high; no unique causal allocation"]
+unresolved_limitations = ["Database species/constant internal consistency and calibration lineage incomplete", "No kinetic, nucleation, rate or actual chronology validation", "Point support does not imply a continuous validated domain"]
+supports_equilibrium_paths = false
+
+[[profiles]]
+id = "calcite-co2-water-386"
+chemical_system = "Calcite-CO2-H2O pure-water approximation"
+mineral_phases = ["Calcite"]
+aqueous_components = ["Ca", "C", "H", "O"]
+required_species = ["H+", "OH-", "H2O", "Ca+2", "HCO3-", "CO3-2", "CO2"]
+required_phases = ["Calcite", "CO2(g)"]
+gas_model = "peng_robinson"
+boundary = "fixed_partial_pressure"
+domain = {temperature_c = [23.0, 80.0], pressure_bar = [0.01, 52.0], ionic_strength_mol_kgw = [0.0, 0.5]}
+observables = ["total_Ca_as_CaCO3_endpoint"]
+statuses = ["engine_verified", "chemically_consistent", "experimentally_challenged", "applicability_unverified"]
+experimental_references = ["REFLECT-24C-Ca", "FERREIRA-2025-25C-Ca", "USGS-ex7-386", "USGS-ex22-386"]
+database_identifier = "USGS phreeqc.dat 3.8.6-17100"
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+activity_model = "ion_association"
+known_discrepancies = ["REFLECT five high-pCO2 24 C endpoints systematically high; no unique causal allocation", "Ferreira 2025 five 25 C low-pCO2 endpoints central predictions low by 1.246–10.404 percent; database-calibration independence UNKNOWN"]
+unresolved_limitations = ["Database species/constant internal consistency and calibration lineage incomplete", "No kinetic, nucleation, rate or actual chronology validation", "Point support does not imply a continuous validated domain"]
+supports_equilibrium_paths = false

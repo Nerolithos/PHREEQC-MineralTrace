@@ -1,0 +1,2 @@
+Attribution archive: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/scientific-validation-paFsir/reproduced/scientific-validation-ewvhpk/calcite-attribution-MppJCq
+Scientific report: /Users/Lithos/Documents/GitHub/PHREEQC-MineralTrace/results/scientific-validation-paFsir/reproduced/scientific-validation-ewvhpk/report.html

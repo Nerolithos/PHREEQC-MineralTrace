@@ -1,0 +1,30 @@
+{
+  "scientific": {
+    "archive": "results/scientific-validation-paFsir",
+    "reproduction_archive": "results/scientific-validation-paFsir/reproduced/scientific-validation-ewvhpk",
+    "analysis_sha256": "ed8bc395d0a120934523f97e2a29240913100a0a0b383a81b27d8ea9423feb3e",
+    "byte_identical": true
+  },
+  "upstream": {
+    "archive": "results/upstream-EMaXcH",
+    "reproduction_archive": "results/upstream-EMaXcH/reproduced/upstream-lOaovM",
+    "analysis_sha256": "271ed3a43ccb65ebdfb568ec4b557ff4e3eca2586ca7ddc8910830541ff79c88",
+    "byte_identical": true
+  },
+  "discovery": {
+    "archive": "results/discovery-KF5ahQ",
+    "reproduction_archive": "results/discovery-KF5ahQ/reproduced/discovery-n2TF9n",
+    "analysis_sha256": "dc676b59f92115a62dc72614e920abc724c0008a7763561966a0548dd5e9d6cd",
+    "byte_identical": true
+  },
+  "historical_observations_sha256": "2e8df44966f958f0959c4f252124e8a0b55c5b4b3e4889a5799a328a0d12d805",
+  "controlled_endpoints": 35,
+  "existing_discovery_classes": {
+    "compatible": 2,
+    "incompatible": 201,
+    "undetermined": 7
+  },
+  "empirical_conclusion": "experimentally_challenged; unresolved; no qualification granted",
+  "historical_v071_prediction_max_abs_difference_g_kg": 0.0,
+  "historical_v071_analysis_sha256": "79f89478e957f5175cde0b2d72a0c045179a37d9573f5ea879c976e24e5c406b"
+}

@@ -1,0 +1,80 @@
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+executable_sha256 = "c812189a98bc4667fcccfe28387924df3cc4b63fe714a943b5c41ae2df720f4a"
+experimental_support_granted = false
+reference_policy = "Never overwritten; atol=1e-7, rtol=2e-3 for printed precision; cross-version deviations reported, not retuned"
+software_version = "0.8.0"
+source_type = "engine_reference"
+
+[[benchmarks]]
+adapter_direct_byte_identical = true
+archive = "run-yLTyPi"
+branch_scope = "6A/6B only, no kinetics"
+direct_archive = "ex6-direct-instrumented"
+engine_banner = "              ║             * PHREEQC-3.8.6 *              ║"
+example = "ex6"
+executed_branch_sha256 = "185a9ffe30b5e35e2b868ab030152b321e34e58961f9d84ac7d83c9a20cdd285"
+instrumented_input_sha256 = "a580cbac7eed463867cda5a20d3ef8bffcf85f163b65742b1fd7f89f05bb47e2"
+locked_reference_agreement = true
+locked_reference_max_abs_difference = 0.0
+locked_reference_sha256 = "4a58be801d2969fd7b7587e87ef0fc5456b68cbb9b0a607e5610273dace51cc8"
+original_archive = "ex6-original"
+row_count = 21
+selected_reference_sha256 = "4a58be801d2969fd7b7587e87ef0fc5456b68cbb9b0a607e5610273dace51cc8"
+upstream_input_sha256 = "8e44f6a226e3f58cf34456755cde7ace25ce6568f50393bb895d5986339bfef3"
+
+    [benchmarks.behavior]
+    incremental_path_rows = 14
+    phase_transfer_present = true
+    reaction_dose_progression = true
+
+    [benchmarks.official_selected_agreement]
+    "ex6A-B.sel" = true
+[[benchmarks]]
+adapter_direct_byte_identical = true
+archive = "run-VEsqlo"
+branch_scope = "fixed partial, total pressure, and volume branches"
+direct_archive = "ex7-direct-instrumented"
+engine_banner = "              ║             * PHREEQC-3.8.6 *              ║"
+example = "ex7"
+executed_branch_sha256 = "344fcc89c6fc7d0e0229084528ef06321727b274c7fcc159590cdf9ded09387d"
+instrumented_input_sha256 = "0a35d82dc1c231f6725da9d16c39a57c52e67d7576cfe76fc8c33c0edef169e9"
+locked_reference_agreement = true
+locked_reference_max_abs_difference = 0.0
+locked_reference_sha256 = "3fc88b3521b527fe6bd41178cfc6a72d343e784a750eff52039e11bc48c0f843"
+original_archive = "ex7-original"
+row_count = 27
+selected_reference_sha256 = "3fc88b3521b527fe6bd41178cfc6a72d343e784a750eff52039e11bc48c0f843"
+upstream_input_sha256 = "344fcc89c6fc7d0e0229084528ef06321727b274c7fcc159590cdf9ded09387d"
+
+    [benchmarks.behavior]
+    fixed_partial_log_fugacity = -1.5001
+    fixed_partial_pressure_log_target = -1.5
+    fixed_total_pressure_atm = 1.1
+    fixed_volume_liters = 23.19
+
+    [benchmarks.official_selected_agreement]
+    "ex7.sel" = true
+[[benchmarks]]
+adapter_direct_byte_identical = true
+archive = "run-aeQ6iz"
+branch_scope = "25 C fixed-volume branch only"
+direct_archive = "ex22-direct-instrumented"
+engine_banner = "              ║             * PHREEQC-3.8.6 *              ║"
+example = "ex22"
+executed_branch_sha256 = "e9990adbf39206289038358eab521fe88f294a97e42c9af8e1243def30d77c98"
+instrumented_input_sha256 = "3baeade5d4f9e09951338ce1c93e1d86ca00d72c66efeb980fefcb1bc9d3467b"
+locked_reference_agreement = true
+locked_reference_max_abs_difference = 0.0
+locked_reference_sha256 = "3f9f5bececf01168471e5a9ddfc5c03e2ab32c18a15b5f671af598e21cafb7a7"
+original_archive = "ex22-original"
+row_count = 33
+selected_reference_sha256 = "3f9f5bececf01168471e5a9ddfc5c03e2ab32c18a15b5f671af598e21cafb7a7"
+upstream_input_sha256 = "7e32dcb2b77f15415f9ccc44306d04c84d81d32797a80430b28b8466472dc32c"
+
+    [benchmarks.behavior]
+    phi_min = 0.19101
+    pressure_fugacity_identity_checked = true
+    pressure_max_atm = 1452.2
+    pressure_min_atm = 0.031262
+
+    [benchmarks.official_selected_agreement]

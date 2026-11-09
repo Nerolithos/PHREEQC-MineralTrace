@@ -59,6 +59,7 @@ include("process_unit.jl")
 include("pathways_unit.jl")
 include("discovery_unit.jl")
 include("credibility_unit.jl")
+include("model_profiles.jl")
 
 if get(ENV,"MINERALTRACE_INTEGRATION","0") == "1"
     include("v071_attribution.jl")
@@ -70,6 +71,9 @@ if get(ENV,"MINERALTRACE_INTEGRATION","0") == "1"
     include("pathways_integration.jl")
     include("discovery_integration.jl")
     include("credibility_integration.jl")
+    include("model_profiles_integration.jl")
+    include("upstream_reference.jl")
+    include("holdout_integration.jl")
 else
     @info "Real PHREEQC integration NOT RUN. Set MINERALTRACE_INTEGRATION=1 and configure executable/database."
 end
