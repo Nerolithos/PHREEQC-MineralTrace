@@ -1,0 +1,12 @@
+{
+  "source_type": "official source history, not experimental measurement",
+  "historical_commit": "ea7ada6f0967b50ab341956c4b063805a3ddb986",
+  "historical_date": "2021-07-07T03:52:06Z",
+  "historical_url": "https://raw.githubusercontent.com/phreeqc-dev/phreeqc3/ea7ada6f0967b50ab341956c4b063805a3ddb986/database/phreeqc.dat",
+  "historical_sha256": "3e819f36a78a134b9e53557e9fd9e640d3616b84282cf7095c60337c49c6357b",
+  "production_sha256": "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10",
+  "thesis_pdf_sha256": "4663264999e324e9aadd193ee7862de7be73158ff8bee6abe97c950a65cff78a",
+  "thesis_public_download": "https://repositorio.ufrn.br/server/api/core/bitstreams/a5fe5437-5b3a-453b-8fc3-aa7964d33e79/content",
+  "conclusion": "database-calibration independence UNKNOWN; no citation found is not proof of nonuse",
+  "block_comparison_note": "Normalized whitespace/options only, not numeric normalization; formatting-only 9.0 versus 9 differences are not parameter changes"
+}

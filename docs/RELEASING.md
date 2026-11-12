@@ -58,3 +58,7 @@ CI 与干净环境验证是本项目建议的发布质量门槛；当前没有�
 ## 每次显著版本更新
 
 先更新 README：这个版本能帮助用户完成什么任务、最短操作路径是什么、输入输出有何变化、证据与科学边界如何变化。再更新详细参考、示例、验证记录和发布说明；用文档中的命令运行实际示例并核对输出。发布前固定提交，检查归档中源码与发布身份一致。
+
+## v0.8.2 local release checks
+
+Review [execution record](../data/validation/V082_STATUS.md), [scientific comparison](../data/validation/v082/REPORT.md), [reproduction audit](../data/validation/v082/REPRODUCTION_AUDIT.json) and [workbench guide](WORKBENCH.md). Build with the committed npm lockfile; configure trusted engine paths outside requests. Preserve the frozen v0.8.1 runtime/receipt and unchanged experimental inputs. The local workbench is not a public hosting target. External CI, native installers and cross-platform support are not claimed. No package registration or remote release is authorized by this development brief.

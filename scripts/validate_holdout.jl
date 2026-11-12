@@ -93,5 +93,8 @@ function holdout_report(dir,payload)
     write(joinpath(dir,"report.html"),page)
 end
 if abspath(PROGRAM_FILE)==@__FILE__
-    validate_holdout(isempty(ARGS) ? "results" : ARGS[1])
+    # Package upgrades must not silently update the pre-prediction runtime.
+    frozen_project=normpath(joinpath(@__DIR__,"../data/validation/frozen-v081"))
+    output=isempty(ARGS) ? abspath("results") : abspath(ARGS[1])
+    run(`$(Base.julia_cmd()) --startup-file=no --project=$frozen_project $(joinpath(frozen_project,"scripts/validate_holdout.jl")) $output`)
 end

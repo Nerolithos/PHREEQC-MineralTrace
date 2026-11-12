@@ -60,6 +60,7 @@ include("pathways_unit.jl")
 include("discovery_unit.jl")
 include("credibility_unit.jl")
 include("model_profiles.jl")
+include("cross_study.jl")
 
 if get(ENV,"MINERALTRACE_INTEGRATION","0") == "1"
     include("v071_attribution.jl")

@@ -74,7 +74,7 @@ function load_evidence_registry(path=joinpath(MODEL_DATA,"evidence.toml"))
     for e in d["entries"]
         required=["id","source_type","source_path","source_sha256","persistent_id","observable","conclusion","comparison_method","limitations","independent_of_calibration","domain","assumptions","numerical_result"]
         all(k->haskey(e,k),required) || throw(ArgumentError("incomplete evidence record"))
-        e["source_type"] in ("independent_experiment","engine_reference","synthetic_regression") || throw(ArgumentError("unknown evidence type"))
+        e["source_type"] in ("independent_experiment","engine_reference","synthetic_regression","cross_study_analysis") || throw(ArgumentError("unknown evidence type"))
         e["conclusion"] in ("engine_verified","chemically_consistent","experimentally_supported","experimentally_challenged","applicability_unverified") || throw(ArgumentError("unknown evidence conclusion"))
         e["conclusion"] in ("experimentally_supported","experimentally_challenged") && e["source_type"]!="independent_experiment" && throw(ArgumentError("engine or synthetic evidence cannot grant experimental status"))
         e["conclusion"]=="experimentally_supported" && e["independent_of_calibration"]!==true && throw(ArgumentError("independent holdout lineage required for support"))
@@ -91,7 +91,7 @@ end
 function ModelProfile(d::AbstractDict)
     q=deepcopy(Dict{String,Any}(d))
     required=["id","chemical_system","mineral_phases","aqueous_components","required_species","required_phases","database_identifier","database_sha256","activity_model","gas_model","boundary","domain","observables","statuses","experimental_references","known_discrepancies","unresolved_limitations","supports_equilibrium_paths"]
-    Set(keys(q))==Set(required) || throw(ArgumentError("missing or unknown model profile fields"))
+    issubset(Set(required),Set(keys(q))) && issubset(Set(keys(q)),Set(vcat(required,["cross_study_references"]))) || throw(ArgumentError("missing or unknown model profile fields"))
     occursin(r"^[a-f0-9]{64}$",q["database_sha256"]) || throw(ArgumentError("profile requires exact database SHA-256"))
     q["boundary"] in ("none_closed","fixed_partial_pressure","fixed_total_pressure","fixed_volume") || throw(ArgumentError("unknown gas boundary"))
     all(s->s in ("engine_verified","chemically_consistent","experimentally_supported","experimentally_challenged","applicability_unverified","out_of_scope"),q["statuses"]) || throw(ArgumentError("unknown nonordinal status"))
@@ -110,6 +110,8 @@ function load_model_profiles(path=joinpath(MODEL_DATA,"profiles.toml"); registry
         if "experimentally_supported" in row["statuses"]
             any(id->registry.entries[id]["conclusion"]=="experimentally_supported",row["experimental_references"]) || throw(ArgumentError("profile status lacks experimental support"))
         end
+        refs=get(row,"cross_study_references",String[])
+        refs isa AbstractVector && all(id->id isa AbstractString && haskey(registry.entries,id) && registry.entries[id]["source_type"]=="cross_study_analysis",refs) || throw(ArgumentError("invalid cross-study reference"))
         profiles[row["id"]]=p
     end
     profiles

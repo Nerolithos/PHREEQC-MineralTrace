@@ -1,0 +1,12 @@
+{
+  "real_engine": true,
+  "candidate_count": 27,
+  "CLI_UI_analysis_byte_identical": true,
+  "analysis_sha256": "2deb1cb04ba3716f1381feda066009da6ecc0d1947fac281ee447e516b0a680d",
+  "cancelled_partial_archive_preserved": true,
+  "duplicate_request_idempotent": true,
+  "concurrent_job_rejected": true,
+  "invalid_requests_and_origins_rejected": true,
+  "archive_zip_checked": true,
+  "error_propagation_checked": true
+}

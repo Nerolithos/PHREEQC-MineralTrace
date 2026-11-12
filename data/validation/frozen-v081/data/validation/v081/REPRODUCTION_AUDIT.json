@@ -1,0 +1,27 @@
+{
+  "source_version": "0.8.1",
+  "comparison_status": "external_experimental_prediction_completed",
+  "strict_holdout_qualification": "database_calibration_independence_UNKNOWN",
+  "frozen_before_predictions": true,
+  "freeze_receipt_sha256": "fb10f904b006f1fc2900eea9467123b807858248fa7e26074240928d1f31d185",
+  "analysis_sha256": "ad61877dd71707f5cdc2d3cab5f72dcfb057d393865e94261821520cdb7036b3",
+  "observation_sha256": "e18d4d331a774d8dea0bf569a55913ed06a74122e2a0762df927abee0400d9cc",
+  "archive": "results/external-holdout-SIJ884",
+  "reproduction_archive": "results/external-holdout-SIJ884/reproduced/external-holdout-fQfJ1D",
+  "identical_reproduction": [
+    "analysis.json",
+    "comparison.csv",
+    "comparison.svg"
+  ],
+  "chemical_checks": "all 40 endpoints pass Ca/C/H/O, charge, nonexhausted phases and saturation checks",
+  "stock_reservoir_controls": "all five endpoint changes <1e-8 mmol/kg",
+  "counts": {
+    "measured_endpoints": 5,
+    "controlled_calculations": 40
+  },
+  "experimental_validation_granted": false,
+  "regression_status": "full existing real-engine suite passed; no experimental certification inferred",
+  "targeted_freeze_and_registry_checks": 8,
+  "legacy_REFLECT_observation_sha256": "2e8df44966f958f0959c4f252124e8a0b55c5b4b3e4889a5799a328a0d12d805",
+  "v080_analysis_sha256_unchanged": "ed8bc395d0a120934523f97e2a29240913100a0a0b383a81b27d8ea9423feb3e"
+}

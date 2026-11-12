@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.8.1-334155?style=flat-square" alt="源码版本 0.8.1"></a>
+  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.8.2-334155?style=flat-square" alt="源码版本 0.8.2"></a>
   <a href="https://julialang.org/downloads/"><img src="https://img.shields.io/badge/Julia-1.10%2B-9558B2?style=flat-square&amp;logo=julia&amp;logoColor=white" alt="Julia 1.10 及以上"></a>
   <a href="https://www.usgs.gov/software/phreeqc-version-3"><img src="https://img.shields.io/badge/PHREEQC-3_CLI-1976A3?style=flat-square" alt="PHREEQC 3 命令行引擎"></a>
   <a href="examples/discovery.toml"><img src="https://img.shields.io/badge/TOML-configuration-9C4121?style=flat-square&amp;logo=toml&amp;logoColor=white" alt="TOML 配置"></a>
@@ -24,6 +24,19 @@
 
 > [!NOTE]
 > **研究预览阶段。** MineralTrace 比较条件性的平衡反应机制，真实结晶先后仍为无法判断。独立方解石终点对照已暴露模型偏差，尚未建立经过科学验证的通用过程模型。
+
+
+**v0.8.2 · 跨实验偏差审计 + 本地研究工作台。** 两组冻结实验在不同条件下出现相反残差方向，没有直接匹配实验点对；不据此归因于压力或授予验证资格。新增 React/TypeScript 界面，可编辑研究条件、运行真实 PHREEQC、筛选候选并导出复现归档。[科学比较](data/validation/v082/REPORT.md) · [本地界面使用指南](docs/WORKBENCH.md)。
+
+一次配置好 Julia/PHREEQC 后，在仓库目录构建并启动：
+
+```sh
+npm ci --prefix workbench
+npm run build --prefix workbench
+python3 scripts/workbench_server.py
+```
+
+打开 `http://127.0.0.1:8765`。需要 Python 3.11+；前端构建需要 Node.js/npm。引擎路径沿用下方环境配置，Julia 不在 PATH 时设置 `MINERALTRACE_JULIA`。仅本地运行，无账号或云服务；macOS 已实测，其他平台未认证。
 
 **v0.8.1 · 第二组独立来源实验，严格留出资格待确认。** 对另一实验室五个冻结的 25 °C 终点使用原模型预测，偏差为 **−1.25% 至 −10.40%**，没有复现不同温压域 REFLECT 的正向偏差。与数据库参数校准的完整独立性仍未知，没有授予模型或严格路径验证资格。[运行与复核](docs/INDEPENDENT_EXPERIMENT.md) · [科学比较](data/validation/v081/REPORT.md) · [模型验证框架](docs/SCIENTIFIC_VALIDATION.md)。
 

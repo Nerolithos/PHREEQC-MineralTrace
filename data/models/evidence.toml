@@ -79,3 +79,20 @@ assumptions = ["Pure-water approximation", "Regulated CO2 partial pressure and p
 numerical_result = "All five central predictions low: -1.246 to -10.404%; mean signed error -0.682692 mmol/kg; RMSE 0.849584 mmol/kg. Does not reproduce REFLECT positive-bias direction in this different domain."
 uncertainty = "u(m)=0.15 mmol/kg, u(T)=0.05 K, u(P)=2.7 kPa; duplicate SD [0.09,0.05,0.04,0.05,0.21] mmol/kg separate; no weighted acceptance"
 continuous_domain_supported = false
+
+[[entries]]
+id = "CROSS-STUDY-082"
+source_type = "cross_study_analysis"
+source_path = "../validation/v082/REPORT.md"
+source_sha256 = "712e2eff3bd6369543bed2b461aaa051eb1898a43a769b8f56c98ec82d643e40"
+persistent_id = "local:cross-study-082"
+observable = "cross_study_discrepancy_audit"
+conclusion = "applicability_unverified"
+comparison_method = "Descriptive comparison of frozen predictions; 25 unmatched cross-study pairs; separate mass-basis alternatives"
+limitations = ["No matched experimental pairs", "No pooled validation score", "No causal attribution to pressure", "No promotion of strict qualification"]
+independent_of_calibration = "UNKNOWN"
+domain = {points = []}
+assumptions = ["REFLECT mass bases retained as alternatives", "No new chemistry or fitting"]
+numerical_result = "Five positive REFLECT residuals on either basis; five negative Ferreira residuals; no direct matched comparisons"
+linked_experimental_references = ["REFLECT-24C-Ca", "FERREIRA-2025-25C-Ca"]
+calibration_lineage_state = "UNKNOWN"

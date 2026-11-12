@@ -1,0 +1,8 @@
+{
+  "vite_version": "6.4.6",
+  "audit_source": "npm install registry audit after compatible remediation",
+  "audited_packages": 25,
+  "known_vulnerabilities": 0,
+  "package_lock_sha256": "4093274bb2f866558be26fb0aea950abebc6812db65ce23adb536bea21ef7a74",
+  "scope": "dependency audit; not a security certification"
+}

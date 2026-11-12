@@ -1,0 +1,13 @@
+
+> mineraltrace-workbench@0.8.2 build
+> tsc --noEmit && vite build
+
+vite v6.4.6 building for production...
+transforming...
+✓ 26 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.47 kB │ gzip:  0.32 kB
+dist/assets/index-fzxTvP4F.css    5.84 kB │ gzip:  2.05 kB
+dist/assets/index-Cm6GRjZm.js   171.95 kB │ gzip: 55.09 kB
+✓ built in 517ms

@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.8.1-334155?style=flat-square" alt="Source version 0.8.1"></a>
+  <a href="Project.toml"><img src="https://img.shields.io/badge/source-v0.8.2-334155?style=flat-square" alt="Source version 0.8.2"></a>
   <a href="https://julialang.org/downloads/"><img src="https://img.shields.io/badge/Julia-1.10%2B-9558B2?style=flat-square&amp;logo=julia&amp;logoColor=white" alt="Julia 1.10 or later"></a>
   <a href="https://www.usgs.gov/software/phreeqc-version-3"><img src="https://img.shields.io/badge/PHREEQC-3_CLI-1976A3?style=flat-square" alt="PHREEQC 3 CLI"></a>
   <a href="examples/discovery.toml"><img src="https://img.shields.io/badge/TOML-configuration-9C4121?style=flat-square&amp;logo=toml&amp;logoColor=white" alt="TOML configuration"></a>
@@ -24,6 +24,19 @@
 
 > [!NOTE]
 > **Research preview.** MineralTrace compares conditional equilibrium-reaction mechanisms. Actual crystallization order remains undetermined. Independent calcite endpoint comparisons expose model discrepancies; a scientifically validated general process model is not yet established.
+
+
+**v0.8.2 · Cross-study discrepancy audit + local research workbench.** Two frozen experimental series have opposite residual signs in unmatched domains; there are no directly comparable pairs, no pressure-causal conclusion and no new validation qualification. A React/TypeScript interface now supports editable studies, real PHREEQC jobs, candidate inspection and reproducible export. [Scientific comparison](data/validation/v082/REPORT.md) · [Workbench guide](docs/WORKBENCH.md).
+
+After configuring Julia/PHREEQC as below, build and launch from the repository root:
+
+```sh
+npm ci --prefix workbench
+npm run build --prefix workbench
+python3 scripts/workbench_server.py
+```
+
+Open `http://127.0.0.1:8765`. Requires Python 3.11+; Node.js/npm is needed for the build. Set `MINERALTRACE_JULIA` if Julia is not on PATH. Local-only, no accounts or cloud services. Tested on macOS; other platforms are not certified.
 
 **v0.8.1 · Independent-source experiment; holdout qualification pending.** A second laboratory's five frozen 25 °C endpoints give **−1.25% to −10.40%** errors under the unchanged model, unlike REFLECT's positive bias in a different pressure/temperature domain. Database-calibration independence remains unknown; no model or strict path is certified. [Run and review](docs/INDEPENDENT_EXPERIMENT.md) · [Scientific comparison](data/validation/v081/REPORT.md) · [Model validation framework](docs/SCIENTIFIC_VALIDATION.md).
 

@@ -1,0 +1,275 @@
+{
+  "id" : "a0e271e9-8801-4014-934e-e3f8947b28cc",
+  "uuid" : "a0e271e9-8801-4014-934e-e3f8947b28cc",
+  "name" : "Solubilidade do carbonato de cálcio em misturas aquosas contendo CO2 e monoetilenoglicol",
+  "handle" : "123456789/49714",
+  "metadata" : {
+    "dc.contributor.advisor" : [ {
+      "value" : "Chiavone Filho, Osvaldo",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.advisor-co1" : [ {
+      "value" : "Ferreira, Fedra Alexandra de Sousa Vaquero Marado",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.advisor-co1Lattes" : [ {
+      "value" : "http://lattes.cnpq.br/0562243793353648",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.advisorLattes" : [ {
+      "value" : "http://lattes.cnpq.br/2621516646153655",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.author" : [ {
+      "value" : "Penha, Vitória Cibely Silveira",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.authorLattes" : [ {
+      "value" : "http://lattes.cnpq.br/0961290014409063",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.referees1" : [ {
+      "value" : "Deus, Katherine Carrilho de Oliveira",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.contributor.referees2" : [ {
+      "value" : "Rios, Rafael Barbosa",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.accessioned" : [ {
+      "value" : "2022-11-09T22:45:50Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.available" : [ {
+      "value" : "2022-11-09T22:45:50Z",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.date.issued" : [ {
+      "value" : "2022-03-31",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.abstract" : [ {
+      "value" : "Monoethylene glycol (MEG) is applied as hydrate inhibitor in the natural gas production. The\r\npresence of MEG can cause salts precipitation present in the produced water, causing\r\nunwanted incrustations in pipes and equipments. The most common salt found in incrustations\r\nis calcium carbonate (CaCO3), due to its low solubility in water. In addition, CaCO3 is\r\nabundant in the reservoir conditions, and for having its solubility increased in the presence of\r\ncarbon dioxide (CO2), another species found in abundance, especially in the pre-salt. Sodium\r\nchloride (NaCl) is also very present in the incrustations, and directly influences the solubility\r\nof calcium carbonate. This work aims to study the behavior of calcium carbonate solubility in\r\naqueous solutions containing carbon dioxide, monoethylene glycol and sodium chloride. For\r\nthis, a system of equations was developed to calculate the solubility of carbon dioxide in\r\nCO2+water mixtures, which was compared with the literature data. Then, data analysis was\r\nperformed from the H2O+CaCO3+CO2 system at 278.15, 283.15 and 298.15 K and the\r\nH2O+CaCO3+CO2+MEG system at 298.15 K, both varying the partial pressure of CO2, and in\r\nthe second system the concentration of MEG was varied. These data were obtained by the\r\nanalytical method in thermostated equilibrium glass cells. Equilibrium tests were also\r\nperformed to determine solubility data in the modified Othmer ebulliometer for the\r\nH2O+NaCl, H2O+CO2 and H2O+CaCO3+CO2 systems. For the first system, the measurements\r\nwere carried out at different pressures and concentrations until NaCl saturation. For the\r\nsecond system, the experiments were performed at a pressure close to atmospheric and with\r\nconstant partial pressure of CO2. Finally, for the third system, the experimental study was also\r\ncarried out at a pressure close to atmospheric, in the condition of saturation of calcium\r\ncarbonate and also with constant partial pressure of CO2. The equation developed showed a\r\nsatisfactory agreement with literature solubility data. Regarding the nature of the ideal\r\nsolution approach, it is shown that an activity coefficient model would provide a more\r\naccurate description. The measured data using the thermostated equilibrium glass cells were\r\nfound in agreement with the literature for the H2O+CaCO3+CO2 system and with the expected\r\nbehavior for mixtures with MEG. The datasets obtained with the Othmer ebulliometer for the\r\nsystem H2O+NaCl showed quantitative agreement with the literature, and made it possible to\r\nverify that the values of temperature of the liquid phase collected are the ones that best\r\nrepresent the equilibrium data. In addition, it was possible to operate with solid NaCl in the\r\nreboiler, obtaining solid-liquid-vapor equilibrium data. Equilibrium measurements of the\r\nH2O+CO2 and H2O+CaCO3+CO2 systems showed that CO2 dissolves better in the vapor phase\r\ncondensate, due to refrigeration in the ebulliometer sampler. For the system with CaCO3, the\r\nsolubility of 0.56±0.05 mmol/kg was obtained at 373.46 K and 770.33 mmHg, with an\r\naverage partial pressure of CO2 of 8.49 mmHg, expressed by the pH of the solution saturated\r\n7.27±0.03. The observed values of CaCO3 solubility and the corresponding activity\r\ncoefficients are in agreement with those reported in the literature. Finally, the solubilities\r\ndetermined in this work added to those in the literature compose a more consistent database\r\nfor the thermodynamic modeling of the processes of interest.",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.resumo" : [ {
+      "value" : "O monoetilenoglicol (MEG) é utilizado como inibidor de hidratos na produção do gás natural.\r\nA presença do MEG, além de outros fatores oriundos do processo de produção de petróleo e\r\ngás natural, pode ocasionar a precipitação de sais presentes na água produzida, provocando\r\nindesejadas incrustações nas tubulações e equipamentos. O sal mais encontrado nas\r\nincrustações é o carbonato de cálcio (CaCO3), em razão de sua baixa solubilidade em água,\r\nabundância nas condições de reservatório, e por ter sua solubilidade aumentada na presença de\r\ndióxido de carbono (CO2), outra espécie encontrada em abundância,especialmente no pré-sal.\r\nO cloreto de sódio (NaCl) também é muito presente nas incrustações,e influencia diretamente\r\nna solubilidade do carbonato de cálcio. Este trabalho tem como objetivo estudar o\r\ncomportamento da solubilidade do carbonato de cálcio em soluções aquosascontendo dióxido\r\nde carbono, monoetilenoglicol e cloreto de sódio. Para isso, foi realizado umequacionamento\r\npara o cálculo da solubilidade do carbonato de cálcio em água e CO2, que foicomparado com\r\nos dados da literatura. Em seguida foi feita a análise de dados do sistema H2O+CaCO3+CO2 a\r\n278,15, 283,15 e 298,15 K e do sistema H2O+CaCO3+CO2+MEG a 298,15 K, ambos\r\nvariando a pressão parcial de CO2, e no segundo sistema variou-se a concentração de\r\nmonoetilenoglicol. Estes dados foram obtidos pelo método analítico em célulasde equilíbrio de\r\nvidro enjaquetadas. Foram também realizados ensaios de equilíbrio para determinação de\r\ndados de solubilidade no ebuliômetro de Othmer modificado para os sistemas H2O+NaCl,\r\nH2O+CO2 e H2O+CaCO3+CO2. Para o primeiro sistema foram realizados ensaios em\r\ndiferentes pressões e concentrações até a saturação do NaCl. Já para o segundo sistema, o\r\nensaio foi realizado em uma pressão próxima a atmosférica e com pressão parcial constante de\r\nCO2. Por fim, para o terceiro sistema, o ensaio foi realizado também em uma pressão próxima\r\na atmosférica, na condição de saturação do carbonato de cálcio e também com pressão parcial\r\nconstante de CO2. O equacionamento desenvolvido mostrou uma certa concordância com dados\r\nde solubilidade da literatura, mas por se tratar de uma equação ideal existe a necessidade do\r\ndesenvolvimento do coeficiente de atividade médio iônico para uma melhor descrição. Em\r\nrelação aos dados obtidos nos ensaios em células de vidro, estes estão de acordo com a literatura\r\npara o sistema H2O+CaCO3+CO2 e com o comportamento esperado para as misturas com MEG.\r\nA série de dados no ebuliômetro para o sistema H2O+NaCl apresentou concordância com a\r\nliteratura, e possibilitou a constatação de que os valores de temperatura da fase líquida\r\ncoletados, são os que melhor representam os dados de equilíbrio. Além disso, foi possível\r\noperar com NaCl sólido no refervedor obtendo dados de equilíbrio sólido-líquido-vapor. Por\r\nfim, os ensaios de equilíbrio dos sistemas H2O+CO2 e H2O+CaCO3+CO2 mostraram que o CO2\r\nse dissolve melhor no condensado da fase vapor, devido a refrigeração. Para o sistema com\r\nCaCO3, a solubilidade de 0,56±0,05 mmol/kg foi obtida a 373,46 K e 770,33 mmHg, com uma\r\npressão parcial média de CO2 de 8,49 mmHg, expressa pelo pH da solução saturada de\r\n7,27±0,03. Os valores observados de solubilidade do CaCO3 e os correspondentes coeficientes\r\nde atividade estão de acordo com os reportados na literatura. Finalmente, as solubilidades\r\ndeterminadas neste trabalho somadas com as da literatura compõem uma base de dados mais\r\nconsistente para a modelagem termodinâmica dos processos de interesse.",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.description.sponsorship" : [ {
+      "value" : "Conselho Nacional de Desenvolvimento Científico e Tecnológico - CNPq",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.capesdegreeprogramcode" : [ {
+      "value" : "23001011011P7",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.citation" : [ {
+      "value" : "PENHA, Vitória Cibely Silveira. Solubilidade do carbonato de cálcio em misturas aquosas contendo CO2 e monoetilenoglicol. Orientador: Osvaldo Chiavone Filho. 2022. 103f. Dissertação (Mestrado em Engenharia Química) - Centro de Tecnologia, Universidade Federal do Rio Grande do Norte, Natal, 2022.",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.identifier.uri" : [ {
+      "value" : "https://repositorio.ufrn.br/handle/123456789/49714",
+      "language" : null,
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.language" : [ {
+      "value" : "pt_BR",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.publisher" : [ {
+      "value" : "Universidade Federal do Rio Grande do Norte",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.publisher.country" : [ {
+      "value" : "Brasil",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.publisher.initials" : [ {
+      "value" : "UFRN",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.publisher.program" : [ {
+      "value" : "PROGRAMA DE PÓS-GRADUAÇÃO EM ENGENHARIA QUÍMICA",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.rights" : [ {
+      "value" : "Acesso Aberto",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.subject" : [ {
+      "value" : "Engenharia Química",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    }, {
+      "value" : "Ebuliômetro",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 1
+    }, {
+      "value" : "Carbonato de cálcio",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 2
+    }, {
+      "value" : "Monoetilenoglicol",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 3
+    }, {
+      "value" : "Equilíbrio de fases",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 4
+    }, {
+      "value" : "Hidrato de gás natural",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 5
+    } ],
+    "dc.subject.cnpq" : [ {
+      "value" : "CNPQ::ENGENHARIAS::ENGENHARIA QUIMICA",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.title" : [ {
+      "value" : "Solubilidade do carbonato de cálcio em misturas aquosas contendo CO2 e monoetilenoglicol",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.title.alternative" : [ {
+      "value" : "Solubility of calcium carbonate in aqueous mixtures containing CO2 and monoethylene glycol",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ],
+    "dc.type" : [ {
+      "value" : "masterThesis",
+      "language" : "pt_BR",
+      "authority" : null,
+      "confidence" : -1,
+      "place" : 0
+    } ]
+  },
+  "inArchive" : true,
+  "discoverable" : true,
+  "withdrawn" : false,
+  "lastModified" : "2026-08-26T14:32:58.016871Z",
+  "entityType" : null,
+  "type" : "item",
+  "_links" : {
+    "accessStatus" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/accessStatus"
+    },
+    "bundles" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/bundles"
+    },
+    "identifiers" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/identifiers"
+    },
+    "mappedCollections" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/mappedCollections"
+    },
+    "owningCollection" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/owningCollection"
+    },
+    "relationships" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/relationships"
+    },
+    "version" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/version"
+    },
+    "templateItemOf" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/templateItemOf"
+    },
+    "thumbnail" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/thumbnail"
+    },
+    "submitter" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc/submitter"
+    },
+    "self" : {
+      "href" : "https://repositorio.ufrn.br/server/api/core/items/a0e271e9-8801-4014-934e-e3f8947b28cc"
+    }
+  }
+}

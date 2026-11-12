@@ -1,6 +1,6 @@
 include(joinpath(@__DIR__,"../scripts/validate_holdout.jl"))
 @testset "Pre-prediction freeze prevents data/model drift without fitting" begin
-    project=dirname(@__DIR__);config=PHREEQCConfig()
+    project=joinpath(dirname(@__DIR__),"data/validation/frozen-v081");config=PHREEQCConfig()
     receipt=verify_holdout_freeze(project,config)
     @test receipt["frozen_before_first_prediction"]
     @test receipt["holdout_qualification"]=="database_calibration_independence_UNKNOWN"

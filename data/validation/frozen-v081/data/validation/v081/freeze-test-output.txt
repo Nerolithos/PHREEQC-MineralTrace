@@ -1,0 +1,2 @@
+Test Summary:                                                   | Pass  Total  Time
+Pre-prediction freeze prevents data/model drift without fitting |    8      8  1.4s

@@ -1,0 +1,9 @@
+{
+  "data/validation/v071/comparison.csv": "ef84506fc98a0c19f0ede3ab6a2fe7c469796fbbe210bc8d088907a34e00bdac",
+  "data/validation/v080/analysis.json": "ed8bc395d0a120934523f97e2a29240913100a0a0b383a81b27d8ea9423feb3e",
+  "data/validation/v081/analysis.json": "ad61877dd71707f5cdc2d3cab5f72dcfb057d393865e94261821520cdb7036b3",
+  "data/validation/v081/comparison.csv": "c90d9862760d244b887e2a27c331c40621bdcd142be76783484dd4be03c8cbd6",
+  "data/validation/reflect-2023/observations.csv": "2e8df44966f958f0959c4f252124e8a0b55c5b4b3e4889a5799a328a0d12d805",
+  "data/validation/holdout-ferreira-2025/observations.csv": "e18d4d331a774d8dea0bf569a55913ed06a74122e2a0762df927abee0400d9cc",
+  "data/validation/holdout-ferreira-2025/PROTOCOL.toml": "8a339b774b574b1b64c753ebb81a061b42886bf220767a177157b93e70f9ab4a"
+}

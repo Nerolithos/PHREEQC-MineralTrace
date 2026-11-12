@@ -99,7 +99,7 @@ function sensitivity_comparisons(s,candidates,membership)
     result
 end
 
-function discover_paths(s::DiscoveryStudy,c::PHREEQCConfig=PHREEQCConfig();root="results",profile_id="discovery-cafc-386")
+function discover_paths(s::DiscoveryStudy,c::PHREEQCConfig=PHREEQCConfig();root="results",profile_id="discovery-cafc-386",progress=(completed,total,directory)->nothing)
     registry=load_evidence_registry();profiles=load_model_profiles(;registry)
     haskey(profiles,profile_id) || throw(ArgumentError("Unknown model profile: $profile_id"))
     profile=profiles[profile_id]
@@ -117,6 +117,7 @@ function discover_paths(s::DiscoveryStudy,c::PHREEQCConfig=PHREEQCConfig();root=
     write(joinpath(dir,"database-audit.json"),json_value(db_audit)*"\n")
     frozen=PHREEQCConfig(executable=env.executable,database=joinpath(dir,"database.dat"),timeout_seconds=c.timeout_seconds)
     candidates=Dict{String,Any}[]
+    progress(0,length(generated.candidates),dir)
     for item in generated.candidates
         study=PathStudy(item["spec"]);definition=only(study.spec["paths"])
         candidate=run_candidate(study,definition,frozen,dir)
@@ -126,6 +127,7 @@ function discover_paths(s::DiscoveryStudy,c::PHREEQCConfig=PHREEQCConfig();root=
         candidate["environmental_sequence"]=item["environmental_sequence"]
         candidate["accessibility"]="all_declared_phases_always_accessible"
         push!(candidates,candidate)
+        progress(length(candidates),length(generated.candidates),dir)
     end
     groups=discovery_groups(candidates);sensitivity=sensitivity_comparisons(s,candidates,generated.membership)
     provenance=Dict{String,Any}("timestamp_utc"=>string(now(UTC)),"julia_version"=>string(VERSION),"package_version"=>string(pkgversion(@__MODULE__)),"database_sha256"=>env.database_sha256,"executable_sha256"=>bytes2hex(sha256(read(env.executable))),"config_sha256"=>bytes2hex(sha256(read(joinpath(dir,"discovery.toml")))),"generated_candidates_sha256"=>bytes2hex(sha256(read(joinpath(dir,"generated-candidates.toml")))),"enumeration"=>"deterministic bounded exhaustive enumeration of declared discrete grammar; no random seed, optimization or evidence-guided pruning","phase_access_policy"=>s.spec["accessibility"],"model_applicability"=>"unverified")

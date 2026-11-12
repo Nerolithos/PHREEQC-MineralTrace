@@ -1,0 +1,48 @@
+{
+  "version": "0.8.2",
+  "date": "2026-11-12",
+  "platform": "macOS ARM64; no cross-platform byte-identity claim",
+  "frozen_inputs_unchanged": {
+    "data/validation/v071/comparison.csv": "ef84506fc98a0c19f0ede3ab6a2fe7c469796fbbe210bc8d088907a34e00bdac",
+    "data/validation/v080/analysis.json": "ed8bc395d0a120934523f97e2a29240913100a0a0b383a81b27d8ea9423feb3e",
+    "data/validation/v081/analysis.json": "ad61877dd71707f5cdc2d3cab5f72dcfb057d393865e94261821520cdb7036b3",
+    "data/validation/v081/comparison.csv": "c90d9862760d244b887e2a27c331c40621bdcd142be76783484dd4be03c8cbd6",
+    "data/validation/reflect-2023/observations.csv": "2e8df44966f958f0959c4f252124e8a0b55c5b4b3e4889a5799a328a0d12d805",
+    "data/validation/holdout-ferreira-2025/observations.csv": "e18d4d331a774d8dea0bf569a55913ed06a74122e2a0762df927abee0400d9cc",
+    "data/validation/holdout-ferreira-2025/PROTOCOL.toml": "8a339b774b574b1b64c753ebb81a061b42886bf220767a177157b93e70f9ab4a"
+  },
+  "frozen_runtime_original_file_count": 29,
+  "frozen_runtime_hashes_verified": true,
+  "cross_study_reproduction": {
+    "analysis.json": "c8e0215372f9db13072314dbc2ea1cabdbd80968ad8feca9469ab96f74f896d7",
+    "observations.csv": "ee8b1349c4164c9f1aea104cc349ab22a993f09c255cc422ce3345ae749b1444",
+    "REPORT.md": "712e2eff3bd6369543bed2b461aaa051eb1898a43a769b8f56c98ec82d643e40",
+    "report.html": "2505e71506cc0fe5e24a56c6c30b38b6bfdb6a01f96edc8d62493aad79f70888",
+    "residual-pressure.svg": "505e2fece2bccfc7416d44e7e63add1568dd1218bcb01ad89940939f606c7c88",
+    "residual-concentration.svg": "4b69892ad714ea1b82f5fc00dea276a2778dec555fececb82e484cabd636d31e",
+    "residual-temperature.svg": "e122fbbea6e69b9846b69e3dc5ba26196dcf5521cd7f827207b32c07ace742d0"
+  },
+  "UI_210_archive": "results/workbench/95c45c3d1821447b9052cfe2f092c635/discovery-o2rz6H",
+  "UI_reproduction_archive": "results/workbench/95c45c3d1821447b9052cfe2f092c635/discovery-o2rz6H/reproduced/discovery-M9f95i",
+  "UI_analysis_sha256": "5bacc520929e94643c892964418b08cb6e6df46636157c7a8fbb1ff729ab0f50",
+  "UI_analysis_byte_identical": true,
+  "discovery_classification_counts": {
+    "compatible": 2,
+    "incompatible": 201,
+    "undetermined": 7
+  },
+  "frozen_v081_reproduction_archive": "results/external-holdout-GFP59N",
+  "frozen_v081_JSON_CSV_SVG_byte_identical": true,
+  "API_audit": "API_AUDIT.json",
+  "API_test_sha256": "5ac76319fca87959cc7d4d0366f02b0f9f2e7cdb9674c305704375b6da8bd3ae",
+  "browser_test": "BROWSER_E2E.md",
+  "full_regression_log_sha256": "aa27b09517d84f9db523637340be600009e556aa2e3c7331d2a404fb556120f4",
+  "frontend_build_log_sha256": "0eb175d06ccb68c96859b9f3cbafa0998b979607e4b335bdc89c62d31eaa0ac0",
+  "no_parameter_fit": true,
+  "no_strict_promotion": true,
+  "scientific_test_log_sha256": "d7741115a8ae8825da2227df360a543c8c38f0d82fe0f8464f4e621a74bec81c",
+  "API_test_log_sha256": "7c2a248864cf662e44b17821b724771cf19efc339aeb79bcfc32f087487273c3",
+  "dependency_lock_sha256": "4093274bb2f866558be26fb0aea950abebc6812db65ce23adb536bea21ef7a74",
+  "vite_security_update": "6.0.0 -> 6.4.6; installation audit reports zero known vulnerabilities",
+  "cross_study_comparison_code_sha256": "f60aa4a2d1efae65f573f14d57d7297768c9df417e1024d650e187d34dcdf3b4"
+}

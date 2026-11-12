@@ -18,6 +18,8 @@ include("discovery/DiscoverySimulation.jl")
 include("discovery/DiscoveryReport.jl")
 include("validation/CalciteEndpoint.jl")
 include("validation/ModelProfiles.jl")
+include("validation/CrossStudy.jl")
+export evaluate_research_applicability
 include("robustness/Robustness.jl")
 include("robustness/RobustnessReport.jl")
 export comparison_statistics

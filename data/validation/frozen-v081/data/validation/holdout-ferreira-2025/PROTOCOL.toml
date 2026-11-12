@@ -1,0 +1,47 @@
+schema_version = 1
+study_id = "FERREIRA-2025-25C-PURE-WATER"
+protocol_stage = "frozen before first MineralTrace prediction for this dataset"
+source_doi = "10.1021/acs.jced.4c00670"
+source_snapshot = "data/sources/FERREIRA-2025-PUBLISHER-TRANSCRIPT.txt"
+selection = "All five 298.15 K, pure-water Table 3 measurements, ordered by increasing pressure; no prediction-dependent selection"
+excluded = ["278.15 K and 288.15 K: below existing endpoint API 23 C lower limit", "all MEG/salt mixtures: outside pure-water contract", "2022 thesis values: related source, not identical to 2025 table and not a second independent replicate", "author-fitted Pitzer/OLI/correlation curves: not independent measurements"]
+measured_observable = "AAS total dissolved Ca as CaCO3-equivalent molality; multiply mmol/kg by 1e-3 for mol/kg water"
+temperature_conversion = "T_C=T_K-273.15"
+pressure_conversion = "pCO2_bar=pCO2_kPa/100; pCO2_atm=pCO2_bar/1.01325"
+model_basis = "PHREEQC total aqueous Ca moles divided by calculated mass_H2O; not free-ion activity or initial water mass"
+reported_duplicate_sd = "Table 3 column sigma: standard deviation of duplicate data; retain separate from standard uncertainty"
+reported_standard_uncertainty = "Table 3 footnote a: u(T)=0.05 K, u(P)=2.7 kPa, u(m)=0.15 mmol/kg; do not combine duplicate SD with u(m) without covariance model"
+independent_of_REFLECT = true
+independent_of_database_calibration = "UNKNOWN; relevant parameters changed after underlying 2022 data existed"
+holdout_qualification = "pending_calibration_lineage; external experimental prediction comparison only, no strict independent-parameter holdout certification"
+no_fitted_parameters = true
+no_REFLECT_calibration = true
+outcome_policy = "Report all signed discrepancies, MSE/MAE/RMSE/max relative error and signs; no model ranking, tuning, pass threshold or Gaussian/weighted statistical validation"
+
+[model]
+database_identifier = "unmodified official PHREEQC 3.8.6-17100 phreeqc.dat"
+database_sha256 = "59373961d648dfbf68a40744060c1d64f57ecbec98f4f5fb89f3a1b4213ccd10"
+activity_model = "unchanged ion-association, WATEQ/default gamma and CO2 dimer profile"
+gas_boundary = "fixed_CO2_partial_pressure, native Peng-Robinson; pressure tank supports approximation"
+aqueous_pressure = "pCO2 + 0.0317 bar water-vapor approximation at 25 C, explicit control omits this term; not an experimental measurement"
+initial_water_kg = 1.0
+calcite_g = 10.0
+co2_reservoir_mol = 10.0
+stock_interpretation = "numerical normalization/buffering only, not guessed experimental solvent or solid amount; excess solid reported, exact per-run masses unknown"
+initial_recipe = "type-1 deionized water approximated as pure water, no added salts/MEG"
+software = "MineralTrace frozen source hashes; PHREEQC executable hash recorded in freeze receipt"
+
+[controls]
+stock_upper_g = 40.0
+reservoir_upper_mol = 20.0
+pco2_offset_kpa = [-2.7, 2.7]
+temperature_offset_k = [-0.05, 0.05]
+omit_vapor_pressure = true
+interpretation = "one-at-a-time stated controls, not joint confidence interval or residual minimization"
+
+[unmeasured]
+DIC = "UNKNOWN; model prediction only"
+dissolved_CO2 = "UNKNOWN; model prediction only"
+pH = "UNKNOWN measured endpoint; author's pressure-pH correlation is derived and excluded from validation"
+exact_loading_and_water_mass = "UNKNOWN; no missing measurement invented"
+operational_gas_history = "UNKNOWN; fixed-pressure reservoir is a documented approximation, not exact experiment replay"
